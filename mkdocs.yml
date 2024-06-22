@@ -11,7 +11,4 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-
-
-docs_dir: docs
-site_dir: siteA
+  

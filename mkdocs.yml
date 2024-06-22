@@ -1,0 +1,17 @@
+site_name: Jan Affolter
+nav:
+  - About me: index.md
+  - My career's documents : careerdocuments.md
+  - GitHub and MkDocs: GitHubAndMkdocs.md
+
+theme:
+    name: material
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+
+docs_dir: docs
+site_dir: siteA

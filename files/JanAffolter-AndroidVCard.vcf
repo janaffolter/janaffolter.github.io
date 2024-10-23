@@ -1,0 +1,18 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Jan Gérard Affolter
+N:Affolter;Jan Gérard;;;
+EMAIL;TYPE=INTERNET;TYPE=HOME:jan.affolter@gmail.com
+item1.TEL:775218262
+item1.X-ABLabel:
+item2.ADR:;;Chem. de la Crésentine 25D;Crissier;;1023;CH;Chem. de la Crésen
+ tine 25D\n1023 Crissier\nCH
+item2.X-ABLabel:
+ORG:Jan Affolter\, ITS
+TITLE:Freelance | Product Owner Cloud | Chief Engineer Cloud ITSM
+item3.URL:https\://www.linkedin.com/in/jan-affolter-a195021/
+item3.X-ABLabel:PROFILE
+item4.URL:https\://janaffolter.github.io/
+item4.X-ABLabel:homePage
+CATEGORIES:myContacts
+END:VCARD

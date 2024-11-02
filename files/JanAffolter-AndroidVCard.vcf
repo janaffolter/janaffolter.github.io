@@ -1,12 +1,11 @@
 BEGIN:VCARD
 VERSION:3.0
-FN:Jan Gérard Affolter
-N:Affolter;Jan Gérard;;;
+FN:Jan Gerard Affolter
+N:Affolter;Jan Gerard;;;
 EMAIL;TYPE=INTERNET;TYPE=HOME:jan.affolter@gmail.com
 item1.TEL:775218262
 item1.X-ABLabel:
-item2.ADR:;;Chem. de la Crésentine 25D;Crissier;;1023;CH;Chem. de la Crésen
- tine 25D\n1023 Crissier\nCH
+item2.ADR:;;;Crissier;;1023;CH;1023 Crissier\nCH
 item2.X-ABLabel:
 ORG:Jan Affolter\, ITS
 TITLE:Freelance | Product Owner Cloud | Chief Engineer Cloud ITSM

@@ -1,5 +1,281 @@
 [
     {
+        "text": "Review this statement \"[Resource groups] provide organizations with the ability to manage the compliance of Azure resources across multiple subscriptions.\". If this statement is correct, select `No change is needed`. If the statement is incorrect, select the answer choice that makes the statement correct.",
+        "options": ["No change is needed", "Management groups", "Azure policies", "Azure App Service plans"],
+        "correct": 1,
+        "explanation": "The correct answer is \"Management groups\". Explanation: 1/ Resource groups: These are used to organize and manage Azure resources within a single subscription, but they cannot span multiple subscriptions. 2/ Management groups: These provide the ability to manage and enforce policies, compliance, and access across multiple subscriptions in Azure. Therefore, they are the correct choice for managing compliance across subscriptions. 3/ Azure policies: These are used to define and enforce compliance rules for resources, but they work at a subscription or resource group level, not across subscriptions directly. 4/ Azure App Service plans: These are used for hosting web apps and are unrelated to compliance management."
+    },
+    {
+        "text": "When an Azure subscriptions expires, the associated Azure Active Directory (Azure AD) tenant is deleted automatically.",
+        "options": ["Yes", "No"],
+        "correct": 1,
+        "explanation": "No, an Azure subscription's expiration does not automatically lead to the deletion of the associated Azure Active Directory (Azure AD) tenant. Explanation: Azure Subscriptions: If an Azure subscription expires, the resources within the subscription may become inaccessible, but the Azure AD tenant remains active. Azure AD Tenant: The tenant is independent of the subscription and continues to exist even without an active subscription. It remains responsible for managing identities and authentication."
+    },
+    {
+        "text": "You can change the Azure Active Directory (Azure AD) tenant to which an Azure subscription is associated.",
+        "options": ["Yes", "No"],
+        "correct": 0,
+        "explanation": "Yes, you can change the Azure Active Directory (Azure AD) tenant to which an Azure subscription is associated. This process involves transferring the subscription to a different Azure AD tenant. Here's how it works step be step: 1/ Prepare the Subscription, 2/ Transfer Ownership, 3/ Post-Transfer Actions."
+    },
+    {
+        "text": "An Azure subscription can be associated to multiple Azure Active Directory (Azure AD) tenants?",
+        "options": ["Yes", "No"],
+        "correct": 1,
+        "explanation": "No, an Azure subscription cannot be associated with multiple Azure Active Directory (Azure AD) tenants at the same time. An Azure subscription has a one-to-one relationship with an Azure AD tenant, meaning it is always tied to a single Azure AD tenant for identity and access management."
+    },
+    {
+        "text": "You plan to deploy several Azure virtual machines. You need to ensure that the services running on the virtual machines are available if a single data center fails. Solution: You deploy the virtual machines to a scale set. Does this meet the goal?",
+        "options": ["Yes", "No"],
+        "correct": 1,
+        "explanation": "The correct answer is \"No\". Explanation: Deploying virtual machines to a scale set alone does not ensure availability if a single data center fails. While scale sets provide automatic scaling and load balancing, to protect against data center failure you need to deploy the virtual machines across Availability Zones or use Availability Sets. These features are specifically designed to provide redundancy and resilience against such failures."
+    },
+    {
+        "text": "You plan to deploy several Azure virtual machines. You need to ensure that the services running on the virtual machines are available if a single data center fails. Solution: You deploy the virtual machines to two or more resource groups. Does this meet the goal?",
+        "options": ["Yes", "No"],
+        "correct": 1,
+        "explanation": "The correct answer is \"No\". Explanation: Deploying virtual machines to two or more resource groups does not ensure availability in the event of a single data center failure. Resource groups are logical containers and do not provide physical redundancy. To achieve high availability, the virtual machines must be deployed across Availability Zones or Availability Sets within an Azure region. These features are designed to protect against data center failures."
+    },
+    {
+        "text": "You plan to extend your company's network to Azure. The network contains a VPN appliance that uses an IP address of 131.107.200.1. You need to create an Azure resource that defines the VPN appliance in Azure. Which Azure resource should you create? To answer, select the appropriate resource in the answer area.",
+        "options": ["NAT gateways", "Application gateways", "Local network gateways", "Virtual network gateways", "On-premises data gateways", "Azure data box gateway", "Azure Stack Edge / Data Box gateway", "Web Application Firewall policies"],
+        "correct": 2,
+        "explanation": "The correct answer is \"Local network gateways\". Explanation: A local network gateway in Azure represents the on-premises network or VPN appliance, enabling Azure to recognize and establish connections to it. It specifies the IP address of the VPN appliance (in this case, 131.107.200.1) and allows configurations for connecting an Azure Virtual Network to your company's network."
+    },
+    {
+        "text": "You need to identify the type of failure for which an Azure Availability Zone can be used to protect access to Azure services. What should you identify?",
+        "options": ["a physical server failure", "an Azure region failure", "a storage failure", "an Azure data center failure"],
+        "correct": 3,
+        "explanation": "The correct answer is \"an Azure data center failure\". Explanation: Azure Availability Zones are designed to protect access to Azure services by providing redundancy across physically separate data centers within the same region. This ensures that services remain operational even if a specific data center within the region experiences a failure."
+    },
+    {
+        "text": "Which cloud computing benefit provides continuous user access to a cloud-based application with minimal downtime?",
+        "options": ["agility", "scalability", "elasticity", "high availability"],
+        "correct": 3,
+        "explanation": "The correct answer is \"high availability\". Explanation: High availability ensures that cloud-based applications remain operational and accessible with minimal downtime. This is achieved through redundant systems, failover mechanisms, and resilient infrastructure, providing a seamless experience for users."
+    },
+    {
+        "text": "Select the appropriate benefit that match the definition \"Ensure that users always have the best experience by deploying apps to all the regions where there are users.\"",
+        "options": ["Disaster recovery", "Geo-distribution", "High availability", "Scalability"],
+        "correct": 1,
+        "explanation": "The correct answer is \"Geo-distribution\". Explanation: Geo-distribution ensures that applications and resources are deployed in multiple regions to be closer to users. This approach minimizes latency, improves performance, and delivers the best user experience by utilizing Azure's global data center network."
+    },
+    {
+        "text": "Select the appropriate benefit that match the definition \"Provide a continous user experience with no apparent downtime.\"",
+        "options": ["Disaster recovery", "Geo-distribution", "High availability", "Scalability"],
+        "correct": 2,
+        "explanation": "The correct answer is \"High availability\". Explanation: High availability ensures that systems or services are continuously operational without noticeable downtime, even in the event of hardware or software failures. This capability is achieved through redundancy, failover mechanisms, and resilient infrastructure."
+    },
+    {
+        "text": "Select the appropriate benefit that match the definition \"Increase the compute capacity of apps in the cloud.\"",
+        "options": ["Disaster recovery", "Geo-distribution", "High availability", "Scalability"],
+        "correct": 3,
+        "explanation": "The correct answer is \"geo-redundancy\". Explanation: Geo-redundancy in Azure ensures that resources and data are replicated across multiple geographic locations. This capability helps deploy resources closer to users, enhancing performance and reducing latency while also providing resiliency against regional outages."
+    },
+    {
+        "text": "What Azure capability ensures that resources are deployed closer to users? ",
+        "options": ["resource cost analysis", "packet inspection", "geo-redundancy", "isolation and segmentation"],
+        "correct": 2,
+        "explanation": "The correct answer is \"geo-redundancy\". Explanation: Geo-redundancy in Azure ensures that resources and data are replicated across multiple geographic locations. This capability helps deploy resources closer to users, enhancing performance and reducing latency while also providing resiliency against regional outages."
+    },
+    {
+        "text": "What is a feature of an Azure virtual network?",
+        "options": ["resource cost analysis", "packet inspection", "geo-redundancy", "isolation and segmentation"],
+        "correct": 3,
+        "explanation": "The correct answer is \"isolation and segmentation\". Explanation: Azure Virtual Network (VNet) enables isolation and segmentation, which allows you to create secure and private communication environments for your resources. It provides control over IP addresses, subnets, and network traffic, ensuring that your resources are isolated from other users and networks."
+    },
+    {
+        "text": "What are two benefits of cloud computing? ",
+        "options": ["Enables the rapid provisioning of resources, Has the same configuration options as on-premises", "Enables the rapid provisioning of resources, Has increased administrative complexity", "Has the same configuration options as on-premises, Shifts capital expenditures (CAPEX) to operating expenditures (OPEX)", "Enables the rapid provisioning of resources, Shifts capital expenditures (CAPEX) to operating expenditures (OPEX)"],
+        "correct": 3,
+        "explanation": "The correct option is \"Enables the rapid provisioning of resources, Shifts capital expenditures (CAPEX) to operating expenditures (OPEX)\".1/ Rapid provisioning of resources: Cloud computing allows for quick scaling of resources to meet changing demands efficiently. 2/ Shifts CAPEX to OPEX: With cloud computing, organizations avoid large upfront capital expenses for infrastructure and instead pay for resources as they use them, making it an operational expense."
+    },
+    {
+        "text": "Which term represents the ability to increase the computing capacity of a virtual machine by adding memory or CPUs?",
+        "options": ["agility", "vertical scaling", "horizontal scaling", "elasticity"],
+        "correct": 1,
+        "explanation": "The correct term is vertical scaling. This represents the ability to increase the computing capacity of a virtual machine by adding resources such as memory or CPUs. Vertical scaling enhances the performance of the existing instance without adding new instances. Reference: https://learn.microsoft.com/en-us/azure/azure-monitor/autoscale/autoscale-overview."
+    },
+    {
+        "text": "Select appropriate answer: What Azure Service supports synchronization between on-premises storage and Azure Storage?",
+        "options": ["Azure Blob Storage", "Azure Files", "Azure Queue Storage ", "Azure File Sync"],
+        "correct": 3,
+        "explanation": "The correct service is Azure File Sync, not Azure Files. Azure File Sync is specifically designed to enable synchronization between on-premises file servers and Azure Files, allowing you to centralize file storage in Azure while keeping local access to frequently used data. Azure Files, on the other hand, provides fully managed cloud file shares, but it doesn't include synchronization capabilities by itself. - Azure Blob Storage: Designed for storing large amounts of unstructured data, such as text or binary files. It's ideal for scenarios like serving images, streaming media, or creating data lakes for analytics. - Azure Files: Provides fully managed file shares in the cloud, accessible via SMB or NFS protocols. It's perfect for replacing on-premises file servers or enabling shared application settings. - Azure Queue Storage: A service for storing large numbers of messages, enabling asynchronous communication between application components. Commonly used in distributed systems. - Azure Table Storage: A NoSQL datastore for structured data, offering fast and cost-effective storage for applications that don't require complex joins or stored procedures"
+    },
+    {
+        "text": "Which cloud computing model includes on-premises and cloud-based resources?",
+        "options": ["Hybrid Cloud", "Private Cloud", "Public Cloud"],
+        "correct": 0,
+        "explanation": "The correct answer is Hybrid Cloud. This cloud computing model combines on-premises infrastructure with cloud-based resources, allowing organizations to use both environments seamlessly to meet their needs."
+    },
+    {
+        "text": "A Microsoft SQL Server database that is hosted in the cloud and has software updates managed by Azure is an example of ...",
+        "options": ["disaster recovery as a service (DRaaS)", "Infrastructure as a Service (Iaas)", "Platform as a Service (PaaS)", "Software as a Service (SaaS)"],
+        "correct": 2,
+        "explanation": "The correct answer is Platform as a Service (PaaS). This is because, in this scenario, Azure manages the software updates and underlying infrastructure for the Microsoft SQL Server database while allowing users to focus on managing and using the database itself. PaaS is designed to reduce administrative effort by handling these backend tasks."
+    },
+    {
+        "text": "Select the answer that correctly completes the sentence. An Azure web app that queries an on-premises Microsoft SQL server is an example of a [ ... ].",
+        "options": ["Hybrid Cloud", "Private Cloud", "Public Cloud", "Multi-vendor Cloud"],
+        "correct": 0,
+        "explanation": "The correct answer is Hybrid Cloud. An Azure web app querying an on-premises Microsoft SQL server demonstrates a combination of public cloud services (Azure) and on-premises infrastructure, which is the essence of a hybrid cloud setup."
+    },
+    {
+        "text": "Microsoft 365 is an example of which cloud service model?",
+        "options": ["Infrastructure as a Service (Iaas)", "Platform as a Service (SaaS)", "Software as a Service (SaaS)"],
+        "correct": 2,
+        "explanation": "The correct answer is Software as a Service (SaaS). Microsoft 365 is a SaaS model, as it provides ready-to-use software applications like Word, Excel, and Outlook that are accessed over the internet without requiring users to manage the underlying infrastructure or platform."
+    },
+    {
+        "text": "You have an accounting application named App1 that uses a legacy database. You plan to move App1 to the cloud. Which service model should you use?",
+        "options": ["Infrastructure as a Service (Iaas)", "Platform as a Service (PaaS)", "Software as a Service (SaaS)"],
+        "correct": 0,
+        "explanation": "The best choice in this scenario is Infrastructure as a Service (IaaS). Since App1 uses a legacy database, migrating it to the cloud via IaaS would provide the necessary flexibility and control. With IaaS, you can replicate your on-premises setup and manage the operating system, database, and application as needed, making it ideal for legacy systems."
+    },
+    {
+        "text": "You plan to use Azure to host application named App2. The application must meet the following requirements: App2 must run interactively with the operating system of the server.",
+        "options": ["Infrastructure as a Service (Iaas)", "Platform as a Service (PaaS)", "Software as a Service (SaaS)"],
+        "correct": 0,
+        "explanation": "The correct answer is Infrastructure as a Service (IaaS). Here's why: IaaS provides virtualized computing resources such as servers, storage, and networking. It enables applications like App2 to interact directly with the operating system of the server, giving you complete control over the server environment. This is ideal for scenarios requiring close integration with the OS."
+    },
+    {
+        "text": "You plan to use Azure to host application named App1. The application must meet the following requirements: 1/ You must be able to modify the code of App1. 2/ Administrative effort to manage the operating system of App1 must be minimized.",
+        "options": ["Infrastructure as a Service (Iaas)", "Platform as a Service (PaaS)", "Software as a Service (SaaS)"],
+        "correct": 1,
+        "explanation": "The correct answer is Platform as a Service (PaaS). Here's why: PaaS allows you to modify and control the application code while the cloud provider manages the underlying operating system and infrastructure. This minimizes the administrative effort required to maintain the operating system. PaaS provides a framework that developers can build upon to develop or customize cloud-based applications. Similar to the way you create an Excel macro, PaaS lets developers create applications using built-in software components. Cloud features such as scalability, high-availability, and multi-tenant capability are included, reducing the amount of coding that developers must do."
+    },
+    {
+        "text": "Select the appropriate answer that correctly completes the sentence : Azure Site recovery provides [ ... ] for virtual machines.",
+        "options": ["high availability", "disaster recovery", "elasticity ", "fault tolerance"],
+        "correct": 1,
+        "explanation": "The correct answer is disaster recovery. Azure Site Recovery is designed to ensure business continuity by replicating virtual machines, enabling organizations to recover and maintain operations during outages or disasters."
+    },
+    {
+        "text": "Select the appropriate cloud computing benefits that matches the description : Applications can be developed, tested and launched rapidly.",
+        "options": ["Agility", "Geo-distribution", "Scalability"],
+        "correct": 0,
+        "explanation": "The cloud computing benefit that matches the description is Agility. This refers to the ability to quickly adapt and innovate, enabling efficient development and deployment processes."
+    },
+    {
+        "text": "Select the appropriate cloud computing benefits that matches the description : Applications and data can be deployed to multiple regions.",
+        "options": ["Agility", "Geo-distribution", "Scalability"],
+        "correct": 1,
+        "explanation": "The cloud computing benefit that matches the description is Geo-distribution. This benefit refers to the ability to distribute resources, applications, and data across multiple geographical locations for better performance, availability, and compliance."
+    },
+    {
+        "text": "Select the appropriate cloud computing benefits that matches the description : Resources can be provisioned dynamically to meet changing demands.",
+        "options": ["Agility", "Geo-distribution", "Scalability"],
+        "correct": 2,
+        "explanation": "The cloud computing benefit that matches the description is Scalability. This refers to the ability to quickly adjust resources up or down based on workload demands, ensuring efficiency and cost-effectiveness."
+    },
+    {
+        "text": "Is this statment correct. The costs to increase cloud computing capacity are less than the costs to increase the computing capacity of an on-premises datacenter.",
+        "options": ["Yes", "No"],
+        "correct": 0,
+        "explanation": "\"Yes\", the statement is generally correct. Scaling up cloud computing capacity is often more cost-effective than increasing the computing capacity of an on-premises datacenter. Here's why: 1/ Cloud Computing: Cloud providers use pay-as-you-go pricing models. You only pay for the resources you use, and scaling is immediate, without the need for upfront investments in hardware or infrastructure. - 2/ On-Premises Datacenter: Expanding capacity typically involves purchasing new hardware, upgrading infrastructure, and potentially investing in space and cooling systems, which can be costly and time-consuming."
+    },
+    {
+        "text": "Is this statment correct. You must have internet connectivity to use cloud computing!",
+        "options": ["Yes", "No"],
+        "correct": 1,
+        "explanation": "\"No\", you don't necessarely need internet connectivity, 2 reasons: 1/ Private Cloud and Internet Connectivity: Private clouds operate within an organization's local network, so they don't require internet access. Users can access resources directly through the internal network, ensuring data stays within the organization's infrastructure. 2/ Azure ExpressRoute: This service provides a private, dedicated connection between on-premises infrastructure and Microsoft Azure. It bypasses the public internet, offering enhanced reliability, security, and lower latency for hybrid cloud setups."
+    },
+    {
+        "text": "Is this statment correct. You must have physical servers to use cloud computing!",
+        "options": ["Yes", "No"],
+        "correct": 1,
+        "explanation": "\"No\", the statement \"You must have physical servers to use cloud computing\" is not entirely correct. Cloud computing involves accessing resources (like storage, applications, and processing power) hosted on remote servers via the internet or a private network. For public cloud services, users don't need their own physical servers—resources are provided by the cloud provider. However, private cloud or hybrid cloud setups may require physical servers for hosting infrastructure within the organization's premises."
+    },
+    {
+        "text": "Your company has virtual machines (VMs) hosted in Microsoft Azure. The VMs are located in a single Azure virtual network named VNet1. The company has users that work remotely. The remote workers require access to the VMs on VNet1. You need to provide access for the remote workers. What should you do?",
+        "options": ["Configure a Site-to-Site (S2S) VPN", "Configure a VNet-toVNet VPN", "Configure a Point-to-Site (P2S) VPN", "Configure DirectAccess on a Windows Server 2012 server VM", "Configure a Multi-Site VPN"],
+        "correct": 2,
+        "explanation": "A Point-to-Site (P2S) VPN gateway connection lets you create a secure connection to your virtual network from an individual client computer. ... P2S VPN is also a useful solution to use instead of S2S VPN when you have only a few clients that need to connect to a VNet."
+    },
+    {
+        "text": "Match the cloud model to the correct advantage: [ ... ] Provides a choice to use on-premises or cloud-based resources.",
+        "options": ["Hybrid Cloud", "Private Cloud", "Public Cloud"],
+        "correct": 0,
+        "explanation": "The cloud model that best matches the advantage Provides a choice to use on-premises or cloud-based resources is \"Hybrid Cloud\". This model combines the flexibility of public cloud services with the control of on-premises infrastructure, allowing organizations to balance their workloads between the two as needed."
+    },
+    {
+        "text": "Match the cloud model to the correct advantage: [ ... ] Provides complete control over security.",
+        "options": ["Hybrid Cloud", "Private Cloud", "Public Cloud"],
+        "correct": 1,
+        "explanation": "The cloud model that best matches the advantage Provides complete control over security is \"Private Cloud\". This model allows organizations to have exclusive access to infrastructure, enabling them to implement and manage their own security measures according to specific needs and standards."
+    },
+    {
+        "text": "Match the cloud model to the correct advantage: [ ... ] No required capital expenditure.",
+        "options": ["Hybrid Cloud", "Private Cloud", "Public Cloud"],
+        "correct": 2,
+        "explanation": "Based on the advantage No required capital expenditure, the best match among the cloud models would be \"Public Cloud\". This model operates on a pay-as-you-go system, removing the need for upfront hardware investments."
+    },
+    {
+        "text": "You are tasked with deploying Azure virtual machines for your company and need the appropriate cloud deployment solution—you recommend using Infrastructure as a Service (IaaS); does this solution meet the goal?",
+        "options": ["Yes", "No"],
+        "correct": 0,
+        "explanation": "Yes, VM's are delivered through Infrastructure as a Service (IaaS)."
+    },
+    {
+        "text": "Your developers have created 10 web applications to host on Azure, requiring custom domains, 10 GB of storage each, dedicated compute instances, load balancing, and cost minimization—what Azure web tier plan should you use?",
+        "options": ["Standard", "Basic", "Free", "Shared"],
+        "correct": 0,
+        "explanation": "App Service Free and Shared Plans are not for production and offers only 1 GB of storage, they also do not have dedicated compute. Basic plan, even it offers 10 GB of storage do not offers load-balancing 'no traffic management' refer to https://azure.microsoft.com/en-us/pricing/details/app-service/windows/. Cheapest solution is then Standard plan. Note that each tier provides a specific subset of App Service features. These features include custom domains and TLS/SSL certificates, autoscaling, deployment slots, backups, Azure Traffic Manager integration, and more."
+    },
+    {
+        "text": "You plan to migrate a company to Azure with each division having an administrator to manage its Azure resources and want the deployment to allow segmentation while minimizing administrative effort—you propose using several Azure Active Directory (Azure AD) directories; does this solution meet the goal?",
+        "options": ["Yes", "No"],
+        "correct": 1,
+        "explanation": "You do not need 'several' AAD directories, best practice is only one, the word 'several' cause problem here! You plan to make use of several Azure Active Directory (Azure AD) directories.."
+    },
+    {
+        "text": "Your developers created a publicly accessible portal web app for Miami branch users to retrieve customer and product information, and you plan to host it on Azure, requiring the miami.weyland.com URL, deployment to two instances, SSL support, 12 GB of storage, and minimized costs—which Azure web tier plan should you use?",
+        "options": ["Standard", "Basic", "Free", "Shared"],
+        "correct": 0,
+        "explanation": "Standard offer 50 GB, Basic 10 GB only, as costs must be optimized this is the most cost efficient solution."
+    },
+    {
+        "text": "Your company plans to migrate virtual machines from Hyper-V hosts in a data center to an Azure pay-as-you-go subscription, requiring the correct expenditure model—you recommend using the elastic expenditure model; does the solution meet the goal?",
+        "options": ["Yes", "No"],
+        "correct": 1,
+        "explanation": "The term \"elastic expenditure model\" isn't a standard term or concept used in Azure or cloud computing. The two common expenditure models in Azure are \"pay-as-you-go\" and \"reserved instances\"."
+    },
+    {
+        "text": "Your company is planning to migrate all their virtual machines to an Azure pay-as-you-go subscription. The virtual machines are currently hosted on the Hyper-V hosts in a data center. You are required to make sure that the intended Azure solution uses the correct expenditure model. Solution: You should recommend the use of the scalable expenditure model. Does the solution meet the goal?",
+        "options": ["Yes", "No"],
+        "correct": 1,
+        "explanation": "Operating expenditures are ongoing costs of doing business. Consuming cloud services in a pay-as-you-go model could qualify as an operating expenditure. References : https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/business-outcomes/fiscal-outcomes."
+    },
+    {
+        "text": "Your company is planning to migrate all their virtual machines to an Azure pay-as-you-go subscription. The virtual machines are currently hosted on the Hyper-V hosts in a data center. You are required make sure that the intended Azure solution uses the correct expenditure model. Solution: You should recommend the use of the operational expenditure model. Does the solution meet the goal?",
+        "options": ["Yes", "No"],
+        "correct": 0,
+        "explanation": "Operating expenditures are ongoing costs of doing business. Consuming cloud services in a pay-as-you-go model could qualify as an operating expenditure. References : https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/business-outcomes/fiscal-outcomes."
+    },
+    {
+        "text": "You are required to deploy an Artificial Intelligence (AI) solution in Azure. You want to make sure that you are able to build, test, and deploy predictive analytics for the solution. Solution: You should make use of Azure Cosmos DB. Does the solution meet the goal?",
+        "options": ["Yes", "No"],
+        "correct": 1,
+        "explanation": "Machine Learning Studio (classic) is a drag-and-drop tool you can use to build, test, and deploy predictive analytics solutions. Azure Cosmos DB is a fully managed NoSQL database for modern app development."
+    },
+    {
+        "text": "Your company's Active Directory forest includes thousands of user accounts. You have been informed that all network resources will be migrated to Azure. Thereafter, the on-premises data center will be retired. You are required to employ a strategy that reduces the effect on users, once the planned migration has been completed. Solution: You plan to sync all the Active Directory user accounts to Azure Active Directory (Azure AD). Does the solution meet the goal?",
+        "options": ["Yes", "No"],
+        "correct": 0,
+        "explanation": "Answer is \"Yes\"; it is beneficial to sync your on premise AD with the AD Azure to minimize the impact on users."
+    },
+    {
+        "text": "You have been informed by your superiors of the company's intentions to automate server deployment to Azure. There is, however, some concern that administrative credentials could be uncovered during this process. You are required to make sure that during the deployment, the administrative credentials are encrypted using a suitable Azure solution. Solution: You recommend the use of Azure Multi-Factor Authentication (MFA). Does the solution meet the goal?",
+        "options": ["Yes", "No"],
+        "correct": 1,
+        "explanation": "Answer is \"No\". The solution to encrypt credentials is Azure Key Vault. reference https://learn.microsoft.com/en-us/azure/key-vault/. Azure Multi-Factor Authentication (MFA) is a security feature that adds an extra layer of protection to user accounts by requiring multiple forms of verification during sign-in."
+    },
+    {
+        "text": "You have been informed by your superiors of the company's intentions to automate server deployment to Azure. There is, however, some concern that administrative credentials could be uncovered during this process. You are required to make sure that during the deployment, the administrative credentials are encrypted using a suitable Azure solution. Solution: You recommend the use of Azure Information Protection. Does the solution meet the goal?",
+        "options": ["Yes", "No"],
+        "correct": 1,
+        "explanation": "Answer is \"No\". The solution to encrypt credentials is Azure Key Vault. reference https://learn.microsoft.com/en-us/azure/key-vault/. Azure Information Protection (AIP) is a cloud-based solution designed to help organizations classify, label, and protect sensitive information, whether it's stored in the cloud or on-premises."
+    },
+    {
         "text": "Is this statment correct. A company can extend its internal network to the public cloud!",
         "options": ["Yes", "No"],
         "correct": 0,
@@ -114,7 +390,7 @@
         "explanation": "The correct answer is \"an Azure virtual machine\". Infrastructure as a Service (IaaS) provides virtualized computing resources like servers, storage, and networking, enabling users to manage operating systems and applications. Azure Virtual Machines fall under this category because they offer raw computing resources that users can configure and control. - Why others are not IaaS: Azure web app: This is a Platform as a Service (PaaS) solution that abstracts the infrastructure, offering a managed environment for hosting web applications. Azure logic app: This is a PaaS/Serverless solution for automating workflows and integrations without requiring infrastructure management. Azure SQL database: This is also a PaaS solution, as it provides a fully managed relational database service without the need for infrastructure oversight."
     },
     {
-        "text": "Your company has an on-premises network that contains multiple servers. The company plans to migrate servers to Azure virtual machines to reduce the following administrative responsibilities. You need to identify which administrative responsibilities will be eliminated after the planned migration. Which two responsibilities should you identify? Each correct answer presents a complete solution.",
+        "text": "Your company has an on-premises network that contains multiple servers. The company plans to migrate servers to Azure virtual machines to reduce administrative responsibilities. You need to identify which administrative responsibilities will be eliminated after the planned migration. Which two responsibilities should you identify? Each correct answer presents a complete solution.",
         "options": ["Backing up application data, Replacing failed server hardware", "Managing physical server security, Replacing failed server hardware", "Updating server operating systems, Managing permissions to shared documents", "Managing permissions to shared documents, Backing up application data"],
         "correct": 1,
         "explanation": "The two responsibilities that will be eliminated after migrating servers to Azure virtual machines are: 1/ \"Replacing failed server hardware\": Azure, being a cloud platform, handles all hardware-related responsibilities, including maintaining and replacing failed server hardware. This is no longer a concern for the customer. 2/ \"Managing physical server security\": Since Azure provides physical infrastructure and its data centers are secured by Microsoft, managing physical server security will no longer be the company's responsibility."
@@ -138,25 +414,25 @@
         "explanation": "Yes, that's correct. To implement a hybrid cloud model, a company needs to have an internal network, often referred to as on-premises infrastructure. The hybrid cloud model integrates this internal network with a public cloud platform, enabling seamless interaction between the two environments."
     },
     {
-        "text": "A cloud service that can be accessed quickly from the Internet",
+        "text": "What feature need a cloud service that can be accessed quickly from the Internet",
         "options": ["Disaster recovery", "Fault tolerance", "Low latency", "Dynamic scalability"],
         "correct": 2,
         "explanation": "The correct answer is Low latency. Low latency refers to a cloud service's ability to process and respond to requests quickly, ensuring smooth and fast accessibility from the internet. This is crucial for real-time applications, such as online gaming, video streaming, and e-commerce platforms, where delay can negatively impact user experience."
     },
     {
-        "text": "A cloud service that performs quickly when demand increases",
+        "text": "What feature need a cloud service that performs quickly when demand increases",
         "options": ["Disaster recovery", "Fault tolerance", "Low latency", "Dynamic scalability"],
         "correct": 3,
         "explanation": "The correct answer is Dynamic scalability. Dynamic scalability refers to a cloud service's ability to automatically and efficiently allocate more resources (such as compute power, storage, or bandwidth) when demand increases. This ensures optimal performance even during high-demand periods, making it a key feature of modern cloud platforms."
     },
     {
-        "text": "A cloud service that can be recovered after a failure occurs",
+        "text": "What feature need a cloud service that can be recovered after a failure occurs",
         "options": ["Disaster recovery", "Fault tolerance", "Low latency", "Dynamic scalability"],
         "correct": 0,
         "explanation": "The correct answer is Disaster recovery. Disaster recovery refers to the ability of a cloud service to be restored or recovered after a failure occurs. This typically involves predefined strategies and tools to back up data, systems, and applications, ensuring they can be restored quickly to minimize downtime."
     },
     {
-        "text": "A cloud service that remains available after a failure occurs",
+        "text": "What feature need a cloud service that remains available after a failure occurs",
         "options": ["Disaster recovery", "Fault tolerance", "Low latency", "Dynamic scalability"],
         "correct": 1,
         "explanation": "The correct answer is Fault tolerance. A fault-tolerant cloud service is designed to continue operating without interruption even if a failure occurs in its components. This ensures high availability and reliability, as the system can detect and manage failures automatically, maintaining service continuity."
@@ -199,7 +475,7 @@
     },
     {
         "text": "Select appropriate option:  An organization that hosts its infrastructure [ ... ] no longer requires a data center.",
-        "options": ["in a private cloud", "in a hybridd cloud", "in the public cloud", "on a Hyper-V hosts"],
+        "options": ["in a private cloud", "in a hybrid cloud", "in the public cloud", "on a Hyper-V hosts"],
         "correct": 2,
         "explanation": "The correct answer is \"in the public cloud\". When an organization hosts its infrastructure in the public cloud, it no longer needs a physical data center because the cloud provider manages all the underlying hardware, networking, and maintenance. Public cloud services allow organizations to focus on their applications and data without worrying about owning or maintaining infrastructure."
     },
@@ -407,12 +683,6 @@
         "correct": 0,
         "explanation": "\"Yes\", Azure DevTest Labs is the best answer. This service is designed for developers to deploy for testing purpose, this is for short-term provisioning and the most cost efficient solution."
     },
-    {
-        "text": "You have been informed by your superiors of the company's intentions to automate server deployment to Azure. There is, however, some concern that administrative credentials could be uncovered during this process. You are required to make sure that during the deployment, the administrative credentials are encrypted using a suitable Azure solution. Solution: You recommend the use of Azure Information Protection. Does the solution meet the goal?",
-        "options": ["Configure a Site-to-Site (S2S) VPN", "Configure a VNet-toVNet VPN", "Configure a Point-to-Site (P2S) VPN", "Configure DirectAccess on a Windows Server 2012 server VM", "Configure a Multi-Site VPN"],
-        "correct": 2,
-        "explanation": "A Point-to-Site (P2S) VPN gateway connection lets you create a secure connection to your virtual network from an individual client computer. ... P2S VPN is also a useful solution to use instead of S2S VPN when you have only a few clients that need to connect to a VNet."
-    },
   {
       "text": "Your company intends to subscribe to an Azure support plan. The support plan must allow for new support requests to be opened. Which of the following are support plans that will allow this?",
       "options": ["Basic, Developer, Standard, Professional Direct", "Developer, Standard, Professional Direct", "Basic, Developer, Standard"],
@@ -442,73 +712,7 @@
     "options": ["A governement contractor from any country, A governement entity from any country", "A governement entity from any country, A European governement entity, A United State governement entity", "A United State governement entity, A United State governement contractor", "A governement contractor from any country, A European governement contractor, A United State governement contractor"],
     "correct": 2,
     "explanation": "Azure Government is ONLY for United State governement and its contractors."
-  },
-    {
-    "text": "You are tasked with deploying Azure virtual machines for your company and need the appropriate cloud deployment solution—you recommend using Infrastructure as a Service (IaaS); does this solution meet the goal?",
-    "options": ["Yes", "No"],
-    "correct": 0,
-    "explanation": "Yes, VM's are delivered through Infrastructure as a Service (IaaS)."
-    },
-    {
-        "text": "Your developers have created 10 web applications to host on Azure, requiring custom domains, 10 GB of storage each, dedicated compute instances, load balancing, and cost minimization—what Azure web tier plan should you use?",
-        "options": ["Standard", "Basic", "Free", "Shared"],
-        "correct": 0,
-        "explanation": "App Service Free and Shared Plans are not for production and offers only 1 GB of storage, they also do not have dedicated compute. Basic plan, even it offers 10 GB of storage do not offers load-balancing 'no traffic management' refer to https://azure.microsoft.com/en-us/pricing/details/app-service/windows/. Cheapest solution is then Standard plan. Note that each tier provides a specific subset of App Service features. These features include custom domains and TLS/SSL certificates, autoscaling, deployment slots, backups, Azure Traffic Manager integration, and more."
-    },
-    {
-        "text": "You plan to migrate a company to Azure with each division having an administrator to manage its Azure resources and want the deployment to allow segmentation while minimizing administrative effort—you propose using several Azure Active Directory (Azure AD) directories; does this solution meet the goal?",
-        "options": ["Yes", "No"],
-        "correct": 1,
-        "explanation": "You do not need 'several' AAD directories, best practice is only one, the word 'several' cause problem here! You plan to make use of several Azure Active Directory (Azure AD) directories.."
-    },
-    {
-        "text": "Your developers created a publicly accessible portal web app for Miami branch users to retrieve customer and product information, and you plan to host it on Azure, requiring the miami.weyland.com URL, deployment to two instances, SSL support, 12 GB of storage, and minimized costs—which Azure web tier plan should you use?",
-        "options": ["Standard", "Basic", "Free", "Shared"],
-        "correct": 0,
-        "explanation": "Standard offer 50 GB, Basic 10 GB only, as costs must be optimized this is the most cost efficient solution."
-    },
-    {
-        "text": "Your company plans to migrate virtual machines from Hyper-V hosts in a data center to an Azure pay-as-you-go subscription, requiring the correct expenditure model—you recommend using the elastic expenditure model; does the solution meet the goal?",
-        "options": ["Yes", "No"],
-        "correct": 1,
-        "explanation": "The term \"elastic expenditure model\" isn't a standard term or concept used in Azure or cloud computing. The two common expenditure models in Azure are \"pay-as-you-go\" and \"reserved instances\"."
-    },
-    {
-        "text": "Your company is planning to migrate all their virtual machines to an Azure pay-as-you-go subscription. The virtual machines are currently hosted on the Hyper-V hosts in a data center. You are required to make sure that the intended Azure solution uses the correct expenditure model. Solution: You should recommend the use of the scalable expenditure model. Does the solution meet the goal?",
-        "options": ["Yes", "No"],
-        "correct": 1,
-        "explanation": "Operating expenditures are ongoing costs of doing business. Consuming cloud services in a pay-as-you-go model could qualify as an operating expenditure. References : https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/business-outcomes/fiscal-outcomes."
-    },
-    {
-        "text": "Your company is planning to migrate all their virtual machines to an Azure pay-as-you-go subscription. The virtual machines are currently hosted on the Hyper-V hosts in a data center. You are required make sure that the intended Azure solution uses the correct expenditure model. Solution: You should recommend the use of the operational expenditure model. Does the solution meet the goal?",
-        "options": ["Yes", "No"],
-        "correct": 0,
-        "explanation": "Operating expenditures are ongoing costs of doing business. Consuming cloud services in a pay-as-you-go model could qualify as an operating expenditure. References : https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/strategy/business-outcomes/fiscal-outcomes."
-    },
-    {
-        "text": "You are required to deploy an Artificial Intelligence (AI) solution in Azure. You want to make sure that you are able to build, test, and deploy predictive analytics for the solution. Solution: You should make use of Azure Cosmos DB. Does the solution meet the goal?",
-        "options": ["Yes", "No"],
-        "correct": 1,
-        "explanation": "Machine Learning Studio (classic) is a drag-and-drop tool you can use to build, test, and deploy predictive analytics solutions. Azure Cosmos DB is a fully managed NoSQL database for modern app development."
-    },
-    {
-        "text": "Your company's Active Directory forest includes thousands of user accounts. You have been informed that all network resources will be migrated to Azure. Thereafter, the on-premises data center will be retired. You are required to employ a strategy that reduces the effect on users, once the planned migration has been completed. Solution: You plan to sync all the Active Directory user accounts to Azure Active Directory (Azure AD). Does the solution meet the goal?",
-        "options": ["Yes", "No"],
-        "correct": 0,
-        "explanation": "Answer is \"Yes\"; it is beneficial to sync your on premise AD with the AD Azure to minimize the impact on users."
-    },
-    {
-        "text": "You have been informed by your superiors of the company's intentions to automate server deployment to Azure. There is, however, some concern that administrative credentials could be uncovered during this process. You are required to make sure that during the deployment, the administrative credentials are encrypted using a suitable Azure solution. Solution: You recommend the use of Azure Multi-Factor Authentication (MFA). Does the solution meet the goal?",
-        "options": ["Yes", "No"],
-        "correct": 1,
-        "explanation": "Answer is \"No\". The solution to encrypt credentials is Azure Key Vault. reference https://learn.microsoft.com/en-us/azure/key-vault/. Azure Multi-Factor Authentication (MFA) is a security feature that adds an extra layer of protection to user accounts by requiring multiple forms of verification during sign-in."
-    },
-    {
-        "text": "You have been informed by your superiors of the company's intentions to automate server deployment to Azure. There is, however, some concern that administrative credentials could be uncovered during this process. You are required to make sure that during the deployment, the administrative credentials are encrypted using a suitable Azure solution. Solution: You recommend the use of Azure Information Protection. Does the solution meet the goal?",
-        "options": ["Yes", "No"],
-        "correct": 1,
-        "explanation": "Answer is \"No\". The solution to encrypt credentials is Azure Key Vault. reference https://learn.microsoft.com/en-us/azure/key-vault/. Azure Information Protection (AIP) is a cloud-based solution designed to help organizations classify, label, and protect sensitive information, whether it's stored in the cloud or on-premises."
-    }
+  }
 ]
 
 

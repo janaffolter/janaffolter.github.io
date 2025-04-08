@@ -2,7 +2,7 @@ let currentQuestion = 0; // Tracks the current question
 let score = 0; // Tracks the number of questions answered correctly on the first try
 let attemptedOnce = false; // Tracks if the user has already attempted the current question
 let questions = []; // Placeholder for the questions array
-let nbquestions = 10;
+let nbquestions = 40;
 
 // Function to load the questions from the JSON file
 function fetchQuestions() {

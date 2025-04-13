@@ -2,9 +2,24 @@ let currentQuestion = 0; // Tracks the current question
 let score = 0; // Tracks the number of questions answered correctly on the first try
 let attemptedOnce = false; // Tracks if the user has already attempted the current question
 let questions = []; // Placeholder for the questions array
-let nbquestions = 40;
+let nbquestions = 50;
 
-// Function to load the questions from the JSON file
+/*
+// Function to load the questions from the JSON file in ascending order
+function fetchQuestions() {
+    fetch("../questions.json")
+        .then((response) => response.json())
+        .then((data) => {
+            // Sort questions in ascending order based on an index or ID
+            questions = data.sort((a, b) => a.id - b.id); // Assuming each question has an 'id' field
+            loadQuestion(); // Load the first question
+        })
+        .catch((error) => console.error("Error fetching questions:", error));
+}
+*/
+
+// Function to randomly load {nbquestions} the questions from the JSON file
+
 function fetchQuestions() {
     fetch("../questions.json")
         .then((response) => response.json())
@@ -15,6 +30,7 @@ function fetchQuestions() {
         })
         .catch((error) => console.error("Error fetching questions:", error));
 }
+
 
 // Function to shuffle the array and select the first `count` elements
 function shuffleAndSelect(array, count) {

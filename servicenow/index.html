@@ -1,0 +1,2711 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Jan Affolter's personal website, showcasing his work, projects, and interests.">
+      
+      
+        <meta name="author" content="Jan Affolter">
+      
+      
+        <link rel="canonical" href="https://janaffolter.github.io/servicenow/">
+      
+      
+        <link rel="prev" href="../AOI/cloud/">
+      
+      
+        <link rel="next" href="../ITxM/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+    
+    
+      
+        <title>ServiceNow - Jan Affolter</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-WS94CKT6HP"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-WS94CKT6HP",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-WS94CKT6HP",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#servicenow-focus-on-itsm-itam" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Jan Affolter" class="md-header__button md-logo" aria-label="Jan Affolter" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Jan Affolter
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ServiceNow
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="brown" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
+          
+  
+  Get to know
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../agile/" class="md-tabs__link">
+          
+  
+  Centers of Interest
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../AOI/books/" class="md-tabs__link">
+          
+  
+  Books
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../Studies/SNBPlaysforSurvivalNotProsperity/" class="md-tabs__link">
+          
+  
+  Studies
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Jan Affolter" class="md-nav__button md-logo" aria-label="Jan Affolter" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Jan Affolter
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Get to know
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Get to know
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About me
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Get my ...
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Get my ...
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PDF/cv-jan-affolter-svg-en.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CV - English [PDF]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PDF/jan-affolter-projects-en.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Projects Books [PDF]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Explore my ...
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Explore my ...
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WorkCertificates/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Work certificates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Diplomas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Certifications and diplomas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../awards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Award and Honors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../courses/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Courses and trainings
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cards/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Greetings and farewell cards
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Contact me via ...
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Contact me via ...
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4_1" id="__nav_1_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    vCards
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            vCards
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/JanAffolter-AndroidVCard.vcf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Android
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/JanAffolter-Google.csv" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Google
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../files/JanAffolter-Outlook.csv" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Outlook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.linkedin.com/in/jan-affolter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LinkedIn profile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Press articles
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Press articles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Press Coverage of Projects as Product Owner
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://www.businesswire.com/news/home/20220215005702/fr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Everest Group Recognizes DXC Technology as a Leader in Cloud Services
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Centers of Interest
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Centers of Interest
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agile and Scaled Agile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AOI/cloud/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ServiceNow
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            ServiceNow
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ServiceNow
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ServiceNow
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ci-discovery-and-population-into-cmdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      CI discovery and population into CMDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ways-to-access-to-servicenow-cmdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ways to Access to ServiceNow CMDB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ways to Access to ServiceNow CMDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servicenow-user-interface-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      ServiceNow User Interface (UI)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apis-restsoap" class="md-nav__link">
+    <span class="md-ellipsis">
+      APIs (REST/SOAP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-sets-and-integrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import Sets and Integrations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discovery-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discovery Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connectnow" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConnectNow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-and-integration-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      API and integration tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API and integration tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web-services-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web Services APIs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specialized-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specialized APIs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrationhub-and-etl" class="md-nav__link">
+    <span class="md-ellipsis">
+      IntegrationHub and ETL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javascript-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      JavaScript APIs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-driven-and-custom-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event-driven and Custom APIs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mid-server-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      MID Server APIs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reporting-and-analytics-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reporting and Analytics APIs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples-of-specific-api-endpoints-not-exhaustive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples of Specific API Endpoints (not exhaustive):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apis-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      API's summary:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicenow-po-itsm-itam" class="md-nav__link">
+    <span class="md-ellipsis">
+      ServiceNow PO ITSM + ITAM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ServiceNow PO ITSM + ITAM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Responsibilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typical-deliverables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typical Deliverables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#po-itsm-itam-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      PO ITSM + ITAM summary:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicenow-cmdb-crud-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      ServiceNow CMDB CRUD API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ServiceNow CMDB CRUD API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-setup-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Setup &amp; Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#endpoints-and-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoints and Resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crud-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      CRUD Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-and-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permissions and Roles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Cases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicenow-cmdb-crud-api-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      ServiceNow CMDB CRUD API summary:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-servicenow-automation-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary of ServiceNow Automation components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Summary of ServiceNow Automation components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automated-ci-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automated CI Classification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-grouping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Grouping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tag-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tag Automation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discovery-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discovery &amp; Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reconciliation-data-integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reconciliation &amp; Data Integrity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow Triggers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ITxM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ITxM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dsd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Solutions Designer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AOI/AI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Artificial Intelligence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AOI/cybersecurity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cybersecurity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AOI/GitHubAndMkdocs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build a web site using GitHub and MkDocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AOI/softdev/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AOI/wisewords/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Celebrities Wise words
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AOI/myths/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Debunking the Myths
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Books
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Books
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AOI/books/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Studies
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Studies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Studies/SNBPlaysforSurvivalNotProsperity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20258-05-13 - SNB plays a survival politic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Studies/AgeDiscrimination/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20258-05-14 - Age discrimination is legal in Switzerland
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ci-discovery-and-population-into-cmdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      CI discovery and population into CMDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ways-to-access-to-servicenow-cmdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ways to Access to ServiceNow CMDB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ways to Access to ServiceNow CMDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servicenow-user-interface-ui" class="md-nav__link">
+    <span class="md-ellipsis">
+      ServiceNow User Interface (UI)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apis-restsoap" class="md-nav__link">
+    <span class="md-ellipsis">
+      APIs (REST/SOAP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-sets-and-integrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Import Sets and Integrations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discovery-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discovery Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connectnow" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConnectNow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-and-integration-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      API and integration tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API and integration tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web-services-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web Services APIs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#table-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table API
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specialized-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specialized APIs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integrationhub-and-etl" class="md-nav__link">
+    <span class="md-ellipsis">
+      IntegrationHub and ETL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javascript-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      JavaScript APIs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-driven-and-custom-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event-driven and Custom APIs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mid-server-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      MID Server APIs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reporting-and-analytics-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reporting and Analytics APIs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples-of-specific-api-endpoints-not-exhaustive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples of Specific API Endpoints (not exhaustive):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apis-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      API's summary:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicenow-po-itsm-itam" class="md-nav__link">
+    <span class="md-ellipsis">
+      ServiceNow PO ITSM + ITAM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ServiceNow PO ITSM + ITAM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-responsibilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Responsibilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typical-deliverables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Typical Deliverables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#po-itsm-itam-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      PO ITSM + ITAM summary:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#servicenow-cmdb-crud-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      ServiceNow CMDB CRUD API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ServiceNow CMDB CRUD API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-setup-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Setup &amp; Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#endpoints-and-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoints and Resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crud-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      CRUD Operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions-and-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permissions and Roles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Cases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicenow-cmdb-crud-api-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      ServiceNow CMDB CRUD API summary:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-of-servicenow-automation-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary of ServiceNow Automation components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Summary of ServiceNow Automation components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#automated-ci-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automated CI Classification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-grouping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Grouping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tag-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tag Automation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discovery-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discovery &amp; Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reconciliation-data-integrity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reconciliation &amp; Data Integrity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow Triggers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="servicenow-focus-on-itsm-itam">ServiceNow - focus on ITSM / ITAM</h1>
+<h2 id="ci-discovery-and-population-into-cmdb">CI discovery and population into <abbr title="Configuration Management Database">CMDB</abbr></h2>
+<ul>
+<li>
+<p><strong>ServiceNow <abbr title="Configuration Management Database">CMDB</abbr> (Configuration Management Database)</strong> is a centralized repository that stores detailed information about an organization’s IT assets (Configuration Items, or CIs) and, crucially, their relationships and dependencies. This database acts as the backbone for IT Service Management (ITSM), supporting processes like incident, change, and asset management<sup id="fnref5:1"><a class="footnote-ref" href="#fn:1">1</a></sup>-<sup id="fnref3:5"><a class="footnote-ref" href="#fn:5">5</a></sup>.</p>
+</li>
+<li>
+<p><strong>Visibility and Relationships:</strong> The <abbr title="Configuration Management Database">CMDB</abbr> not only inventories assets but also maps how they interact and depend on each other. This mapping accelerates troubleshooting, impact analysis, and decision-making by showing, for example, which applications run on which servers, and how business services depend on various infrastructure components<sup id="fnref4:1"><a class="footnote-ref" href="#fn:1">1</a></sup>-<sup id="fnref2:5"><a class="footnote-ref" href="#fn:5">5</a></sup>.</p>
+</li>
+<li>
+<p><strong>Discovery and Service Mapping:</strong> ServiceNow uses automated tools like Discovery to scan the IT environment (on-premises, cloud, virtual) and populate the <abbr title="Configuration Management Database">CMDB</abbr> with up-to-date information. Service Mapping builds on this by creating dynamic, real-time maps of entire business services, showing all supporting CIs and their interconnections. These maps are always current, reflecting any changes in the IT landscape<sup id="fnref3:1"><a class="footnote-ref" href="#fn:1">1</a></sup>-<sup id="fnref2:3"><a class="footnote-ref" href="#fn:3">3</a></sup>-<sup id="fnref3:4"><a class="footnote-ref" href="#fn:4">4</a></sup>.</p>
+</li>
+<li>
+<p><strong>MID Server:</strong> Discovery is performed by a MID Server, an agent installed within your network that communicates securely with ServiceNow in the cloud. The MID Server discovers assets across network segments (including DMZs, if properly configured) and sends the results to the <abbr title="Configuration Management Database">CMDB</abbr><sup id="fnref2:2"><a class="footnote-ref" href="#fn:2">2</a></sup>-<sup id="fnref2:4"><a class="footnote-ref" href="#fn:4">4</a></sup>.</p>
+</li>
+<li>
+<p><strong>Design and Security:</strong> Best practices recommend strategically placing MID Servers to maximize network visibility while minimizing firewall exceptions. For DMZs, you can use a single MID Server with secure tunnels or open specific ports as needed. Bastion or relay hosts can be used to securely relay discovery traffic into restricted segments, though these are not native ServiceNow components but standard IT security practices<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>.</p>
+</li>
+<li>
+<p><strong>Benefits:</strong> ServiceNow <abbr title="Configuration Management Database">CMDB</abbr> and its discovery tools provide real-time, accurate visibility of your IT environment, reduce downtime, optimize resources, support compliance, and improve the efficiency of IT operations by automating asset tracking and relationship mapping<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup>-<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup>.</p>
+</li>
+</ul>
+<p>In short, ServiceNow’s <abbr title="Configuration Management Database">CMDB</abbr>, Discovery, and Service Mapping combine to give organizations a dynamic, always-updated map of their IT landscape, making IT management more efficient, secure, and data-driven<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>-<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>-<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup>.</p>
+<p><img alt="" src="../images/mid-server-web-app-snow.svg" /></p>
+<details class="example">
+<summary>ServiceNow discovery for a web app service</summary>
+<div class="highlight"><pre><span></span><code>@startuml
+left to right direction
+
+&#39;--- Management Compartment ---
+rectangle &quot;Mgmt Compartment&quot; {
+  component &quot;MID Server&quot; as MID
+}
+
+&#39;--- Secure Tunnel to DMZ ---
+component &quot;Secure Tunnel\n(SSH/VPN)&quot; as TUNNEL
+
+&#39;--- DMZ ---
+rectangle &quot;DMZ&quot; {
+  component Firewall
+  component Proxy
+  component &quot;Load Balancer&quot; as LB
+  component &quot;Bastion/Relay&quot; as RELAY
+}
+
+&#39;--- Web Server Compartment ---
+rectangle &quot;Web Server Compartment&quot; {
+  component &quot;Web App 1&quot; as App1
+  component &quot;Web App 2&quot; as App2
+  database &quot;Central Database&quot; as DB
+}
+
+&#39;--- ServiceNow Cloud ---
+database &quot;ServiceNow CMDB&quot; as CMDB
+
+&#39;--- Direct Discovery (blue) ---
+MID -[#blue]-&gt; App1 : Direct Discovery
+MID -[#blue]-&gt; App2 : Direct Discovery
+MID -[#blue]-&gt; DB : Direct Discovery
+
+&#39;--- Discovery via tunnel (red) ---
+MID -[#red,dashed]-&gt; TUNNEL : Discovery via tunnel
+TUNNEL -[#red,dashed]-&gt; RELAY : Traffic relay
+RELAY -[#red,dashed]-&gt; Firewall : DMZ Discovery
+RELAY -[#red,dashed]-&gt; Proxy : DMZ Discovery
+RELAY -[#red,dashed]-&gt; LB : DMZ Discovery
+
+&#39;--- CMDB Storage ---
+MID --&gt; CMDB : Discovery Results
+
+&#39;--- Data Traffic (green) ---
+actor Client
+Client -[#green]-&gt; Firewall : HTTP/HTTPS
+Firewall -[#green]-&gt; Proxy : Filtered HTTP/HTTPS
+Proxy -[#green]-&gt; LB : Load balancing
+LB -[#green]-&gt; App1 : Application traffic
+LB -[#green]-&gt; App2 : Application traffic
+App1 -[#green]-&gt; DB : SQL Queries
+App2 -[#green]-&gt; DB : SQL Queries
+@enduml
+</code></pre></div>
+</details>
+<h2 id="ways-to-access-to-servicenow-cmdb">Ways to Access to ServiceNow <abbr title="Configuration Management Database">CMDB</abbr></h2>
+<h3 id="servicenow-user-interface-ui"><strong>ServiceNow User Interface (UI)</strong></h3>
+<ul>
+<li><strong>Direct access:</strong> Users with the appropriate role (such as <code>cmdb_read</code>) can log in to the ServiceNow instance and use the navigation menu to access the <abbr title="Configuration Management Database">CMDB</abbr>. By searching for "Configuration" or specific CI classes, users can browse, search, and view configuration items and their details directly in the web interface<sup id="fnref2:7"><a class="footnote-ref" href="#fn:7">7</a></sup>-<sup id="fnref2:8"><a class="footnote-ref" href="#fn:8">8</a></sup>.</li>
+<li><strong>Dashboards and Portals:</strong> ServiceNow provides dashboards and portals for visualizing and interacting with <abbr title="Configuration Management Database">CMDB</abbr> data without needing to access raw tables<sup id="fnref3:8"><a class="footnote-ref" href="#fn:8">8</a></sup>.</li>
+<li><strong>Manual entry:</strong> Users can also manually add, edit, or delete CI records through forms in the UI<sup id="fnref5:6"><a class="footnote-ref" href="#fn:6">6</a></sup>-<sup id="fnref4:9"><a class="footnote-ref" href="#fn:9">9</a></sup>.</li>
+</ul>
+<h3 id="apis-restsoap"><strong>APIs (REST/SOAP)</strong></h3>
+<ul>
+<li><strong>REST API:</strong> ServiceNow exposes RESTful APIs that allow you to programmatically access, query, create, update, or delete <abbr title="Configuration Management Database">CMDB</abbr> data. You can use these APIs to integrate with external applications, automate data extraction, or synchronize with other systems<sup id="fnref2:10"><a class="footnote-ref" href="#fn:10">10</a></sup>.</li>
+<li>Example endpoint:<br />
+<code>https://.service-now.com/api/now/table/cmdb_ci_computer</code></li>
+<li><strong>Authentication:</strong> Access via API requires authentication, typically using OAuth tokens or basic authentication, and is subject to the permissions assigned to the user or application<sup id="fnref3:10"><a class="footnote-ref" href="#fn:10">10</a></sup>.</li>
+</ul>
+<h3 id="import-sets-and-integrations"><strong>Import Sets and Integrations</strong></h3>
+<ul>
+<li><strong>Import Sets:</strong> You can import data into the <abbr title="Configuration Management Database">CMDB</abbr> from external sources (like CSV, Excel, databases) using Import Sets. This allows bulk loading or updating of CI data, which is then mapped to the appropriate <abbr title="Configuration Management Database">CMDB</abbr> tables<sup id="fnref3:6"><a class="footnote-ref" href="#fn:6">6</a></sup>-<sup id="fnref2:9"><a class="footnote-ref" href="#fn:9">9</a></sup>.</li>
+<li><strong>Integrations:</strong> ServiceNow supports integration with other IT management tools (asset management, network monitoring, etc.) via connectors, scripts, or middleware, to automatically populate or update the <abbr title="Configuration Management Database">CMDB</abbr><sup id="fnref4:6"><a class="footnote-ref" href="#fn:6">6</a></sup>-<sup id="fnref3:9"><a class="footnote-ref" href="#fn:9">9</a></sup>.</li>
+</ul>
+<h3 id="discovery-tools"><strong>Discovery Tools</strong></h3>
+<ul>
+<li><strong>ServiceNow Discovery:</strong> Automated discovery tools scan your IT environment and populate the <abbr title="Configuration Management Database">CMDB</abbr> with up-to-date information about assets and their relationships<sup id="fnref2:6"><a class="footnote-ref" href="#fn:6">6</a></sup>-<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup>.</li>
+</ul>
+<h3 id="access-summary"><strong>Access summary</strong></h3>
+<p>You can access and interact with the ServiceNow <abbr title="Configuration Management Database">CMDB</abbr> through the web interface, REST/SOAP APIs, import sets, integrations with other systems, and automated discovery tools. The method you choose depends on whether you want to view, manually edit, automate, or integrate <abbr title="Configuration Management Database">CMDB</abbr> data with other platforms. Access is always governed by assigned roles and permissions within ServiceNow<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup>-<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup>-<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup>-<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup>.</p>
+<h2 id="connectnow">ConnectNow</h2>
+<p>In summary:
+ServiceNow ConnectNow is a built-in collaboration tool for real-time chat, messaging, and document sharing inside ServiceNow. It is not used for accessing or integrating with the <abbr title="Configuration Management Database">CMDB</abbr>; for that, you would use APIs or specialized connectors</p>
+<h2 id="api-and-integration-tools">API and integration tools</h2>
+<p>ServiceNow offers a wide range of APIs and integration tools to enable automation, data exchange, and system integration both inside and outside the ServiceNow platform. Here’s an overview of the main types of APIs available within ServiceNow, along with some specific examples<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">11</a></sup>-<sup id="fnref:12"><a class="footnote-ref" href="#fn:12">12</a></sup>-<sup id="fnref:14"><a class="footnote-ref" href="#fn:14">14</a></sup>-<sup id="fnref:15"><a class="footnote-ref" href="#fn:15">15</a></sup>:</p>
+<h3 id="web-services-apis"><strong>Web Services APIs</strong></h3>
+<ul>
+<li><strong>REST API:</strong><br />
+  The most widely used, allowing CRUD (Create, Read, Update, Delete) operations on ServiceNow tables, including the <abbr title="Configuration Management Database">CMDB</abbr>, incidents, users, etc.</li>
+<li>Example: <code>/api/now/table/cmdb_ci_computer</code></li>
+<li><strong>SOAP API:</strong><br />
+  Used for structured, secure integrations, especially with legacy systems.</li>
+<li><strong>Attachment API:</strong><br />
+  For uploading, downloading, and managing file attachments on records.</li>
+</ul>
+<h3 id="table-api"><strong>Table API</strong></h3>
+<ul>
+<li>Provides generic access to any ServiceNow table (including custom tables) for querying, creating, updating, or deleting records via REST or SOAP<sup id="fnref4:11"><a class="footnote-ref" href="#fn:11">11</a></sup>.</li>
+</ul>
+<h3 id="specialized-apis"><strong>Specialized APIs</strong></h3>
+<ul>
+<li><strong><abbr title="Configuration Management Database">CMDB</abbr> Instance API:</strong><br />
+  For advanced operations on configuration items, relationships, and metadata in the <abbr title="Configuration Management Database">CMDB</abbr>.</li>
+<li><strong>Import Set API:</strong><br />
+  For bulk importing data into staging tables before mapping to target tables.</li>
+<li><strong>Knowledge Management API:</strong><br />
+  For accessing and managing knowledge base articles.</li>
+<li><strong>Service Catalog API:</strong><br />
+  For interacting with catalog items, orders, and requests.</li>
+<li><strong>User and Group APIs:</strong><br />
+  For managing users, groups, and roles.</li>
+<li><strong>Attachment API:</strong><br />
+  For handling file attachments.</li>
+<li><strong>Batch API:</strong><br />
+  For executing multiple REST API calls in a single request.</li>
+</ul>
+<h3 id="integrationhub-and-etl"><strong>IntegrationHub and ETL</strong></h3>
+<ul>
+<li><strong>IntegrationHub:</strong><br />
+  Provides low-code connectors (“spokes”) for integrating with popular third-party applications and platforms.</li>
+<li><strong>IntegrationHub ETL:</strong><br />
+  For extracting, transforming, and loading (ETL) data into ServiceNow, especially for <abbr title="Configuration Management Database">CMDB</abbr> ingestion<sup id="fnref5:12"><a class="footnote-ref" href="#fn:12">12</a></sup>-<sup id="fnref5:14"><a class="footnote-ref" href="#fn:14">14</a></sup>-<sup id="fnref6:15"><a class="footnote-ref" href="#fn:15">15</a></sup>.</li>
+</ul>
+<h3 id="javascript-apis"><strong>JavaScript APIs</strong></h3>
+<ul>
+<li>For advanced scripting and automation within ServiceNow, including server-side and client-side scripting<sup id="fnref4:12"><a class="footnote-ref" href="#fn:12">12</a></sup>-<sup id="fnref4:14"><a class="footnote-ref" href="#fn:14">14</a></sup>-<sup id="fnref5:15"><a class="footnote-ref" href="#fn:15">15</a></sup>.</li>
+</ul>
+<h3 id="event-driven-and-custom-apis"><strong>Event-driven and Custom APIs</strong></h3>
+<ul>
+<li><strong>Scripted REST APIs:</strong><br />
+  Create custom REST endpoints for bespoke integrations.</li>
+<li><strong>Webhooks/Event-driven APIs:</strong><br />
+  Trigger ServiceNow actions based on external events (including support for Kafka and other event brokers)<sup id="fnref4:15"><a class="footnote-ref" href="#fn:15">15</a></sup>.</li>
+</ul>
+<h3 id="mid-server-apis"><strong>MID Server APIs</strong></h3>
+<ul>
+<li>Securely connect ServiceNow to on-premises systems behind firewalls for discovery, orchestration, and integrations<sup id="fnref3:12"><a class="footnote-ref" href="#fn:12">12</a></sup>-<sup id="fnref3:14"><a class="footnote-ref" href="#fn:14">14</a></sup>-<sup id="fnref3:15"><a class="footnote-ref" href="#fn:15">15</a></sup>.</li>
+</ul>
+<h3 id="reporting-and-analytics-apis"><strong>Reporting and Analytics APIs</strong></h3>
+<ul>
+<li>For extracting reports, analytics, and metric data from ServiceNow.</li>
+</ul>
+<h3 id="examples-of-specific-api-endpoints-not-exhaustive"><strong>Examples of Specific API Endpoints</strong> (not exhaustive)<sup id="fnref2:11"><a class="footnote-ref" href="#fn:11">11</a></sup>:</h3>
+<ul>
+<li><code>/api/now/table/{tableName}</code> (Table API)</li>
+<li><code>/api/now/cmdb/instance/{className}</code> (<abbr title="Configuration Management Database">CMDB</abbr> Instance API)</li>
+<li><code>/api/now/attachment</code> (Attachment API)</li>
+<li><code>/api/now/import/{importSetTable}</code> (Import Set API)</li>
+<li><code>/api/now/knowledge/{articleId}</code> (Knowledge Management)</li>
+<li><code>/api/now/service_catalog/{catalogId}</code> (Service Catalog API)</li>
+<li><code>/api/now/batch</code> (Batch API)</li>
+</ul>
+<h3 id="apis-summary"><strong>API's summary:</strong></h3>
+<p>ServiceNow provides REST and SOAP APIs for nearly every module, specialized APIs for key business functions (<abbr title="Configuration Management Database">CMDB</abbr>, Knowledge, Catalog, Users, etc.), low-code integration tools (IntegrationHub), and the ability to create custom APIs and webhooks. This comprehensive API suite allows you to automate, integrate, and extend ServiceNow to meet virtually any business need<sup id="fnref3:11"><a class="footnote-ref" href="#fn:11">11</a></sup>-<sup id="fnref2:12"><a class="footnote-ref" href="#fn:12">12</a></sup>-<sup id="fnref2:14"><a class="footnote-ref" href="#fn:14">14</a></sup>-<sup id="fnref2:15"><a class="footnote-ref" href="#fn:15">15</a></sup>.</p>
+<h2 id="servicenow-po-itsm-itam">ServiceNow PO ITSM + ITAM</h2>
+<p>A ServiceNow Product Owner specializing in IT Service Management (ITSM) and Asset Management (ITAM) is responsible for maximizing the value of these modules within the ServiceNow platform. Here’s what such a PO typically works on, based on industry standards and job descriptions<sup id="fnref:16"><a class="footnote-ref" href="#fn:16">16</a></sup>-<sup id="fnref:17"><a class="footnote-ref" href="#fn:17">17</a></sup>-<sup id="fnref:18"><a class="footnote-ref" href="#fn:18">18</a></sup>-<sup id="fnref:19"><a class="footnote-ref" href="#fn:19">19</a></sup>-<sup id="fnref:20"><a class="footnote-ref" href="#fn:20">20</a></sup>-<sup id="fnref:21"><a class="footnote-ref" href="#fn:21">21</a></sup>:</p>
+<h3 id="key-responsibilities"><strong>Key Responsibilities</strong></h3>
+<p><strong>1. Strategic Vision &amp; Roadmap</strong>
+- Define and maintain the product vision and roadmap for ITSM and ITAM modules, ensuring alignment with business objectives, compliance, and best practices<sup id="fnref2:16"><a class="footnote-ref" href="#fn:16">16</a></sup>-<sup id="fnref2:17"><a class="footnote-ref" href="#fn:17">17</a></sup>-<sup id="fnref2:20"><a class="footnote-ref" href="#fn:20">20</a></sup>.
+- Stay updated on ServiceNow’s new features and industry trends to leverage improvements for efficiency and user experience<sup id="fnref3:16"><a class="footnote-ref" href="#fn:16">16</a></sup>-<sup id="fnref3:20"><a class="footnote-ref" href="#fn:20">20</a></sup>.</p>
+<p><strong>2. Stakeholder Engagement</strong>
+- Act as the main liaison between business stakeholders, IT teams, asset managers, and ServiceNow platform teams<sup id="fnref3:17"><a class="footnote-ref" href="#fn:17">17</a></sup>-<sup id="fnref2:18"><a class="footnote-ref" href="#fn:18">18</a></sup>-<sup id="fnref4:20"><a class="footnote-ref" href="#fn:20">20</a></sup>.
+- Gather, clarify, and prioritize requirements from various business units and ensure they are reflected in the backlog<sup id="fnref3:18"><a class="footnote-ref" href="#fn:18">18</a></sup>-<sup id="fnref2:21"><a class="footnote-ref" href="#fn:21">21</a></sup>.</p>
+<p><strong>3. Backlog &amp; User Story Management</strong>
+- Translate business needs into clear user stories and acceptance criteria for ITSM and ITAM features<sup id="fnref4:18"><a class="footnote-ref" href="#fn:18">18</a></sup>-<sup id="fnref2:19"><a class="footnote-ref" href="#fn:19">19</a></sup>-<sup id="fnref3:21"><a class="footnote-ref" href="#fn:21">21</a></sup>.
+- Prioritize the backlog based on business value, compliance, risk, and user needs<sup id="fnref4:17"><a class="footnote-ref" href="#fn:17">17</a></sup>-<sup id="fnref5:18"><a class="footnote-ref" href="#fn:18">18</a></sup>.</p>
+<p><strong>4. Solution Design &amp; Implementation</strong>
+- Lead the configuration, customization, and integration of ITSM and ITAM modules, including hardware and software asset management, automation workflows, and process improvements<sup id="fnref4:16"><a class="footnote-ref" href="#fn:16">16</a></sup>-<sup id="fnref5:17"><a class="footnote-ref" href="#fn:17">17</a></sup>-<sup id="fnref5:20"><a class="footnote-ref" href="#fn:20">20</a></sup>.
+- Oversee the design and delivery of solutions, ensuring they meet requirements and quality standards<sup id="fnref6:20"><a class="footnote-ref" href="#fn:20">20</a></sup>.</p>
+<p><strong>5. Process Optimization &amp; Continuous Improvement</strong>
+- Analyze existing ITSM and asset management processes, identify gaps, and drive process re-engineering and automation<sup id="fnref6:17"><a class="footnote-ref" href="#fn:17">17</a></sup>-<sup id="fnref7:20"><a class="footnote-ref" href="#fn:20">20</a></sup>.
+- Monitor KPIs, user feedback, and analytics to propose and implement enhancements<sup id="fnref5:16"><a class="footnote-ref" href="#fn:16">16</a></sup>-<sup id="fnref7:17"><a class="footnote-ref" href="#fn:17">17</a></sup>.</p>
+<p><strong>6. Change Management &amp; Adoption</strong>
+- Develop and execute change management strategies to ensure smooth adoption of new features and processes<sup id="fnref6:16"><a class="footnote-ref" href="#fn:16">16</a></sup>.
+- Provide training, documentation, and support to end-users and stakeholders<sup id="fnref7:16"><a class="footnote-ref" href="#fn:16">16</a></sup>-<sup id="fnref6:18"><a class="footnote-ref" href="#fn:18">18</a></sup>.</p>
+<p><strong>7. Compliance, Risk, &amp; Reporting</strong>
+- Ensure that ITAM processes support regulatory, audit, and security requirements<sup id="fnref8:17"><a class="footnote-ref" href="#fn:17">17</a></sup>-<sup id="fnref8:20"><a class="footnote-ref" href="#fn:20">20</a></sup>.
+- Drive reporting and analytics to support decision-making and demonstrate value<sup id="fnref9:17"><a class="footnote-ref" href="#fn:17">17</a></sup>.</p>
+<p><strong>8. Agile Leadership</strong>
+- Participate in agile ceremonies (backlog refinement, sprint planning, demos, retrospectives)<sup id="fnref4:21"><a class="footnote-ref" href="#fn:21">21</a></sup>.
+- Collaborate closely with developers, architects, and business analysts to deliver high-quality solutions<sup id="fnref9:20"><a class="footnote-ref" href="#fn:20">20</a></sup>-<sup id="fnref5:21"><a class="footnote-ref" href="#fn:21">21</a></sup>.</p>
+<h3 id="typical-deliverables"><strong>Typical Deliverables</strong></h3>
+<ul>
+<li>Product roadmap and release plans for ITSM and ITAM</li>
+<li>Well-defined and prioritized backlog of user stories</li>
+<li>Configured and customized ServiceNow modules for ITSM and ITAM</li>
+<li>Process documentation and training materials</li>
+<li>Reports and dashboards for asset tracking, compliance, and service performance</li>
+</ul>
+<h3 id="po-itsm-itam-summary"><strong>PO ITSM + ITAM summary:</strong></h3>
+<p>A ServiceNow Product Owner focused on ITSM and Asset Management is responsible for translating business needs into actionable solutions, driving process optimization, ensuring compliance, and maximizing the value delivered by ServiceNow’s ITSM and ITAM modules—while continuously engaging with stakeholders and leading agile delivery teams<sup id="fnref8:16"><a class="footnote-ref" href="#fn:16">16</a></sup>-<sup id="fnref10:17"><a class="footnote-ref" href="#fn:17">17</a></sup>-<sup id="fnref7:18"><a class="footnote-ref" href="#fn:18">18</a></sup>-<sup id="fnref3:19"><a class="footnote-ref" href="#fn:19">19</a></sup>-<sup id="fnref10:20"><a class="footnote-ref" href="#fn:20">20</a></sup>-<sup id="fnref6:21"><a class="footnote-ref" href="#fn:21">21</a></sup>.</p>
+<h2 id="servicenow-cmdb-crud-api">ServiceNow <abbr title="Configuration Management Database">CMDB</abbr> CRUD API</h2>
+<p>The ServiceNow <abbr title="Configuration Management Database">CMDB</abbr> CRUD API allows you to <strong>Create, Read, Update, and Delete</strong> configuration item (CI) records in the <abbr title="Configuration Management Database">CMDB</abbr> using standard RESTful web service calls. Here’s how it works and what you need to know:</p>
+<h3 id="api-setup-authentication"><strong>API Setup &amp; Authentication</strong></h3>
+<ul>
+<li>First, enable the REST API in your ServiceNow instance and set up authentication (typically OAuth or basic auth).</li>
+<li>You’ll use access tokens or credentials to authenticate external applications or scripts that interact with the API<sup id="fnref4:22"><a class="footnote-ref" href="#fn:22">22</a></sup>.</li>
+</ul>
+<h3 id="endpoints-and-resources"><strong>Endpoints and Resources</strong></h3>
+<ul>
+<li>Each <abbr title="Configuration Management Database">CMDB</abbr> table (e.g., <code>cmdb_ci_computer</code> for computers, <code>cmdb_ci_network_adapter</code> for network adapters) has its own REST endpoint.</li>
+<li>Example endpoint to access computers in the <abbr title="Configuration Management Database">CMDB</abbr>:
+  <div class="highlight"><pre><span></span><code>https://.service-now.com/api/now/table/cmdb_ci_computer
+</code></pre></div></li>
+<li>The endpoint name matches the table name in ServiceNow<sup id="fnref3:22"><a class="footnote-ref" href="#fn:22">22</a></sup>.</li>
+</ul>
+<h3 id="crud-operations"><strong>CRUD Operations</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>HTTP Method</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create</td>
+<td>POST</td>
+<td>Add a new CI record</td>
+<td>Send a POST request with the CI data in the body<sup id="fnref6:23"><a class="footnote-ref" href="#fn:23">23</a></sup>-<sup id="fnref5:26"><a class="footnote-ref" href="#fn:26">26</a></sup></td>
+</tr>
+<tr>
+<td>Read</td>
+<td>GET</td>
+<td>Retrieve CI records (all or by sys_id)</td>
+<td>Send a GET request to the endpoint, optionally with query parameters<sup id="fnref5:23"><a class="footnote-ref" href="#fn:23">23</a></sup>-<sup id="fnref4:26"><a class="footnote-ref" href="#fn:26">26</a></sup></td>
+</tr>
+<tr>
+<td>Update</td>
+<td>PUT/PATCH</td>
+<td>Update an existing CI record</td>
+<td>Send a PUT or PATCH request with the sys_id and updated data<sup id="fnref4:23"><a class="footnote-ref" href="#fn:23">23</a></sup>-<sup id="fnref3:26"><a class="footnote-ref" href="#fn:26">26</a></sup></td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>DELETE</td>
+<td>Remove a CI record</td>
+<td>Send a DELETE request with the sys_id of the record<sup id="fnref3:23"><a class="footnote-ref" href="#fn:23">23</a></sup>-<sup id="fnref2:26"><a class="footnote-ref" href="#fn:26">26</a></sup></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><strong>Create a CI (POST):</strong>
+  <div class="highlight"><pre><span></span><code><span class="err">POST https://.service-now.com/api/now/table/cmdb_ci_computer</span>
+<span class="err">Body: { &quot;name&quot;: &quot;Server01&quot;, &quot;location&quot;: &quot;Data Center 1&quot; }</span>
+</code></pre></div></li>
+<li><strong>Read CIs (GET):</strong>
+  <div class="highlight"><pre><span></span><code><span class="err">GET https://.service-now.com/api/now/table/cmdb_ci_computer?sysparm_query=name=Server01</span>
+</code></pre></div></li>
+<li><strong>Update a CI (PATCH):</strong>
+  <div class="highlight"><pre><span></span><code><span class="err">PATCH https://.service-now.com/api/now/table/cmdb_ci_computer/</span>
+<span class="err">Body: { &quot;location&quot;: &quot;Data Center 2&quot; }</span>
+</code></pre></div></li>
+<li><strong>Delete a CI (DELETE):</strong>
+  <div class="highlight"><pre><span></span><code><span class="err">DELETE https://.service-now.com/api/now/table/cmdb_ci_computer/</span>
+</code></pre></div></li>
+</ul>
+<h3 id="permissions-and-roles"><strong>Permissions and Roles</strong></h3>
+<ul>
+<li>Only users with the appropriate roles (like <code>admin</code>, <code>web_service_admin</code>, or <code>rest_api_explorer</code>) can perform CRUD operations via the API<sup id="fnref2:23"><a class="footnote-ref" href="#fn:23">23</a></sup>.</li>
+<li>Access can be further restricted based on ServiceNow ACLs and table permissions.</li>
+</ul>
+<h3 id="use-cases"><strong>Use Cases</strong></h3>
+<ul>
+<li>Integrate external tools with ServiceNow <abbr title="Configuration Management Database">CMDB</abbr> for automated asset updates<sup id="fnref2:22"><a class="footnote-ref" href="#fn:22">22</a></sup>-<sup id="fnref:24"><a class="footnote-ref" href="#fn:24">24</a></sup>.</li>
+<li>Bulk import, update, or clean up CI data.</li>
+<li>Synchronize <abbr title="Configuration Management Database">CMDB</abbr> with other IT management or monitoring platforms.</li>
+</ul>
+<h3 id="servicenow-cmdb-crud-api-summary"><strong>ServiceNow <abbr title="Configuration Management Database">CMDB</abbr> CRUD API summary:</strong></h3>
+<p>The ServiceNow <abbr title="Configuration Management Database">CMDB</abbr> CRUD API is a powerful REST interface that lets you programmatically manage configuration items in your <abbr title="Configuration Management Database">CMDB</abbr>. You can create, read, update, and delete CIs using standard HTTP methods and endpoints mapped to <abbr title="Configuration Management Database">CMDB</abbr> tables, provided you have the right permissions and authentication<sup id="fnref:22"><a class="footnote-ref" href="#fn:22">22</a></sup>-<sup id="fnref:23"><a class="footnote-ref" href="#fn:23">23</a></sup>-<sup id="fnref:26"><a class="footnote-ref" href="#fn:26">26</a></sup>.</p>
+<p>Certainly! Here’s a summary of each key ServiceNow <abbr title="Configuration Management Database">CMDB</abbr> automation component, with the main ServiceNow features or modules used for each:</p>
+<h2 id="summary-of-servicenow-automation-components">Summary of ServiceNow Automation components</h2>
+<h3 id="automated-ci-classification"><strong>Automated CI Classification</strong></h3>
+<p><strong>Features in use:</strong>
+- <strong>Discovery</strong> (automatically identifies and classifies CIs)
+- <strong>Identification and Reconciliation Engine (IRE)</strong>
+- <strong><abbr title="Configuration Management Database">CMDB</abbr> Class Manager</strong>
+- <strong>Business Rules</strong> (for custom classification logic)</p>
+<h3 id="dynamic-grouping"><strong>Dynamic Grouping</strong></h3>
+<p><strong>Features in use:</strong>
+- <strong><abbr title="Configuration Management Database">CMDB</abbr> Query Builder</strong> (for building dynamic queries)
+- <strong>Dynamic CI Groups</strong> (auto-updating groups based on queries)
+- <strong>Tags</strong> (used as criteria for grouping)
+- <strong>Scheduled Jobs</strong> (for regular group updates)</p>
+<h3 id="tag-automation"><strong>Tag Automation</strong></h3>
+<p><strong>Features in use:</strong>
+- <strong>Business Rules</strong> (auto-assign tags based on CI attributes)
+- <strong>Flow Designer</strong> (for tag-based automation and workflow triggers)
+- <strong>Script Includes</strong> (for advanced tagging logic)
+- <strong>Cloud Discovery</strong> (imports cloud tags for automation)</p>
+<h3 id="discovery-integration"><strong>Discovery &amp; Integration</strong></h3>
+<p><strong>Features in use:</strong>
+- <strong>ServiceNow Discovery</strong> (automated asset and relationship population)
+- <strong>IntegrationHub</strong> (connects to external data sources)
+- <strong>Import Sets</strong> (bulk data import and mapping)
+- <strong>MID Server</strong> (secure on-premises discovery and integration)</p>
+<h3 id="reconciliation-data-integrity"><strong>Reconciliation &amp; Data Integrity</strong></h3>
+<p><strong>Features in use:</strong>
+- <strong>Identification and Reconciliation Engine (IRE)</strong>
+- <strong>Data Certification</strong> (scheduled reviews of CI data)
+- <strong>Duplicate CI Remediation</strong> (tools for merging/cleaning records)
+- <strong>Business Rules</strong> (enforce data integrity constraints)</p>
+<h3 id="workflow-triggers"><strong>Workflow Triggers</strong></h3>
+<p><strong>Features in use:</strong>
+- <strong>Flow Designer</strong> (triggers actions based on CI changes, tags, or group membership)
+- <strong>Business Rules</strong> (for real-time automation)
+- <strong>Notifications</strong> (automatic alerts based on events)
+- <strong>Event Management</strong> (for complex, multi-step workflow automation)</p>
+<hr />
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>https://dev.to/emily_assetloom/understanding-the-cmdb-in-servicenow-672&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>https://www.discoveryadmin.com/get-started/servicenow-discovery-design&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>https://www.servicenow.com/products/it-operations-management/what-is-service-mapping.html&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/doc-type/resource-center/white-paper/wp-itom-visibility-security-overview.pdf&#160;<a class="footnote-backref" href="#fnref:4" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:4" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>https://www.linkedin.com/pulse/understanding-servicenow-cmdb-comprehensive-guide-michael-moch&#160;<a class="footnote-backref" href="#fnref:5" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:5" title="Jump back to footnote 5 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>https://www.servicenow.com/community/developer-forum/what-are-th-various-ways-to-populate-data-in-cmdb/td-p/2502995&#160;<a class="footnote-backref" href="#fnref:6" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:6" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:6" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:6" title="Jump back to footnote 6 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>https://www.servicenow.com/community/cmdb-forum/cmdb-access-for-cmdb-read/m-p/240125&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 7 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p>https://www.servicenow.com/community/itom-forum/granting-users-read-only-access-to-cmdb/m-p/976204&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:8" title="Jump back to footnote 8 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:8" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p>https://www.youtube.com/watch?v=1G5vExjjmy0&#160;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:9" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:9" title="Jump back to footnote 9 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:9" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p>https://virima.com/blog/the-power-of-servicenow-cmdb-api-integrating-with-external-applications&#160;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 10 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:10" title="Jump back to footnote 10 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:10" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:11">
+<p>https://docs.celigo.com/hc/en-us/articles/12986904637467-Available-ServiceNow-APIs&#160;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:11" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:11" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:11" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:12">
+<p>https://www.servicenow.com/it/products/api-integrations.html&#160;<a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 12 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:12" title="Jump back to footnote 12 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:12" title="Jump back to footnote 12 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:12" title="Jump back to footnote 12 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:12" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:13">
+<p>https://www.linkedin.com/pulse/servicenow-integration-rest-soap-apis-streamlining-workflows-kaleem-harpc&#160;<a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:14">
+<p>https://www.servicenow.com/au/products/api-integrations.html&#160;<a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 14 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:14" title="Jump back to footnote 14 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:14" title="Jump back to footnote 14 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:14" title="Jump back to footnote 14 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:14" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+<li id="fn:15">
+<p>https://www.servicenow.com/products/api-integrations.html&#160;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 15 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:15" title="Jump back to footnote 15 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:15" title="Jump back to footnote 15 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:15" title="Jump back to footnote 15 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:15" title="Jump back to footnote 15 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:15" title="Jump back to footnote 15 in the text">&#8617;</a></p>
+</li>
+<li id="fn:16">
+<p>https://www.summitag.ch/current-vacancies/itsm/servicenow-product-owner&#160;<a class="footnote-backref" href="#fnref:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:16" title="Jump back to footnote 16 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:16" title="Jump back to footnote 16 in the text">&#8617;</a></p>
+</li>
+<li id="fn:17">
+<p>https://www.talentis.global/job/director-it-asset-management-product-owner-servicenow/&#160;<a class="footnote-backref" href="#fnref:17" title="Jump back to footnote 17 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:17" title="Jump back to footnote 17 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:17" title="Jump back to footnote 17 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:17" title="Jump back to footnote 17 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:17" title="Jump back to footnote 17 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:17" title="Jump back to footnote 17 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:17" title="Jump back to footnote 17 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:17" title="Jump back to footnote 17 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:17" title="Jump back to footnote 17 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:17" title="Jump back to footnote 17 in the text">&#8617;</a></p>
+</li>
+<li id="fn:18">
+<p>https://www.indeed.com/viewjob?jk=935c4be11299a43b&#160;<a class="footnote-backref" href="#fnref:18" title="Jump back to footnote 18 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:18" title="Jump back to footnote 18 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:18" title="Jump back to footnote 18 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:18" title="Jump back to footnote 18 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:18" title="Jump back to footnote 18 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:18" title="Jump back to footnote 18 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:18" title="Jump back to footnote 18 in the text">&#8617;</a></p>
+</li>
+<li id="fn:19">
+<p>https://www.softwareverdict.co/it-service-management-itsm-product-owner/&#160;<a class="footnote-backref" href="#fnref:19" title="Jump back to footnote 19 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:19" title="Jump back to footnote 19 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:19" title="Jump back to footnote 19 in the text">&#8617;</a></p>
+</li>
+<li id="fn:20">
+<p>https://www.linkedin.com/jobs/view/servicenow-technical-product-owner-it-asset-management-itam-automations-and-app-engine-at-worley-4190998034&#160;<a class="footnote-backref" href="#fnref:20" title="Jump back to footnote 20 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:20" title="Jump back to footnote 20 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:20" title="Jump back to footnote 20 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:20" title="Jump back to footnote 20 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:20" title="Jump back to footnote 20 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:20" title="Jump back to footnote 20 in the text">&#8617;</a><a class="footnote-backref" href="#fnref7:20" title="Jump back to footnote 20 in the text">&#8617;</a><a class="footnote-backref" href="#fnref8:20" title="Jump back to footnote 20 in the text">&#8617;</a><a class="footnote-backref" href="#fnref9:20" title="Jump back to footnote 20 in the text">&#8617;</a><a class="footnote-backref" href="#fnref10:20" title="Jump back to footnote 20 in the text">&#8617;</a></p>
+</li>
+<li id="fn:21">
+<p>https://www.tealhq.com/job/itsm-service-now-product-owner_75a72738-3bd2-4776-81c7-39aee1c47385&#160;<a class="footnote-backref" href="#fnref:21" title="Jump back to footnote 21 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:21" title="Jump back to footnote 21 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:21" title="Jump back to footnote 21 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:21" title="Jump back to footnote 21 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:21" title="Jump back to footnote 21 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:21" title="Jump back to footnote 21 in the text">&#8617;</a></p>
+</li>
+<li id="fn:22">
+<p>https://virima.com/blog/the-power-of-servicenow-cmdb-api-integrating-with-external-applications&#160;<a class="footnote-backref" href="#fnref:22" title="Jump back to footnote 22 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:22" title="Jump back to footnote 22 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:22" title="Jump back to footnote 22 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:22" title="Jump back to footnote 22 in the text">&#8617;</a></p>
+</li>
+<li id="fn:23">
+<p>https://hevodata.com/learn/servicenow-rest-apis/&#160;<a class="footnote-backref" href="#fnref:23" title="Jump back to footnote 23 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:23" title="Jump back to footnote 23 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:23" title="Jump back to footnote 23 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:23" title="Jump back to footnote 23 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:23" title="Jump back to footnote 23 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:23" title="Jump back to footnote 23 in the text">&#8617;</a></p>
+</li>
+<li id="fn:24">
+<p>https://www.youtube.com/watch?v=_cdIsZGmq08&#160;<a class="footnote-backref" href="#fnref:24" title="Jump back to footnote 24 in the text">&#8617;</a></p>
+</li>
+<li id="fn:25">
+<p>https://www.servicenow.com/community/cmdb-articles/new-data-model-in-cmdb-for-apis/ta-p/2688843&#160;<a class="footnote-backref" href="#fnref:25" title="Jump back to footnote 25 in the text">&#8617;</a></p>
+</li>
+<li id="fn:26">
+<p>https://zuplo.com/blog/2025/04/03/servicenow-api&#160;<a class="footnote-backref" href="#fnref:26" title="Jump back to footnote 26 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:26" title="Jump back to footnote 26 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:26" title="Jump back to footnote 26 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:26" title="Jump back to footnote 26 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:26" title="Jump back to footnote 26 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "content.code.copy", "search.suggest"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

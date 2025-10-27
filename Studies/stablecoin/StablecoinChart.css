@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffffff;
+  color: #212121;
+}
+
+.prediction-chart-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 150, 36, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 150, 36, 0.3);
+}
+
+.prediction-chart-container h2 {
+  text-align: center;
+  color: #009624;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.control-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 150, 36, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.ticker-control {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  color: #212121;
+}
+
+.ticker-control label {
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  flex: 1;
+}
+
+.toggle-checkbox {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+  accent-color: #009624;
+}
+
+.scenario-slider {
+  flex: 2;
+  cursor: pointer;
+  -webkit-appearance: none;
+  height: 8px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #ef4444, #3b82f6, #22c55e);
+  outline: none;
+  transition: opacity 0.3s;
+}
+
+.scenario-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #009624;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 6px #009624aa;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scenario-slider::-webkit-slider-thumb:hover {
+  background-color: #00c853;
+  box-shadow: 0 0 12px #00c853cc;
+}
+
+/* Firefox */
+.scenario-slider::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #009624;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 6px #009624aa;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scenario-slider::-moz-range-thumb:hover {
+  background-color: #00c853;
+  box-shadow: 0 0 12px #00c853cc;
+}
+
+.scenario-label {
+  font-weight: 600;
+  color: #009624;
+  min-width: 55px;
+  text-align: center;
+  user-select: none;
+}
+
+.chart-container {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(0, 150, 36, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 150, 36, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.info-panel {
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 150, 36, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 150, 36, 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.info-panel h3 {
+  color: #009624;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.insights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.insight-card {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid rgba(0, 150, 36, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 150, 36, 0.10);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: transform 0.2s ease;
+}
+
+.insight-card:hover {
+  transform: translateY(-6px);
+}
+
+.insight-card h4 {
+  color: #00C853;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.insight-card p {
+  color: #212121;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Tooltip styles for Chart.js */
+.chartjs-tooltip {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 16px rgba(0, 150, 36, 0.15) !important;
+  color: #212121 !important;
+  font-weight: 600 !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 8px 12px !important;
+  pointer-events: none !important;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .prediction-chart-container {
+    padding: 16px;
+    margin: 24px auto;
+  }
+
+  .prediction-chart-container h2 {
+    font-size: 2rem;
+  }
+
+  .control-panel {
+    padding: 16px;
+  }
+
+  .ticker-control {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .insights {
+    grid-template-columns: 1fr;
+  }
+
+  .scenario-label {
+    min-width: auto;
+  }
+}

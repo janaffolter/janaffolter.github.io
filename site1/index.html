@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AVRA Mykonos, taverne grecque à Bournens VD : mezze authentiques, poissons frais et recettes traditionnelles grecques dans un cadre chaleureux.">
+  <meta name="theme-color" content="#0d5eaf">
+  <title>AVRA Mykonos | Taverne grecque à Bournens VD</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "AVRA Mykonos",
+    "servesCuisine": "Grecque",
+    "priceRange": "CHF 30-50",
+    "telephone": "+41782418474",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Place du Collège 2",
+      "postalCode": "1035",
+      "addressLocality": "Bournens",
+      "addressRegion": "Vaud",
+      "addressCountry": "CH"
+    },
+    "openingHoursSpecification": [
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"12:00","closes":"15:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"19:00","closes":"23:30"}
+    ],
+    "sameAs": [
+      "https://www.facebook.com/p/Avra-Mykonos-61555550109667/",
+      "https://www.instagram.com/mykonosavra/"
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bleu-drapeau:#0d5eaf;
+      --bleu-egee:#0a4a8a;
+      --bleu-cyclade:#4d9fd6;
+      --bleu-clair:#eaf3fb;
+      --blanc-chaux:#ffffff;
+      --sable:#f6f4ee;
+      --terracotta:#c8622d;
+      --encre:#1c2b38;
+      --ligne:#dfe8f0;
+      --ombre:0 16px 36px rgba(13,58,94,.14);
+      --rayon:16px;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--encre); background:var(--blanc-chaux); font-family:Georgia,'Times New Roman',serif; line-height:1.7; }
+    a { color:inherit; }
+    img { display:block; max-width:100%; }
+    section { scroll-margin-top:6.5rem; }
+    .container { width:min(1120px,calc(100% - 2rem)); margin-inline:auto; }
+    .skip-link { position:absolute; top:-4rem; left:1rem; z-index:100; padding:.7rem 1rem; background:var(--blanc-chaux); color:var(--bleu-egee); font-weight:700; border-radius:0 0 8px 8px; }
+    .skip-link:focus { top:0; }
+    :focus-visible { outline:3px solid var(--terracotta); outline-offset:3px; }
+
+    header { position:sticky; top:0; z-index:20; background:rgba(255,255,255,.96); backdrop-filter:blur(10px); border-bottom:2px solid var(--bleu-drapeau); }
+    .header-inner { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:1rem; padding-block:.6rem; }
+    .brand { text-decoration:none; }
+    .brand strong { display:block; color:var(--bleu-egee); font-size:1.4rem; letter-spacing:.03em; }
+    .brand span { display:block; font-family:Arial,sans-serif; color:#5c7186; font-size:.72rem; letter-spacing:.05em; text-transform:uppercase; }
+    nav { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:.1rem; font-family:Arial,sans-serif; }
+    nav a { padding:.45rem .58rem; border-radius:999px; color:var(--bleu-egee); font-size:.8rem; font-weight:700; text-decoration:none; }
+    nav a:hover { background:var(--bleu-clair); }
+
+    .hero { color:var(--blanc-chaux); background:linear-gradient(180deg,rgba(10,45,80,.87),rgba(13,58,94,.74)),url('https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/3be7185d-4b32-5311-b0ec-5c58be36479d/abdd9300-450e-5ac1-8d62-d59e6323f431.jpg') center/cover; padding:6rem 0 5rem; text-align:center; }
+    .hero-content { max-width:760px; margin-inline:auto; }
+    .eyebrow { display:inline-block; margin-bottom:1.1rem; padding:.35rem .8rem; border:1px solid rgba(255,255,255,.65); border-radius:999px; font-family:Arial,sans-serif; font-size:.76rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
+    h1,h2,h3 { margin-top:0; font-family:Georgia,'Times New Roman',serif; }
+    h1 { margin-bottom:1.1rem; font-size:clamp(2.3rem,7vw,4.4rem); line-height:1.08; font-style:italic; }
+    .hero p { max-width:620px; margin:0 auto 2rem; font-size:1.15rem; }
+    .btn { display:inline-block; border:2px solid var(--terracotta); border-radius:999px; padding:.8rem 1.3rem; background:var(--terracotta); color:var(--blanc-chaux); font-family:Arial,sans-serif; font-weight:700; text-decoration:none; transition:transform .2s ease,background .2s ease; }
+    .btn:hover { background:#a34c1f; border-color:#a34c1f; transform:translateY(-2px); }
+    .btn-outline { background:transparent; color:var(--blanc-chaux); border-color:var(--blanc-chaux); }
+    .btn-outline:hover { background:rgba(255,255,255,.15); }
+    .btn-outline-blue { background:transparent; color:var(--bleu-egee); border-color:var(--bleu-egee); }
+    .btn-outline-blue:hover { background:var(--bleu-clair); }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:.7rem; justify-content:center; }
+
+    .section { padding:4.5rem 0; }
+    .section-alt { background:var(--bleu-clair); }
+    .section-sable { background:var(--sable); }
+    .heading { max-width:740px; margin:0 auto 2.2rem; text-align:center; }
+    .heading h2 { margin-bottom:.6rem; color:var(--bleu-egee); font-size:clamp(2rem,5vw,3rem); font-style:italic; }
+    .heading p { margin:0; font-family:Arial,sans-serif; color:#4f6478; }
+
+    .intro-grid { display:grid; gap:1.3rem; align-items:center; }
+    .card { padding:1.6rem; border-radius:var(--rayon); background:var(--blanc-chaux); box-shadow:var(--ombre); border-top:4px solid var(--bleu-drapeau); }
+    .card p:last-child { margin-bottom:0; }
+    .values { display:grid; gap:.85rem; font-family:Arial,sans-serif; }
+    .value { padding:1rem 1.1rem; border-left:4px solid var(--bleu-drapeau); border-radius:0 10px 10px 0; background:var(--blanc-chaux); box-shadow:0 6px 16px rgba(13,58,94,.08); }
+    .value strong { display:block; margin-bottom:.15rem; color:var(--bleu-egee); font-family:Georgia,serif; font-size:1.05rem; }
+
+    .menu-grid { display:grid; gap:1.1rem; grid-template-columns:1fr; }
+    .plat { border-radius:var(--rayon); background:var(--blanc-chaux); box-shadow:var(--ombre); overflow:hidden; }
+    .plat img { width:100%; aspect-ratio:4/3; object-fit:cover; }
+    .plat-body { padding:1.3rem 1.4rem 1.5rem; border-top:4px solid var(--terracotta); }
+    .plat h3 { margin-bottom:.35rem; color:var(--bleu-egee); font-size:1.4rem; }
+    .plat .prix { display:inline-block; margin-bottom:.6rem; font-family:Arial,sans-serif; font-weight:700; color:var(--terracotta); }
+    .plat p.desc { margin:0; font-family:Arial,sans-serif; font-size:.95rem; }
+
+    .avis-grid { display:grid; gap:1.1rem; grid-template-columns:1fr; }
+    .avis { padding:1.5rem; border-radius:var(--rayon); background:var(--blanc-chaux); box-shadow:var(--ombre); border-left:4px solid var(--bleu-drapeau); }
+    .avis p { margin:0 0 .8rem; font-style:italic; }
+    .avis cite { display:block; font-family:Arial,sans-serif; font-style:normal; font-size:.85rem; color:#4f6478; }
+
+    .gallery { display:grid; gap:1rem; grid-template-columns:1fr; }
+    figure { margin:0; overflow:hidden; border-radius:14px; background:var(--blanc-chaux); box-shadow:var(--ombre); transition:transform .25s ease,box-shadow .25s ease; border:1px solid var(--ligne); }
+    figure:hover { transform:translateY(-5px); box-shadow:0 20px 40px rgba(13,58,94,.22); }
+    figure img { width:100%; aspect-ratio:4/3; object-fit:cover; transition:transform .35s ease; }
+    figure:hover img { transform:scale(1.06); }
+    figcaption { padding:.75rem 1rem; font-family:Arial,sans-serif; color:var(--bleu-egee); font-weight:700; font-size:.9rem; }
+
+    .location-grid { display:grid; gap:1.3rem; }
+    address { margin:0; font-style:normal; }
+    .map { min-height:390px; overflow:hidden; border-radius:var(--rayon); box-shadow:var(--ombre); border:3px solid var(--bleu-drapeau); }
+    .map iframe { display:block; width:100%; min-height:390px; border:0; }
+
+    .contact { text-align:center; }
+    .phone,.email { display:inline-block; margin:.2rem 0; color:var(--bleu-egee); font-weight:700; text-decoration:none; font-family:Arial,sans-serif; }
+    .phone { font-size:clamp(1.5rem,5vw,2.1rem); }
+    .email:hover,.phone:hover { color:var(--terracotta); }
+    .contact-actions { display:flex; flex-wrap:wrap; justify-content:center; gap:.7rem; margin-top:1.3rem; }
+
+    .horaires { max-width:560px; margin:auto; padding:1.2rem; border-radius:12px; background:var(--bleu-clair); text-align:left; font-family:Arial,sans-serif; }
+    .horaires table { width:100%; border-collapse:collapse; }
+    .horaires th,.horaires td { padding:.62rem 0; border-bottom:1px solid rgba(13,58,94,.14); vertical-align:top; }
+    .horaires tr:last-child th,.horaires tr:last-child td { border-bottom:0; }
+    .horaires th { color:var(--bleu-egee); text-align:left; font-weight:700; }
+    .horaires td { text-align:right; }
+    .horaires-note { margin:.9rem 0 0; color:#4f6478; font-size:.85rem; font-style:italic; }
+
+    footer { padding:2.5rem 1rem 2rem; background:var(--bleu-egee); color:#eaf3fb; text-align:center; font-family:Arial,sans-serif; }
+    footer p { margin:.35rem 0; }
+    footer strong { font-family:Georgia,serif; color:var(--blanc-chaux); font-size:1.25rem; }
+    .social-links { display:flex; justify-content:center; gap:.7rem; margin:1.1rem 0 .3rem; }
+    .social-links a { display:inline-flex; align-items:center; gap:.45rem; padding:.55rem 1rem; border:1px solid rgba(255,255,255,.4); border-radius:999px; color:#eaf3fb; text-decoration:none; font-weight:700; font-size:.85rem; transition:background .2s ease,border-color .2s ease; }
+    .social-links a:hover { background:rgba(255,255,255,.14); border-color:var(--blanc-chaux); }
+    .social-links svg { width:18px; height:18px; fill:currentColor; }
+    .mobile-call { display:none; }
+
+    @media (min-width:640px) { .menu-grid { grid-template-columns:repeat(2,1fr); } .gallery { grid-template-columns:repeat(2,1fr); } .avis-grid { grid-template-columns:repeat(2,1fr); } }
+    @media (min-width:860px) { .intro-grid { grid-template-columns:1.25fr .95fr; } .location-grid { grid-template-columns:.8fr 1.2fr; align-items:stretch; } .gallery { grid-template-columns:repeat(3,1fr); } .menu-grid { grid-template-columns:repeat(3,1fr); } .location-grid .card { display:flex; flex-direction:column; justify-content:center; } }
+    @media (max-width:639px) { body { padding-bottom:4.7rem; } .mobile-call { display:flex; position:fixed; right:0; bottom:0; left:0; z-index:30; align-items:center; justify-content:center; min-height:4.35rem; background:var(--bleu-egee); box-shadow:0 -6px 18px rgba(13,58,94,.25); color:var(--blanc-chaux); font-family:Arial,sans-serif; font-weight:700; text-decoration:none; } .mobile-call span { padding:.68rem 1.1rem; border-radius:999px; background:var(--terracotta); } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu principal</a>
+  <header>
+    <div class="container header-inner">
+      <a class="brand" href="#accueil" aria-label="Retour à l'accueil AVRA Mykonos"><strong>AVRA Mykonos</strong><span>Taverne grecque – Bournens, Vaud</span></a>
+      <nav aria-label="Navigation principale"><a href="#accueil">Accueil</a><a href="#histoire">Notre histoire</a><a href="#carte">La carte</a><a href="#galerie">Galerie</a><a href="#avis">Avis</a><a href="#localisation">Localisation</a><a href="#contact">Contact</a><a href="#horaires">Horaires</a></nav>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section id="accueil" class="hero">
+      <div class="container hero-content">
+        <span class="eyebrow">Cuisine grecque authentique</span>
+        <h1>La Grèce dans l'assiette, l'hospitalité au cœur.</h1>
+        <p>AVRA Mykonos vous invite à découvrir l'authenticité de la cuisine grecque dans un cadre élégant et chaleureux, au cœur de Bournens, en Suisse.</p>
+        <div class="hero-actions"><a class="btn" href="tel:+41782418474">Réserver par téléphone</a><a class="btn btn-outline" href="#carte">Découvrir la carte</a></div>
+      </div>
+    </section>
+
+    <section id="histoire" class="section">
+      <div class="container">
+        <div class="heading"><h2>Un voyage culinaire en Grèce</h2><p>Des produits frais, des recettes traditionnelles et une ambiance conviviale, inspirés par l'île de Mykonos.</p></div>
+        <div class="intro-grid">
+          <article class="card">
+            <p>Inspiré par l'île emblématique de Mykonos, notre restaurant propose une expérience culinaire raffinée, mettant à l'honneur des produits frais, des poissons du jour, de l'huile d'olive extra vierge et des recettes traditionnelles grecques revisitées avec finesse.</p>
+            <p>Chez AVRA Mykonos, chaque plat raconte une histoire de Méditerranée, de soleil et de partage. Notre cuisine allie traditions grecques et créativité moderne pour une expérience gastronomique unique, idéale pour les dîners romantiques, les repas d'affaires ou les moments en famille.</p>
+          </article>
+          <div class="values">
+            <div class="value"><strong>Produits frais</strong>Poissons du jour et huile d'olive extra vierge sélectionnés avec soin.</div>
+            <div class="value"><strong>Tradition du mezze</strong>De nombreux petits plats à partager, à l'image des tavernes grecques.</div>
+            <div class="value"><strong>Accueil chaleureux</strong>Un service souriant et une ambiance conviviale, îles grecques à l'appui.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="carte" class="section section-alt">
+      <div class="container">
+        <div class="heading"><h2>Quelques spécialités de la carte</h2><p>44 plats à la carte : mezze, spécialités mijotées et douceurs grecques, à partager en toute convivialité.</p></div>
+        <div class="menu-grid">
+          <article class="plat">
+            <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/0aa33376-66f9-5a4e-9841-260f1945d748/2fdf7415-58ca-5674-a205-fcefffcee2a0.jpg" alt="Dolmadakia, feuilles de vigne farcies grecques" loading="lazy">
+            <div class="plat-body"><h3>Dolmadakia</h3><span class="prix">Feuilles de vigne farcies</span><p class="desc">Feuilles de vigne roulées à la main, farcies d'un riz tendre aux herbes fraîches, relevées d'une touche de citron et d'huile d'olive.</p></div>
+          </article>
+          <article class="plat">
+            <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/af200daf-363e-515c-9dd7-e26a77692d9a/1f7060a0-abed-5e19-b894-4ab223a37c8c.jpg" alt="Moussaka grecque gratinée aux aubergines et béchamel" loading="lazy">
+            <div class="plat-body"><h3>Moussaka</h3><span class="prix">21.50 CHF</span><p class="desc">Gratin d'aubergines, viande hachée de bœuf et béchamel, un classique réconfortant de la cuisine grecque.</p></div>
+          </article>
+          <article class="plat">
+            <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/5c7e12da-0bef-5bdf-88fd-1fd3eb2e47e8/da3cb0a0-e914-5168-9e04-725159c2ecd2.jpg" alt="Salade grecque traditionnelle avec feta et olives" loading="lazy">
+            <div class="plat-body"><h3>Salade Avra</h3><span class="prix">Salade grecque traditionnelle</span><p class="desc">Tomates, concombre, oignon rouge, olives et feta, assaisonnés d'huile d'olive extra vierge et d'origan.</p></div>
+          </article>
+          <article class="plat">
+            <img src="https://st.perplexity.ai/estatic/0b226c450798410ac541646c86ec31afd840e5beab817a5d84fa821e7db61981ec84c3b4a3f072a7a2e1899c9fb06c6e6fbec3d771b89e1a254114393c8d12be6bc165e49645997b171c5c8ab4952564e4595f0e6eaac5d858ce0ca028c9f0776e014f38892bc4b3e3b4d2f28c1de5ac" alt="Beignets de courgette et feta grecs" loading="lazy">
+            <div class="plat-body"><h3>Kolokythokeftedes</h3><span class="prix">Beignets de courgette</span><p class="desc">Beignets moelleux de courgette et feta, dorés et croustillants, servis avec une sauce au yaourt et à l'ail.</p></div>
+          </article>
+          <article class="plat">
+            <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/3f86c0a4-a480-586d-96b3-669b5418f285/75b11551-b522-5200-9381-f824a6daa502.jpg" alt="Baklava traditionnelle grecque au miel et fruits secs" loading="lazy">
+            <div class="plat-body"><h3>Baklava traditionnelle</h3><span class="prix">Dessert signature</span><p class="desc">Fines feuilles de pâte phyllo dorées, cœur de fruits secs torréfiés, nappées d'un sirop au miel et aux agrumes.</p></div>
+          </article>
+          <article class="plat">
+            <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/3be7185d-4b32-5311-b0ec-5c58be36479d/abdd9300-450e-5ac1-8d62-d59e6323f431.jpg" alt="Ambiance de taverne grecque en terrasse" loading="lazy">
+            <div class="plat-body"><h3>L'esprit taverne</h3><span class="prix">L'expérience AVRA</span><p class="desc">Une ambiance conviviale inspirée des tavernes grecques traditionnelles, à savourer en toute simplicité.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="galerie" class="section">
+      <div class="container">
+        <div class="heading"><h2>Ambiance et spécialités</h2><p>Un aperçu de nos plats et de l'esprit méditerranéen d'AVRA Mykonos.</p></div>
+        <div class="gallery">
+          <figure><img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/5a81bd0d-40bd-5d8f-b802-836a1185fbb0/c74d2889-1dbf-51b8-9353-f8e1f1f7b612.jpg" alt="Salade grecque fraîche avec feta et légumes" loading="lazy"><figcaption>Salade grecque</figcaption></figure>
+          <figure><img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/773d0873-329a-5ed6-9733-9a2fef068cc1/949b23ec-f599-5fdc-a86a-e7b7681036c8.jpg" alt="Dolmadakia servis en assiette" loading="lazy"><figcaption>Dolmadakia maison</figcaption></figure>
+          <figure><img src="https://st.perplexity.ai/estatic/0b226c450798410ac541646c86ec31afd840e5beab817a5d84fa821e7db61981ec84c3b4a3f072a7a2e1899c9fb06c6e7c75ac0daab8ff3959cd0dcb8a4141b5950a07c644df508c6357fc4675a38719d4c28a52836711f53cae999d3c426050d37bc6eaa9d81cb9956bd965f844b180" alt="Moussaka grecque gratinée" loading="lazy"><figcaption>Moussaka gratinée</figcaption></figure>
+          <figure><img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/1ec265d6-6031-5d04-98ed-1746024920d4/b9330f7e-d36c-526c-a94a-37744f5d75d4.jpg" alt="Beignets de courgette grecs dorés" loading="lazy"><figcaption>Beignets de courgette</figcaption></figure>
+          <figure><img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/35c873e9-87be-530d-8734-a02049c8f3f7/f0f29f44-6cad-5d38-aa01-29a3f73a2ea9.jpg" alt="Baklava traditionnelle grecque au sirop de miel" loading="lazy"><figcaption>Baklava au miel</figcaption></figure>
+          <figure><img src="https://st.perplexity.ai/estatic/0b226c450798410ac541646c86ec31afd840e5beab817a5d84fa821e7db61981ec84c3b4a3f072a7a2e1899c9fb06c6edb544c6c4298d63dfe4853e26064a36f22e589552ba75474283654eef8c6820a333c8579632832bf01dfd77d2cd3aa3959907cb62944cd4d4e688fa92811f817" alt="Terrasse d'une taverne grecque traditionnelle" loading="lazy"><figcaption>Ambiance taverne</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="avis" class="section section-alt">
+      <div class="container">
+        <div class="heading"><h2>Ce qu'en disent nos clients</h2><p>Noté 4.9 sur Google et 4.5 sur Tripadvisor, avec 6 avis vérifiés.</p></div>
+        <div class="avis-grid">
+          <article class="avis"><p>« En franchissant la porte, vous vous retrouvez immédiatement transporté dans les îles grecques. Les plats sont riches de saveurs, délicieusement parfumés. Une super adresse ! »</p><cite>Emma M. — Tripadvisor</cite></article>
+          <article class="avis"><p>« Simplement le meilleur restaurant grec que je connaisse en Suisse, et très certainement l'un des plus abordables ! »</p><cite>Erwan M. — Tripadvisor</cite></article>
+          <article class="avis"><p>« Menu intéressant et varié, nourriture délicieuse, personnel gentil et location très belle ! »</p><cite>Riccardo B. — Tripadvisor</cite></article>
+          <article class="avis"><p>« Une cuisine grecque authentique, raffinée et pleine de fraîcheur. Service attentionné et ambiance élégante. »</p><cite>Sophie — Genève</cite></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="localisation" class="section">
+      <div class="container">
+        <div class="heading"><h2>Où nous trouver</h2><p>Le restaurant est situé à Bournens, dans le canton de Vaud. Vous êtes les bienvenus pour venir découvrir notre cuisine sur place.</p></div>
+        <div class="location-grid">
+          <article class="card">
+            <address><strong>AVRA Mykonos</strong><br>Place du Collège 2<br>1035 Bournens, Vaud, Suisse</address>
+            <p style="margin-top:1rem">Une réservation est recommandée, notamment les soirs de week-end. Appelez-nous pour organiser votre venue.</p>
+          </article>
+          <div class="map"><iframe title="Carte de localisation d'AVRA Mykonos à Bournens" width="100%" height="450" style="border:0;" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" src="https://www.google.com/maps?q=Place+du+Coll%C3%A8ge+2,+1035+Bournens,+Vaud,+Suisse&output=embed"></iframe></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-sable">
+      <div class="container">
+        <article class="card contact">
+          <h2 style="color:var(--bleu-egee)">Contact</h2>
+          <p style="font-family:Arial,sans-serif">Pour une réservation ou toute question, appelez-nous directement ou passez nous voir pour découvrir notre carte en vrai.</p>
+          <a class="phone" href="tel:+41782418474" aria-label="Appeler AVRA Mykonos au 078 241 84 74">+41 78 241 84 74</a>
+          <p style="font-family:Arial,sans-serif"><strong>AVRA Mykonos</strong><br>Place du Collège 2, 1035 Bournens, Vaud, Suisse</p>
+          <div class="contact-actions"><a class="btn" href="tel:+41782418474">Appeler maintenant</a><a class="btn btn-outline-blue" href="https://www.google.com/maps/search/?api=1&query=AVRA+Mykonos+Place+du+Coll%C3%A8ge+2+1035+Bournens" target="_blank" rel="noopener">Voir les avis Google</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="horaires" class="section">
+      <div class="container">
+        <article class="card" style="max-width:640px;margin:auto;text-align:center">
+          <h2 style="color:var(--bleu-egee)">Horaires d'ouverture</h2>
+          <p style="font-family:Arial,sans-serif;color:#4f6478;max-width:480px;margin:.5rem auto 1.5rem">Une réservation est conseillée, en particulier le week-end.</p>
+          <div class="horaires">
+            <table>
+              <tbody>
+                <tr><th scope="row">Mercredi – Dimanche</th><td>12:00 – 15:00<br>19:00 – 23:30</td></tr>
+                <tr><th scope="row">Lundi – Mardi</th><td>Fermé</td></tr>
+              </tbody>
+            </table>
+            <p class="horaires-note">Les horaires peuvent varier lors de jours fériés ; appelez-nous pour confirmer votre réservation.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <a class="mobile-call" href="tel:+41782418474" aria-label="Appeler AVRA Mykonos"><span>Réserver : +41 78 241 84 74</span></a>
+  <footer>
+    <p><strong>AVRA Mykonos</strong></p>
+    <p>Taverne grecque à Bournens, canton de Vaud, Suisse</p>
+    <div class="social-links">
+      <a href="https://www.facebook.com/p/Avra-Mykonos-61555550109667/" target="_blank" rel="noopener" aria-label="Page Facebook d'AVRA Mykonos, ouverture dans un nouvel onglet">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.58v1.9h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94z"/></svg>
+        Facebook
+      </a>
+      <a href="https://www.instagram.com/mykonosavra/" target="_blank" rel="noopener" aria-label="Page Instagram d'AVRA Mykonos, ouverture dans un nouvel onglet">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.06 1.97.24 2.43.42.53.2.98.48 1.4.9.42.42.7.87.9 1.4.18.46.36 1.26.42 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.06 1.17-.24 1.97-.42 2.43-.2.53-.48.98-.9 1.4-.42.42-.87.7-1.4.9-.46.18-1.26.36-2.43.42-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.06-1.97-.24-2.43-.42-.53-.2-.98-.48-1.4-.9-.42-.42-.7-.87-.9-1.4-.18-.46-.36-1.26-.42-2.43C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.06-1.17.24-1.97.42-2.43.2-.53.48-.98.9-1.4.42-.42.87-.7 1.4-.9.46-.18 1.26-.36 2.43-.42C8.42 2.21 8.8 2.2 12 2.2zm0 1.8c-3.14 0-3.5.01-4.73.07-.96.05-1.48.2-1.83.34-.46.18-.79.39-1.13.73-.34.34-.55.67-.73 1.13-.14.35-.29.87-.34 1.83C3.18 8.5 3.17 8.86 3.17 12s.01 3.5.07 4.73c.05.96.2 1.48.34 1.83.18.46.39.79.73 1.13.34.34.67.55 1.13.73.35.14.87.29 1.83.34 1.23.06 1.59.07 4.73.07s3.5-.01 4.73-.07c.96-.05 1.48-.2 1.83-.34.46-.18.79-.39 1.13-.73.34-.34.55-.67.73-1.13.14-.35.29-.87.34-1.83.06-1.23.07-1.59.07-4.73s-.01-3.5-.07-4.73c-.05-.96-.2-1.48-.34-1.83-.18-.46-.39-.79-.73-1.13a3.02 3.02 0 0 0-1.13-.73c-.35-.14-.87-.29-1.83-.34C15.5 4.01 15.14 4 12 4zm0 3.4a4.6 4.6 0 1 1 0 9.2 4.6 4.6 0 0 1 0-9.2zm0 1.8a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6zm5.85-3.6a1.08 1.08 0 1 1-2.16 0 1.08 1.08 0 0 1 2.16 0z"/></svg>
+        Instagram
+      </a>
+    </div>
+    <p>© 2026 AVRA Mykonos – Tous droits réservés</p>
+  </footer>
+</body>
+</html>

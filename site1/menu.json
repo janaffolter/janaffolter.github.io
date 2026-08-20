@@ -1,0 +1,91 @@
+{
+  "restaurant": {
+    "nom": "AVRA Mykonos",
+    "sous_titre": "Taverne grecque – Bournens, Vaud",
+    "devise": "CHF"
+  },
+  "categories": [
+    {
+      "id": "entrees",
+      "nom": "Entrées & Mezze",
+      "plats": [
+        {
+          "nom": "Dolmadakia",
+          "description": "Feuilles de vigne roulées à la main, farcies d'un riz tendre aux herbes fraîches, relevées d'une touche de citron et d'huile d'olive.",
+          "prix": null,
+          "prix_label": "Fait maison",
+          "image": "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/0aa33376-66f9-5a4e-9841-260f1945d748/2fdf7415-58ca-5674-a205-fcefffcee2a0.jpg",
+          "vegetarien": true
+        },
+        {
+          "nom": "Kolokythokeftedes",
+          "description": "Beignets moelleux de courgette et feta, dorés et croustillants, servis avec une sauce au yaourt et à l'ail.",
+          "prix": 14.5,
+          "prix_label": null,
+          "image": "https://st.perplexity.ai/estatic/0b226c450798410ac541646c86ec31afd840e5beab817a5d84fa821e7db61981ec84c3b4a3f072a7a2e1899c9fb06c6e6fbec3d771b89e1a254114393c8d12be6bc165e49645997b171c5c8ab4952564e4595f0e6eaac5d858ce0ca028c9f0776e014f38892bc4b3e3b4d2f28c1de5ac",
+          "vegetarien": true
+        },
+        {
+          "nom": "Taramosalata",
+          "description": "Une tarama authentique, à la texture généreuse et au goût de poisson affirmé, loin des versions industrielles.",
+          "prix": null,
+          "prix_label": "Spécialité maison",
+          "image": null,
+          "vegetarien": false
+        },
+        {
+          "nom": "Salade Avra",
+          "description": "Tomates, concombre, oignon rouge, olives et feta, assaisonnés d'huile d'olive extra vierge et d'origan.",
+          "prix": 16.0,
+          "prix_label": null,
+          "image": "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/5c7e12da-0bef-5bdf-88fd-1fd3eb2e47e8/da3cb0a0-e914-5168-9e04-725159c2ecd2.jpg",
+          "vegetarien": true
+        }
+      ]
+    },
+    {
+      "id": "plats",
+      "nom": "Plats principaux",
+      "plats": [
+        {
+          "nom": "Moussaka",
+          "description": "Gratin d'aubergines, viande hachée de bœuf et béchamel, un classique réconfortant de la cuisine grecque.",
+          "prix": 21.5,
+          "prix_label": null,
+          "image": "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/af200daf-363e-515c-9dd7-e26a77692d9a/1f7060a0-abed-5e19-b894-4ab223a37c8c.jpg",
+          "vegetarien": false
+        },
+        {
+          "nom": "Giaourtlou",
+          "description": "Pita, kebab de bœuf et agneau épicé, sauce tomate et yaourt : un mezze de viande hachée généreux et parfumé.",
+          "prix": 20.5,
+          "prix_label": null,
+          "image": null,
+          "vegetarien": false
+        },
+        {
+          "nom": "Spetsofai",
+          "description": "Saucisses de bœuf mijotées dans une sauce tomate épicée aux poivrons, pour les amateurs de saveurs relevées.",
+          "prix": 18.5,
+          "prix_label": null,
+          "image": null,
+          "vegetarien": false
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "nom": "Desserts",
+      "plats": [
+        {
+          "nom": "Baklava traditionnelle",
+          "description": "Fines feuilles de pâte phyllo dorées, cœur de fruits secs torréfiés, nappées d'un sirop au miel et aux agrumes.",
+          "prix": null,
+          "prix_label": "Dessert signature",
+          "image": "https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/3f86c0a4-a480-586d-96b3-669b5418f285/75b11551-b522-5200-9381-f824a6daa502.jpg",
+          "vegetarien": true
+        }
+      ]
+    }
+  ]
+}

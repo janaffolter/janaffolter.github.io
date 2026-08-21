@@ -1,10 +1,9 @@
 {
   "restaurant": {
     "nom": "Le Brûlot",
-    "sous_titre": "Restaurant traditionnel suisse au Tennis Club de Cossonay",
+    "sous_titre": "Restaurant traditionnel suisse – Cossonay, Vaud",
     "telephone_affiche": "021 861 15 41",
-    "telephone_lien": "tel:+41218611541",
-    "email": "brulot@bluewin.ch",
+    "telephone_lien": "+41218611541",
     "adresse": {
       "rue": "Chemin du 900ème 2",
       "npa": "1304",
@@ -12,24 +11,19 @@
       "canton": "Vaud",
       "pays": "Suisse"
     },
-    "google_maps_embed": "https://www.google.com/maps?q=Chemin+du+900%C3%A8me+2+1304+Cossonay-Ville+Suisse&output=embed",
+    "google_maps_embed": "https://www.google.com/maps?q=Chemin+du+900%C3%A8me+2,+1304+Cossonay-Ville,+Vaud,+Suisse&output=embed",
     "google_maps_avis": "https://www.google.com/maps/search/?api=1&query=Le+Brulot+Chemin+du+900%C3%A8me+2+1304+Cossonay-Ville",
     "facebook": null,
     "instagram": null
   },
   "images_accueil": {
-    "image_hero": "images/img_amb002.png",
-    "image_vignette_menu": "images/img_plat002.jpg",
-    "image_vignette_ambiance": "images/img_amb001.png"
+    "image_hero": "images/img_0001.jpg",
+    "image_vignette_menu": "images/img_0002.jpg",
+    "image_vignette_ambiance": "images/img_0003.jpg"
   },
   "horaires": [
-    { "jours": "Lundi", "creneaux": ["Fermé"] },
-    { "jours": "Mardi", "creneaux": ["10h00 – 15h00", "18h00 – 22h30"] },
-    { "jours": "Mercredi", "creneaux": ["10h00 – 15h00", "18h00 – 22h30"] },
-    { "jours": "Jeudi", "creneaux": ["10h00 – 15h00", "18h00 – 22h30"] },
-    { "jours": "Vendredi", "creneaux": ["10h00 – 15h00", "18h00 – 22h30"] },
-    { "jours": "Samedi", "creneaux": ["10h00 – 15h00", "18h00 – 22h30"] },
-    { "jours": "Dimanche", "creneaux": ["Fermé"] }
+    { "jours": "Mardi – Samedi", "creneaux": ["10:00 – 15:00", "18:00 – 22:30"] },
+    { "jours": "Dimanche – Lundi", "creneaux": ["Fermé"] }
   ],
-  "horaires_note": "Horaires à confirmer avec le restaurant : les sources en ligne ne mentionnent pas de fermetures annuelles précises pour l'année en cours (habituellement quelques semaines à Noël, à Pâques et en été). Réservation fortement conseillée au 021 861 15 41, en particulier le week-end."
+  "horaires_note": "Horaires à confirmer avec le restaurant : les sources en ligne ne mentionnent pas de fermetures annuelles précises. Réservation fortement conseillée au 021 861 15 41, en particulier le week-end."
 }

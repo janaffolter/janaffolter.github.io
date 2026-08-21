@@ -1,140 +1,175 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Le Brûlot — Restaurant traditionnel suisse à Cossonay</title>
-<meta name="description" content="Le Brûlot, restaurant traditionnel suisse à Cossonay-Ville, réputé pour ses filets de perches et ses sauces maison. Réservation au 021 861 15 41.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Le Brûlot, restaurant traditionnel suisse à Cossonay-Ville (VD) : filets de perches, sauces maison aux morilles et à la Brûlot, dans une ambiance conviviale et familiale.">
+<meta name="theme-color" content="#0d5eaf">
+<title>Le Brûlot — Restaurant traditionnel suisse à Cossonay VD</title>
 <link rel="stylesheet" href="styles.css">
-<script type="application/ld+json" id="ld-restaurant">{}</script>
+<script type="application/ld+json" id="ld-json-restaurant">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Le Brûlot",
+  "servesCuisine": "Cuisine suisse traditionnelle",
+  "priceRange": "CHF"
+}
+</script>
 </head>
 <body data-page="accueil">
-<a href="#contenu-principal" class="lien-skip">Aller au contenu principal</a>
 <div id="site-header-mount"></div>
 
-<main id="contenu-principal">
+<main id="contenu">
 
-  <section id="accueil" class="hero" aria-label="Section d'accueil">
-    <div class="hero-contenu">
-      <h2>Une cuisine suisse généreuse et authentique</h2>
-      <p>Filets de perches, sauces maison aux morilles et à la Brûlot, viandes tendres : découvrez une table conviviale au cœur de Cossonay-Ville.</p>
-      <div class="boutons-hero">
-        <a id="lien-appel-hero" href="#" class="btn btn-primaire" aria-label="Réserver par téléphone">Réserver par téléphone</a>
-        <a href="menu-page.html" class="btn btn-secondaire">Découvrir la carte</a>
+  <section id="accueil" class="hero">
+    <div class="container hero-content">
+      <span class="eyebrow">Cuisine suisse traditionnelle</span>
+      <h1>Une générosité toute suisse, au cœur de Cossonay.</h1>
+      <p>Le Brûlot vous invite à découvrir une cuisine traditionnelle suisse généreuse et sans artifice, dans un cadre convivial et familial, au sein du Tennis Club de Cossonay, dans le canton de Vaud.</p>
+      <div class="hero-actions">
+        <a class="btn" id="lien-appel-hero" href="tel:">Réserver par téléphone</a>
+        <a class="btn btn-outline" href="menu-page.html">Découvrir la carte</a>
       </div>
     </div>
   </section>
 
-  <section id="histoire" class="section-alt">
+  <section id="histoire" class="section">
     <div class="container">
-      <h2>Notre histoire</h2>
-      <div class="histoire-grille">
-        <div class="histoire-texte">
+      <div class="heading">
+        <h2>Une table fidèle à la tradition suisse</h2>
+        <p>Des produits frais, des recettes traditionnelles et un accueil familial, au cœur de Cossonay-Ville.</p>
+      </div>
+      <div class="intro-grid">
+        <article class="card">
           <p>Installé au sein du Tennis Club de Cossonay, Le Brûlot accueille ses hôtes depuis plus de quinze ans autour d'une cuisine suisse traditionnelle, généreuse et sans artifice. Aux fourneaux, le chef perpétue des recettes fidèles à l'esprit de la maison, tandis qu'en salle, l'accueil reste chaleureux et familial.</p>
           <p>Ici, pas de décor sophistiqué mais une vraie générosité dans l'assiette : les célèbres filets de perches, les sauces maison aux morilles ou à la Brûlot, et des viandes tendres servies en portions copieuses font la réputation de l'établissement loin à la ronde.</p>
-        </div>
-        <div class="points-cles">
-          <div class="point-cle">
-            <h3>Produits frais</h3>
-            <p>Des recettes traditionnelles préparées avec des produits frais et des sauces faites maison.</p>
+        </article>
+        <div class="values">
+          <div class="value">
+            <strong>Produits frais</strong>
+            Des recettes traditionnelles préparées avec des produits frais et des sauces faites maison.
           </div>
-          <div class="point-cle">
-            <h3>Tradition</h3>
-            <p>Une cuisine suisse authentique, fidèle aux classiques régionaux depuis de nombreuses années.</p>
+          <div class="value">
+            <strong>Tradition</strong>
+            Une cuisine suisse authentique, fidèle aux classiques régionaux depuis de nombreuses années.
           </div>
-          <div class="point-cle">
-            <h3>Accueil familial</h3>
-            <p>Une ambiance conviviale, portée par une équipe présente et impliquée en salle comme en cuisine.</p>
+          <div class="value">
+            <strong>Accueil familial</strong>
+            Une ambiance conviviale, portée par une équipe présente et impliquée en salle comme en cuisine.
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="decouvrir">
+  <section id="decouvrir" class="section section-alt">
     <div class="container">
-      <h2>Découvrir</h2>
-      <div class="vignettes">
-        <a class="vignette" href="menu-page.html" aria-label="Découvrir la carte du restaurant">
-          <img id="img-vignette-menu" src="" alt="Spécialités du Brûlot">
-          <span class="vignette-legende">Spécialités</span>
+      <div class="heading">
+        <h2>Découvrez Le Brûlot</h2>
+        <p>Deux univers à explorer : nos spécialités culinaires et l'ambiance chaleureuse de notre restaurant.</p>
+      </div>
+      <div class="teaser-grid">
+        <a class="teaser" href="menu-page.html">
+          <img id="img-vignette-menu" src="" alt="Aperçu de la carte Le Brûlot" loading="lazy">
+          <div class="teaser-body">
+            <span class="teaser-tag">Spécialités</span>
+            <h3>La carte</h3>
+            <p>Filets de perches, sauces maison et viandes généreuses, avec prix et descriptions détaillées.</p>
+            <span class="lien">Voir tous les plats
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 4.5 21 12l-7.5 7.5-1.4-1.4L17.2 13H3v-2h14.2l-5.1-5.1z"/></svg>
+            </span>
+          </div>
         </a>
-        <a class="vignette" href="ambiance-page.html" aria-label="Découvrir l'ambiance du restaurant">
-          <img id="img-vignette-ambiance" src="" alt="Ambiance du restaurant Le Brûlot">
-          <span class="vignette-legende">Ambiance</span>
+        <a class="teaser" href="ambiance-page.html">
+          <img id="img-vignette-ambiance" src="" alt="Aperçu de l'ambiance Le Brûlot" loading="lazy">
+          <div class="teaser-body">
+            <span class="teaser-tag">Ambiance</span>
+            <h3>Découvrir le lieu</h3>
+            <p>Salle conviviale et esprit familial : une immersion visuelle dans l'univers du Brûlot.</p>
+            <span class="lien">Voir les photos
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 4.5 21 12l-7.5 7.5-1.4-1.4L17.2 13H3v-2h14.2l-5.1-5.1z"/></svg>
+            </span>
+          </div>
         </a>
       </div>
     </div>
   </section>
 
-  <section id="avis" class="section-alt">
+  <section id="avis" class="section">
     <div class="container">
-      <h2>Avis clients</h2>
-      <p class="note-moyenne">4,5 / 5 sur Tripadvisor (132 avis) — 3ᵉ restaurant sur 9 à Cossonay</p>
-      <div class="avis-grille">
-        <div class="avis-carte">
-          <p class="texte-avis">« Magnifique soirée d'anniversaire ; grande table de 12 personnes, service sympathique et professionnel. Très grande générosité pour la cuisine, viande très tendre, sauces Brûlot et Morilles excellentes. »</p>
-          <span class="auteur">Carine P.</span>
-          <span class="avis-source">Avis Tripadvisor, novembre 2024</span>
-        </div>
-        <div class="avis-carte">
-          <p class="texte-avis">« Je vous recommande l'entrecôte, un beau morceau cuit comme vous l'aimez, accompagnée de la délicieuse sauce le Brûlot et d'une bonne ration de frites. Excellent, pas pour le régime, mais pour les papilles. »</p>
-          <span class="auteur">TRIPLEJ9</span>
-          <span class="avis-source">Avis Tripadvisor, février 2024</span>
-        </div>
-        <div class="avis-carte">
-          <p class="texte-avis">« Accueil et service très agréables. Une jolie carte des mets mais également des vins. Filets de perches juste un délice, tournedos sauce Brûlot divins avec des frites maison délicieuses. »</p>
-          <span class="auteur">Lolotte1106</span>
-          <span class="avis-source">Avis Tripadvisor, mai 2023</span>
-        </div>
-        <div class="avis-carte">
-          <p class="texte-avis">« Le SEUL endroit où le mot "morilles" est respecté ! Une quantité incroyable et une sauce délicieuse. Partout ailleurs, les morilles sont plutôt en décoration ! »</p>
-          <span class="auteur">Solenne P.</span>
-          <span class="avis-source">Avis Tripadvisor, février 2023</span>
+      <div class="heading">
+        <h2>Ce qu'en disent nos clients</h2>
+        <p>Noté 4,5 sur 5 sur Tripadvisor, avec plus de 130 avis — 3ᵉ restaurant sur 9 à Cossonay.</p>
+      </div>
+      <div class="avis-grid">
+        <article class="avis">
+          <p>« Magnifique soirée d'anniversaire ; grande table de 12 personnes, service sympathique et professionnel. Très grande générosité pour la cuisine, viande très tendre, sauces Brûlot et Morilles excellentes. »</p>
+          <cite>Carine P. — Tripadvisor</cite>
+        </article>
+        <article class="avis">
+          <p>« Je vous recommande l'entrecôte, un beau morceau cuit comme vous l'aimez, accompagnée de la délicieuse sauce le Brûlot et d'une bonne ration de frites. Excellent, pas pour le régime, mais pour les papilles. »</p>
+          <cite>TRIPLEJ9 — Tripadvisor</cite>
+        </article>
+        <article class="avis">
+          <p>« Accueil et service très agréables. Une jolie carte des mets mais également des vins. Filets de perches juste un délice, tournedos sauce Brûlot divins avec des frites maison délicieuses. »</p>
+          <cite>Lolotte1106 — Tripadvisor</cite>
+        </article>
+        <article class="avis">
+          <p>« Le SEUL endroit où le mot "morilles" est respecté ! Une quantité incroyable et une sauce délicieuse. Partout ailleurs, les morilles sont plutôt en décoration ! »</p>
+          <cite>Solenne P. — Tripadvisor</cite>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="localisation" class="section section-alt">
+    <div class="container">
+      <div class="heading">
+        <h2>Où nous trouver</h2>
+        <p>Le restaurant est situé à Cossonay-Ville, dans le canton de Vaud. Vous êtes les bienvenus pour venir découvrir notre cuisine sur place.</p>
+      </div>
+      <div class="location-grid">
+        <article class="card">
+          <address id="adresse-localisation"></address>
+          <p style="margin-top:1rem">Une réservation est recommandée, notamment les soirs de week-end. Appelez-nous pour organiser votre venue.</p>
+        </article>
+        <div class="map">
+          <iframe id="iframe-maps" title="Carte de localisation du Brûlot" width="100%" height="450" style="border:0" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" src=""></iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="localisation">
+  <section id="contact" class="section">
     <div class="container">
-      <h2>Où nous trouver</h2>
-      <div class="loc-grille">
-        <div class="carte-wrapper">
-          <iframe id="iframe-maps" src="" title="Carte de localisation du restaurant Le Brûlot" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <article class="card contact">
+        <h2 style="color:var(--bleu-egee)">Contact</h2>
+        <p style="font-family:Arial,sans-serif">Pour une réservation ou toute question, appelez-nous directement ou passez nous voir pour découvrir notre carte en vrai.</p>
+        <a class="phone" id="lien-appel-contact" href="tel:" aria-label="Appeler le restaurant">Chargement…</a>
+        <address id="adresse-contact" style="font-family:Arial,sans-serif"></address>
+        <div class="contact-actions">
+          <a class="btn" id="btn-appeler" href="tel:">Appeler maintenant</a>
+          <a class="btn btn-outline-blue" id="lien-avis-google" href="" target="_blank" rel="noopener">Voir les avis Google</a>
         </div>
-        <div class="bloc-contact">
-          <p>Le Brûlot vous attend au cœur du Tennis Club de Cossonay. N'hésitez pas à venir découvrir notre cuisine sur place, en réservant au préalable.</p>
-          <address id="adresse-contact"></address>
-        </div>
-      </div>
+      </article>
     </div>
   </section>
 
-  <section id="contact" class="section-alt">
+  <section id="horaires" class="section section-alt">
     <div class="container">
-      <h2>Contact</h2>
-      <div class="bloc-contact">
-        <p>Téléphone : <a id="lien-appel-contact" href="#"></a></p>
-        <address id="adresse-contact-2"></address>
-        <div class="contact-boutons">
-          <a id="btn-appeler" href="#" class="btn btn-primaire">Appeler maintenant</a>
-          <a id="btn-avis-google" href="#" target="_blank" rel="noopener" class="btn btn-secondaire">Voir les avis Google</a>
+      <article class="card" style="max-width:640px;margin:auto;text-align:center">
+        <h2 style="color:var(--bleu-egee)">Horaires d'ouverture</h2>
+        <p style="font-family:Arial,sans-serif;color:#4f6478;max-width:480px;margin:.5rem auto 1.5rem">Une réservation est conseillée, en particulier le week-end.</p>
+        <div class="horaires">
+          <table>
+            <tbody id="table-horaires">
+              <tr><td colspan="2" class="empty">Chargement des horaires…</td></tr>
+            </tbody>
+          </table>
+          <p class="horaires-note" id="horaires-note"></p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="horaires">
-    <div class="container">
-      <h2>Horaires d'ouverture</h2>
-      <table class="tableau-horaires">
-        <thead>
-          <tr><th scope="col">Jours</th><th scope="col">Créneaux</th></tr>
-        </thead>
-        <tbody id="table-horaires"></tbody>
-      </table>
-      <p id="horaires-note" class="horaires-note"></p>
+      </article>
     </div>
   </section>
 
@@ -144,84 +179,69 @@
 
 <script src="layout.js"></script>
 <script>
-document.addEventListener('infosChargees', function (e) {
-  const infos = e.detail;
-  const r = infos.restaurant;
+async function chargerInfos() {
+  try {
+    const reponse = await fetch('infos.json');
+    const data = await reponse.json();
+    const r = data.restaurant;
 
-  const lienHero = document.getElementById('lien-appel-hero');
-  if (lienHero) { lienHero.href = r.telephone_lien; lienHero.setAttribute('aria-label', 'Réserver par téléphone ' + r.nom + ' au ' + r.telephone_affiche); }
+    document.querySelectorAll('#lien-appel-hero, #lien-appel-contact, #btn-appeler').forEach(el => {
+      el.href = 'tel:' + r.telephone_lien;
+    });
+    document.getElementById('lien-appel-contact').textContent = r.telephone_affiche;
+    document.getElementById('lien-appel-contact').setAttribute('aria-label', 'Appeler ' + r.nom + ' au ' + r.telephone_affiche);
 
-  const imgMenu = document.getElementById('img-vignette-menu');
-  if (imgMenu) imgMenu.src = infos.images_accueil.image_vignette_menu;
-  const imgAmbiance = document.getElementById('img-vignette-ambiance');
-  if (imgAmbiance) imgAmbiance.src = infos.images_accueil.image_vignette_ambiance;
+    const adresseHTML = `<strong>${r.nom}</strong><br>${r.adresse.rue}<br>${r.adresse.npa} ${r.adresse.localite}, ${r.adresse.canton}, ${r.adresse.pays}`;
+    document.getElementById('adresse-localisation').innerHTML = adresseHTML;
+    document.getElementById('adresse-contact').innerHTML = adresseHTML;
 
-  const hero = document.getElementById('accueil');
-  if (hero) hero.style.backgroundImage = "url('" + infos.images_accueil.image_hero + "')";
+    document.getElementById('iframe-maps').src = r.google_maps_embed;
+    document.getElementById('lien-avis-google').href = r.google_maps_avis;
 
-  const iframe = document.getElementById('iframe-maps');
-  if (iframe) iframe.src = r.google_maps_embed;
+    document.getElementById('img-vignette-menu').src = data.images_accueil.image_vignette_menu;
+    document.getElementById('img-vignette-ambiance').src = data.images_accueil.image_vignette_ambiance;
 
-  const adresseTexte = r.adresse.rue + ', ' + r.adresse.npa + ' ' + r.adresse.localite + ' (' + r.adresse.canton + '), ' + r.adresse.pays;
-  const adresse1 = document.getElementById('adresse-contact');
-  if (adresse1) adresse1.textContent = adresseTexte;
-  const adresse2 = document.getElementById('adresse-contact-2');
-  if (adresse2) adresse2.textContent = adresseTexte;
+    document.querySelector('#accueil.hero').style.backgroundImage =
+      `linear-gradient(180deg,rgba(10,45,80,.87),rgba(13,58,94,.74)), url('${data.images_accueil.image_hero}')`;
 
-  const lienContact = document.getElementById('lien-appel-contact');
-  if (lienContact) {
-    lienContact.href = r.telephone_lien;
-    lienContact.textContent = r.telephone_affiche;
-    lienContact.setAttribute('aria-label', 'Appeler ' + r.nom + ' au ' + r.telephone_affiche);
-  }
-  const btnAppeler = document.getElementById('btn-appeler');
-  if (btnAppeler) { btnAppeler.href = r.telephone_lien; btnAppeler.setAttribute('aria-label', 'Appeler ' + r.nom + ' maintenant'); }
-  const btnAvis = document.getElementById('btn-avis-google');
-  if (btnAvis) btnAvis.href = r.google_maps_avis;
+    const corpsHoraires = document.getElementById('table-horaires');
+    corpsHoraires.innerHTML = '';
+    data.horaires.forEach(ligne => {
+      const tr = document.createElement('tr');
+      const th = document.createElement('th');
+      th.scope = 'row';
+      th.textContent = ligne.jours;
+      const td = document.createElement('td');
+      td.innerHTML = ligne.creneaux.join('<br>');
+      tr.appendChild(th);
+      tr.appendChild(td);
+      corpsHoraires.appendChild(tr);
+    });
+    document.getElementById('horaires-note').textContent = data.horaires_note;
 
-  const corpsHoraires = document.getElementById('table-horaires');
-  if (corpsHoraires) {
-    corpsHoraires.innerHTML = infos.horaires.map(function (bloc) {
-      return '<tr><td>' + bloc.jours + '</td><td>' + bloc.creneaux.join(' / ') + '</td></tr>';
-    }).join('');
-  }
-  const note = document.getElementById('horaires-note');
-  if (note) note.textContent = infos.horaires_note;
-
-  const ld = document.getElementById('ld-restaurant');
-  if (ld) {
+    const ld = document.getElementById('ld-json-restaurant');
+    const ldData = JSON.parse(ld.textContent);
+    ldData.name = r.nom;
+    ldData.telephone = r.telephone_lien;
+    ldData.address = {
+      "@type": "PostalAddress",
+      "streetAddress": r.adresse.rue,
+      "postalCode": r.adresse.npa,
+      "addressLocality": r.adresse.localite,
+      "addressRegion": r.adresse.canton,
+      "addressCountry": "CH"
+    };
     const sameAs = [];
     if (r.facebook) sameAs.push(r.facebook);
     if (r.instagram) sameAs.push(r.instagram);
-    ld.textContent = JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Restaurant",
-      "name": r.nom,
-      "telephone": r.telephone_affiche,
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": r.adresse.rue,
-        "postalCode": r.adresse.npa,
-        "addressLocality": r.adresse.localite,
-        "addressRegion": r.adresse.canton,
-        "addressCountry": r.adresse.pays
-      },
-      "sameAs": sameAs
-    });
+    ldData.sameAs = sameAs;
+    ld.textContent = JSON.stringify(ldData);
+  } catch (e) {
+    document.getElementById('table-horaires').innerHTML =
+      '<tr><td colspan="2" class="empty">Les informations n\'ont pas pu être chargées. Vérifiez que infos.json est bien présent.</td></tr>';
   }
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  fetch('infos.json').catch(function () {
-    const main = document.getElementById('contenu-principal');
-    if (main) {
-      const p = document.createElement('p');
-      p.className = 'message-erreur';
-      p.textContent = "Les informations n'ont pas pu être chargées. Vérifiez que infos.json est bien présent.";
-      main.prepend(p);
-    }
-  });
-});
+}
+chargerInfos();
 </script>
 </body>
 </html>

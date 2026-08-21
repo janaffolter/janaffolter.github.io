@@ -1,59 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="L'ambiance du Brûlot à Cossonay VD : photos du restaurant, de la salle et de l'esprit convivial de la maison.">
+<meta name="theme-color" content="#0d5eaf">
 <title>Ambiance — Le Brûlot</title>
-<meta name="description" content="Découvrez en images l'ambiance conviviale et familiale du restaurant Le Brûlot à Cossonay.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="ambiance">
-<a href="#contenu-principal" class="lien-skip">Aller au contenu principal</a>
 <div id="site-header-mount"></div>
 
-<main id="contenu-principal">
-  <header class="page-entete">
-    <div class="container">
-      <h1 id="titre-ambiance"></h1>
-      <p id="intro-ambiance"></p>
-    </div>
-  </header>
+<section class="page-hero">
+  <div class="container">
+    <h1 id="titre-ambiance">Ambiance</h1>
+    <p id="intro-ambiance">Chargement…</p>
+  </div>
+</section>
 
-  <section>
-    <div class="container">
-      <div class="galerie-grille" id="galerie-ambiance"></div>
-    </div>
-  </section>
+<main class="container">
+  <div class="gallery" id="galerie-contenu">
+    <p class="empty">Chargement des photos…</p>
+  </div>
 </main>
 
 <div id="site-footer-mount"></div>
 
 <script src="layout.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  fetch('ambiance.json')
-    .then(function (res) { if (!res.ok) throw new Error('Erreur de chargement'); return res.json(); })
-    .then(function (data) {
-      const titre = document.getElementById('titre-ambiance');
-      if (titre) titre.textContent = data.titre;
-      const intro = document.getElementById('intro-ambiance');
-      if (intro) intro.textContent = data.intro;
+async function chargerAmbiance() {
+  try {
+    const reponse = await fetch('ambiance.json');
+    const data = await reponse.json();
+    document.getElementById('titre-ambiance').textContent = data.titre;
+    document.getElementById('intro-ambiance').textContent = data.intro;
 
-      const galerie = document.getElementById('galerie-ambiance');
-      if (galerie) {
-        galerie.innerHTML = data.photos.map(function (photo) {
-          return '<figure class="galerie-item">' +
-            '<img src="' + photo.image + '" alt="' + photo.legende + '">' +
-            '<figcaption class="galerie-legende">' + photo.legende + '</figcaption>' +
-          '</figure>';
-        }).join('');
-      }
-    })
-    .catch(function () {
-      const galerie = document.getElementById('galerie-ambiance');
-      galerie.innerHTML = '<p class="message-erreur">Les informations n\'ont pas pu être chargées. Vérifiez que ambiance.json est bien présent.</p>';
+    const galerie = document.getElementById('galerie-contenu');
+    galerie.innerHTML = '';
+
+    if (!data.photos || data.photos.length === 0) {
+      galerie.innerHTML = '<p class="empty">Aucune photo pour le moment.</p>';
+      return;
+    }
+
+    data.photos.forEach(photo => {
+      const fig = document.createElement('figure');
+      const img = document.createElement('img');
+      img.src = photo.image;
+      img.alt = photo.legende;
+      img.loading = 'lazy';
+      const caption = document.createElement('figcaption');
+      caption.textContent = photo.legende;
+      fig.appendChild(img);
+      fig.appendChild(caption);
+      galerie.appendChild(fig);
     });
-});
+  } catch (e) {
+    document.getElementById('galerie-contenu').innerHTML =
+      '<p class="empty">Les photos n\\'ont pas pu être chargées. Vérifiez que ambiance.json est bien présent à côté de cette page.</p>';
+  }
+}
+chargerAmbiance();
 </script>
 </body>
 </html>

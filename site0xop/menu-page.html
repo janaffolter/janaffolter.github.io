@@ -1,99 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="La carte du Brûlot : filets de perches, sauces maison, viandes et desserts traditionnels suisses, Cossonay VD.">
+<meta name="theme-color" content="#0d5eaf">
 <title>La carte — Le Brûlot</title>
-<meta name="description" content="Découvrez la carte du restaurant Le Brûlot à Cossonay : filets de perches, sauces maison, viandes et desserts faits maison.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="menu">
-<a href="#contenu-principal" class="lien-skip">Aller au contenu principal</a>
 <div id="site-header-mount"></div>
 
-<main id="contenu-principal">
-  <header class="page-entete">
-    <div class="container">
-      <h1>La carte</h1>
-      <p id="sous-titre-menu"></p>
+<section class="page-hero">
+  <div class="container">
+    <h1 id="titre-restaurant">La carte</h1>
+    <p id="sous-titre-restaurant">Cuisine suisse traditionnelle, généreuse et faite maison.</p>
+    <div class="filters" id="filtres">
+      <button type="button" data-filtre="tous" class="active">Tous les plats</button>
+      <button type="button" data-filtre="vegetarien">Végétarien</button>
     </div>
-  </header>
+  </div>
+</section>
 
-  <section>
-    <div class="container">
-      <div class="filtres" id="filtres-menu" role="group" aria-label="Filtrer les plats">
-        <button class="filtre-btn actif" data-filtre="tous">Tous les plats</button>
-        <button class="filtre-btn" data-filtre="vegetarien">Végétarien</button>
-      </div>
-      <div id="contenu-menu"></div>
-    </div>
-  </section>
+<main class="container" id="menu-contenu">
+  <p class="empty">Chargement de la carte…</p>
 </main>
 
 <div id="site-footer-mount"></div>
 
 <script src="layout.js"></script>
 <script>
-let menuData = null;
 let filtreActif = 'tous';
+let donneesMenu = null;
 
-function rendreMenu() {
-  const conteneur = document.getElementById('contenu-menu');
-  if (!menuData) return;
-
-  conteneur.innerHTML = menuData.categories.map(function (cat) {
-    const plats = cat.plats.filter(function (p) {
-      return filtreActif === 'tous' || (filtreActif === 'vegetarien' && p.vegetarien);
-    });
-    if (plats.length === 0) return '';
-
-    const cartes = plats.map(function (p) {
-      const imageHtml = p.image
-        ? '<img src="' + p.image + '" alt="' + p.nom + '">'
-        : '<span class="placeholder">Photo à venir</span>';
-      const prixHtml = p.prix !== null && p.prix !== undefined
-        ? p.prix + ' CHF'
-        : (p.prix_label || 'Prix à confirmer avec le restaurant');
-      const badge = p.vegetarien ? '<span class="badge-vegetarien">Végétarien</span>' : '';
-
-      return '<article class="plat-carte">' +
-        '<div class="plat-image">' + imageHtml + '</div>' +
-        '<div class="plat-corps">' +
-          '<h3>' + p.nom + '</h3>' +
-          '<p class="plat-prix">' + prixHtml + '</p>' +
-          '<p class="plat-desc">' + p.description + '</p>' +
-          badge +
-        '</div>' +
-      '</article>';
-    }).join('');
-
-    return '<section class="categorie-menu"><h2>' + cat.nom + '</h2><div class="plats-grille">' + cartes + '</div></section>';
-  }).join('');
+async function chargerMenu() {
+  try {
+    const reponse = await fetch('menu.json');
+    donneesMenu = await reponse.json();
+    document.getElementById('sous-titre-restaurant').textContent =
+      donneesMenu.restaurant.sous_titre || 'Cuisine suisse traditionnelle, généreuse et faite maison.';
+    afficherMenu();
+  } catch (e) {
+    document.getElementById('menu-contenu').innerHTML =
+      '<p class="empty">La carte n\'a pas pu être chargée. Vérifiez que menu.json est bien présent à côté de cette page.</p>';
+  }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  fetch('menu.json')
-    .then(function (res) { if (!res.ok) throw new Error('Erreur de chargement'); return res.json(); })
-    .then(function (data) {
-      menuData = data;
-      const sousTitre = document.getElementById('sous-titre-menu');
-      if (sousTitre) sousTitre.textContent = data.restaurant.sous_titre;
-      rendreMenu();
-    })
-    .catch(function () {
-      const conteneur = document.getElementById('contenu-menu');
-      conteneur.innerHTML = '<p class="message-erreur">Les informations n\'ont pas pu être chargées. Vérifiez que menu.json est bien présent.</p>';
+function formatPrix(plat, devise) {
+  if (plat.prix_label) return plat.prix_label;
+  if (plat.prix !== null && plat.prix !== undefined) return plat.prix.toFixed(2) + ' ' + devise;
+  return 'Prix à confirmer avec le restaurant';
+}
+
+function afficherMenu() {
+  const devise = donneesMenu.restaurant.devise || 'CHF ';
+  const conteneur = document.getElementById('menu-contenu');
+  conteneur.innerHTML = '';
+
+  donneesMenu.categories.forEach(cat => {
+    const plats = cat.plats.filter(p => filtreActif === 'tous' || (filtreActif === 'vegetarien' && p.vegetarien));
+    if (plats.length === 0) return;
+
+    const section = document.createElement('section');
+    section.className = 'categorie';
+    const h2 = document.createElement('h2');
+    h2.textContent = cat.nom;
+    section.appendChild(h2);
+
+    const grid = document.createElement('div');
+    grid.className = 'plats-grid';
+
+    plats.forEach(plat => {
+      const carte = document.createElement('article');
+      carte.className = 'plat';
+
+      if (plat.image) {
+        const img = document.createElement('img');
+        img.className = 'photo';
+        img.src = plat.image;
+        img.alt = plat.nom;
+        img.loading = 'lazy';
+        carte.appendChild(img);
+      } else {
+        const ph = document.createElement('div');
+        ph.className = 'photo-placeholder';
+        ph.textContent = 'Photo à venir';
+        carte.appendChild(ph);
+      }
+
+      const body = document.createElement('div');
+      body.className = 'plat-body';
+
+      if (plat.vegetarien) {
+        const badge = document.createElement('span');
+        badge.className = 'badge';
+        badge.textContent = 'Végétarien';
+        body.appendChild(badge);
+      }
+
+      const top = document.createElement('div');
+      top.className = 'plat-top';
+      const h3 = document.createElement('h3');
+      h3.textContent = plat.nom;
+      const prix = document.createElement('span');
+      prix.className = 'prix';
+      prix.textContent = formatPrix(plat, devise);
+      top.appendChild(h3);
+      top.appendChild(prix);
+      body.appendChild(top);
+
+      const desc = document.createElement('p');
+      desc.className = 'desc';
+      desc.textContent = plat.description;
+      body.appendChild(desc);
+
+      carte.appendChild(body);
+      grid.appendChild(carte);
     });
 
-  document.getElementById('filtres-menu').addEventListener('click', function (e) {
-    const btn = e.target.closest('.filtre-btn');
-    if (!btn) return;
-    document.querySelectorAll('.filtre-btn').forEach(function (b) { b.classList.remove('actif'); });
-    btn.classList.add('actif');
-    filtreActif = btn.getAttribute('data-filtre');
-    rendreMenu();
+    section.appendChild(grid);
+    conteneur.appendChild(section);
   });
+
+  if (conteneur.children.length === 0) {
+    conteneur.innerHTML = '<p class="empty">Aucun plat ne correspond à ce filtre.</p>';
+  }
+}
+
+document.getElementById('filtres').addEventListener('click', (e) => {
+  const btn = e.target.closest('button');
+  if (!btn) return;
+  document.querySelectorAll('#filtres button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  filtreActif = btn.dataset.filtre;
+  if (donneesMenu) afficherMenu();
 });
+
+chargerMenu();
 </script>
 </body>
 </html>

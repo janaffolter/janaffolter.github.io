@@ -1,9 +1,11 @@
 {
   "restaurant": {
-    "sous_titre": "Cuisine suisse traditionnelle, généreuse et faite maison"
+    "sous_titre": "Cuisine suisse traditionnelle, généreuse et faite maison",
+    "devise": "CHF "
   },
   "categories": [
     {
+      "id": "entrees",
       "nom": "Entrées",
       "plats": [
         {
@@ -11,7 +13,7 @@
           "description": "Feuilleté maison garni d'une généreuse sauce crémeuse aux vraies morilles, un classique plébiscité par les habitués.",
           "prix": null,
           "prix_label": "Prix à confirmer avec le restaurant",
-          "image": "images/img_plat001.jpg",
+          "image": null,
           "vegetarien": false
         },
         {
@@ -19,7 +21,7 @@
           "description": "Les célèbres filets de perches du Brûlot, la spécialité qui fait la renommée de la maison, servis meunière.",
           "prix": null,
           "prix_label": "Prix à confirmer avec le restaurant",
-          "image": "images/img_plat002.jpg",
+          "image": "images/img_0004.jpg",
           "vegetarien": false
         },
         {
@@ -27,12 +29,13 @@
           "description": "Foie gras préparé maison par le chef, une recette fidèle depuis l'ouverture du restaurant.",
           "prix": null,
           "prix_label": "Prix à confirmer avec le restaurant",
-          "image": "images/img_plat003.jpg",
+          "image": null,
           "vegetarien": false
         }
       ]
     },
     {
+      "id": "plats",
       "nom": "Plats principaux",
       "plats": [
         {
@@ -78,6 +81,7 @@
       ]
     },
     {
+      "id": "desserts",
       "nom": "Desserts",
       "plats": [
         {
@@ -91,6 +95,7 @@
       ]
     },
     {
+      "id": "boissons",
       "nom": "Boissons",
       "plats": [
         {

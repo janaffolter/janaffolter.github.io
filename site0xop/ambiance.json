@@ -2,11 +2,9 @@
   "titre": "Ambiance au Brûlot",
   "intro": "Niché au cœur du Tennis Club de Cossonay, Le Brûlot cultive une atmosphère conviviale et familiale, loin du décor sophistiqué, mais riche en générosité et en chaleur humaine.",
   "photos": [
-    { "image": "images/img_0006.jpg", "legende": "La salle du restaurant, ambiance conviviale et familiale — photo à confirmer avec le restaurant" },
-    { "image": "images/img_0007.jpg", "legende": "La terrasse du Brûlot en saison — photo à confirmer avec le restaurant" },
-    { "image": "images/img_0008.jpg", "legende": "Vue extérieure du restaurant, chemin du 900ème à Cossonay-Ville — photo à confirmer avec le restaurant" },
-    { "image": "images/img_0009.jpg", "legende": "Un plat signature dressé en salle — photo à confirmer avec le restaurant" },
-    { "image": "images/img_0010.jpg", "legende": "L'équipe en cuisine — photo à confirmer avec le restaurant" },
-    { "image": "images/img_0011.jpg", "legende": "Détail de la déco de la salle — photo à confirmer avec le restaurant" }
+    { "image": "images/img_amb001.webp", "legende": "La salle du restaurant, ambiance conviviale et familiale — photo à confirmer avec le restaurant" },
+    { "image": "images/img_amb002.webp", "legende": "La terrasse du Brûlot en saison — photo à confirmer avec le restaurant" },
+    { "image": "images/img_amb003.webp", "legende": "Vue extérieure du restaurant, chemin du 900ème à Cossonay-Ville — photo à confirmer avec le restaurant" },
+    { "image": "images/img_amb004.webp", "legende": "Un plat signature dressé en salle — photo à confirmer avec le restaurant" }
   ]
 }

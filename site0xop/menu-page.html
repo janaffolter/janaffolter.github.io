@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La carte — Le Brûlot</title>
+<meta name="description" content="Découvrez la carte du restaurant Le Brûlot à Cossonay : filets de perches, sauces maison, viandes et desserts faits maison.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="menu">
+<a href="#contenu-principal" class="lien-skip">Aller au contenu principal</a>
+<div id="site-header-mount"></div>
+
+<main id="contenu-principal">
+  <header class="page-entete">
+    <div class="container">
+      <h1>La carte</h1>
+      <p id="sous-titre-menu"></p>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="filtres" id="filtres-menu" role="group" aria-label="Filtrer les plats">
+        <button class="filtre-btn actif" data-filtre="tous">Tous les plats</button>
+        <button class="filtre-btn" data-filtre="vegetarien">Végétarien</button>
+      </div>
+      <div id="contenu-menu"></div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer-mount"></div>
+
+<script src="layout.js"></script>
+<script>
+let menuData = null;
+let filtreActif = 'tous';
+
+function rendreMenu() {
+  const conteneur = document.getElementById('contenu-menu');
+  if (!menuData) return;
+
+  conteneur.innerHTML = menuData.categories.map(function (cat) {
+    const plats = cat.plats.filter(function (p) {
+      return filtreActif === 'tous' || (filtreActif === 'vegetarien' && p.vegetarien);
+    });
+    if (plats.length === 0) return '';
+
+    const cartes = plats.map(function (p) {
+      const imageHtml = p.image
+        ? '<img src="' + p.image + '" alt="' + p.nom + '">'
+        : '<span class="placeholder">Photo à venir</span>';
+      const prixHtml = p.prix !== null && p.prix !== undefined
+        ? p.prix + ' CHF'
+        : (p.prix_label || 'Prix à confirmer avec le restaurant');
+      const badge = p.vegetarien ? '<span class="badge-vegetarien">Végétarien</span>' : '';
+
+      return '<article class="plat-carte">' +
+        '<div class="plat-image">' + imageHtml + '</div>' +
+        '<div class="plat-corps">' +
+          '<h3>' + p.nom + '</h3>' +
+          '<p class="plat-prix">' + prixHtml + '</p>' +
+          '<p class="plat-desc">' + p.description + '</p>' +
+          badge +
+        '</div>' +
+      '</article>';
+    }).join('');
+
+    return '<section class="categorie-menu"><h2>' + cat.nom + '</h2><div class="plats-grille">' + cartes + '</div></section>';
+  }).join('');
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  fetch('menu.json')
+    .then(function (res) { if (!res.ok) throw new Error('Erreur de chargement'); return res.json(); })
+    .then(function (data) {
+      menuData = data;
+      const sousTitre = document.getElementById('sous-titre-menu');
+      if (sousTitre) sousTitre.textContent = data.restaurant.sous_titre;
+      rendreMenu();
+    })
+    .catch(function () {
+      const conteneur = document.getElementById('contenu-menu');
+      conteneur.innerHTML = '<p class="message-erreur">Les informations n\'ont pas pu être chargées. Vérifiez que menu.json est bien présent.</p>';
+    });
+
+  document.getElementById('filtres-menu').addEventListener('click', function (e) {
+    const btn = e.target.closest('.filtre-btn');
+    if (!btn) return;
+    document.querySelectorAll('.filtre-btn').forEach(function (b) { b.classList.remove('actif'); });
+    btn.classList.add('actif');
+    filtreActif = btn.getAttribute('data-filtre');
+    rendreMenu();
+  });
+});
+</script>
+</body>
+</html>

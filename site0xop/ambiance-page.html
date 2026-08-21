@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ambiance — Le Brûlot</title>
+<meta name="description" content="Découvrez en images l'ambiance conviviale et familiale du restaurant Le Brûlot à Cossonay.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="ambiance">
+<a href="#contenu-principal" class="lien-skip">Aller au contenu principal</a>
+<div id="site-header-mount"></div>
+
+<main id="contenu-principal">
+  <header class="page-entete">
+    <div class="container">
+      <h1 id="titre-ambiance"></h1>
+      <p id="intro-ambiance"></p>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="galerie-grille" id="galerie-ambiance"></div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer-mount"></div>
+
+<script src="layout.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  fetch('ambiance.json')
+    .then(function (res) { if (!res.ok) throw new Error('Erreur de chargement'); return res.json(); })
+    .then(function (data) {
+      const titre = document.getElementById('titre-ambiance');
+      if (titre) titre.textContent = data.titre;
+      const intro = document.getElementById('intro-ambiance');
+      if (intro) intro.textContent = data.intro;
+
+      const galerie = document.getElementById('galerie-ambiance');
+      if (galerie) {
+        galerie.innerHTML = data.photos.map(function (photo) {
+          return '<figure class="galerie-item">' +
+            '<img src="' + photo.image + '" alt="' + photo.legende + '">' +
+            '<figcaption class="galerie-legende">' + photo.legende + '</figcaption>' +
+          '</figure>';
+        }).join('');
+      }
+    })
+    .catch(function () {
+      const galerie = document.getElementById('galerie-ambiance');
+      galerie.innerHTML = '<p class="message-erreur">Les informations n\'ont pas pu être chargées. Vérifiez que ambiance.json est bien présent.</p>';
+    });
+});
+</script>
+</body>
+</html>

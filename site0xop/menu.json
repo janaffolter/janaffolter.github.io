@@ -95,7 +95,7 @@
           "description": "Sélection de pinot noir suisse proposé comme vin de la maison.",
           "prix": 25,
           "prix_label": null,
-          "image": null,
+          "image": "images/img_vin001.webp",
           "vegetarien": true
         },
         {
@@ -103,7 +103,7 @@
           "description": "Liqueurs digestives préparées par la maison, souvent offertes en fin de repas par la patronne.",
           "prix": 16,
           "prix_label": null,
-          "image": null,
+          "image": "images/img_vin002.webp",
           "vegetarien": true
         }
       ]

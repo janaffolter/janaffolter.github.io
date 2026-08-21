@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Le Brûlot, restaurant de cuisine de brasserie traditionnelle à Cossonay-Ville (VD) : filets de perches, viande de bœuf, sauce maison Le Brûlot, dans une ambiance conviviale et familiale.">
+<meta name="description" content="Le Brûlot, restaurant traditionnel suisse à Cossonay-Ville (VD) : filets de perches, sauces maison aux morilles et à la Brûlot, dans une ambiance conviviale et familiale.">
 <meta name="theme-color" content="#0d5eaf">
-<title>Le Brûlot — Restaurant de cuisine de brasserie à Cossonay VD</title>
+<title>Le Brûlot — Restaurant traditionnel suisse à Cossonay VD</title>
 <link rel="stylesheet" href="styles.css">
 <script type="application/ld+json" id="ld-json-restaurant">
 {
   "@context": "https://schema.org",
   "@type": "Restaurant",
   "name": "Le Brûlot",
-  "servesCuisine": ["Brasserie", "Cuisine suisse"],
-  "priceRange": "CHF 30-50"
+  "servesCuisine": "Cuisine suisse traditionnelle",
+  "priceRange": "CHF"
 }
 </script>
 </head>
@@ -24,9 +24,9 @@
 
   <section id="accueil" class="hero">
     <div class="container hero-content">
-      <span class="eyebrow">Cuisine de brasserie traditionnelle</span>
+      <span class="eyebrow">Cuisine suisse traditionnelle</span>
       <h1>Une générosité toute suisse, au cœur de Cossonay.</h1>
-      <p>Le Brûlot vous invite à découvrir une cuisine de brasserie généreuse et sans artifice — filets de perches, viande de bœuf et sauce maison — dans un cadre convivial et familial, au sein du Tennis Club de Cossonay, dans le canton de Vaud.</p>
+      <p>Le Brûlot vous invite à découvrir une cuisine traditionnelle suisse généreuse et sans artifice, dans un cadre convivial et familial, au sein du Tennis Club de Cossonay, dans le canton de Vaud.</p>
       <div class="hero-actions">
         <a class="btn" id="lien-appel-hero" href="tel:">Réserver par téléphone</a>
         <a class="btn btn-outline" href="menu-page.html">Découvrir la carte</a>
@@ -37,26 +37,26 @@
   <section id="histoire" class="section">
     <div class="container">
       <div class="heading">
-        <h2>Une cuisine de brasserie, généreuse et sans chichis</h2>
-        <p>Des produits frais, des recettes simples et bien exécutées, un accueil familial, au cœur de Cossonay-Ville.</p>
+        <h2>Une table fidèle à la tradition suisse</h2>
+        <p>Des produits frais, des recettes traditionnelles et un accueil familial, au cœur de Cossonay-Ville.</p>
       </div>
       <div class="intro-grid">
         <article class="card">
-          <p>Installé au sein du Tennis Club de Cossonay, Le Brûlot accueille ses hôtes depuis plus de vingt ans autour d'une <strong>cuisine de brasserie traditionnelle</strong>, concentrée sur des recettes simples, lisibles et bien exécutées. Aux fourneaux, Manuel et Cristina perpétuent des classiques fidèles à l'esprit de la maison, tandis qu'en salle, l'accueil reste chaleureux et familial.</p>
-          <p>La carte met à l'honneur les célèbres <strong>filets de perches</strong> meunière au beurre noisette et les pièces de <strong>viande de bœuf</strong>, servies avec la fameuse <strong>sauce maison « Le Brûlot »</strong>, aromatique et légèrement épicée. On y trouve aussi quelques incursions plus généreuses comme les <strong>gambas</strong> ou le <strong>foie gras</strong>. Comptez généralement 10 à 25 CHF pour une entrée et environ 40 CHF pour un plat principal, accompagné d'une belle carte de vins suisses (La Colombe, Cruchon) et de quelques étrangers.</p>
+          <p>Installé au sein du Tennis Club de Cossonay, Le Brûlot accueille ses hôtes depuis plus de quinze ans autour d'une cuisine suisse traditionnelle, généreuse et sans artifice. Aux fourneaux, le chef perpétue des recettes fidèles à l'esprit de la maison, tandis qu'en salle, l'accueil reste chaleureux et familial.</p>
+          <p>Ici, pas de décor sophistiqué mais une vraie générosité dans l'assiette : les célèbres filets de perches, les sauces maison aux morilles ou à la Brûlot, et des viandes tendres servies en portions copieuses font la réputation de l'établissement loin à la ronde.</p>
         </article>
         <div class="values">
           <div class="value">
-            <strong>Cuisine de brasserie</strong>
-            Filets de perches, viande de bœuf et sauce maison, dans la tradition simple et généreuse des brasseries romandes.
+            <strong>Produits frais</strong>
+            Des recettes traditionnelles préparées avec des produits frais et des sauces faites maison.
           </div>
           <div class="value">
-            <strong>Produits soignés</strong>
-            Frites croustillantes, pain fait maison et petites attentions qui font la différence, sans complexité inutile.
+            <strong>Tradition</strong>
+            Une cuisine suisse authentique, fidèle aux classiques régionaux depuis de nombreuses années.
           </div>
           <div class="value">
             <strong>Accueil familial</strong>
-            Une ambiance conviviale, portée par Manuel et Cristina depuis plus de vingt ans, en salle comme en cuisine.
+            Une ambiance conviviale, portée par une équipe présente et impliquée en salle comme en cuisine.
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@
     <div class="container">
       <div class="heading">
         <h2>Découvrez Le Brûlot</h2>
-        <p>Deux univers à explorer : nos spécialités de brasserie et l'ambiance chaleureuse de notre restaurant.</p>
+        <p>Deux univers à explorer : nos spécialités culinaires et l'ambiance chaleureuse de notre restaurant.</p>
       </div>
       <div class="teaser-grid">
         <a class="teaser" href="menu-page.html">
@@ -75,7 +75,7 @@
           <div class="teaser-body">
             <span class="teaser-tag">Spécialités</span>
             <h3>La carte</h3>
-            <p>Filets de perches, viande de bœuf et sauce maison, avec prix et descriptions détaillées.</p>
+            <p>Filets de perches, sauces maison et viandes généreuses, avec prix et descriptions détaillées.</p>
             <span class="lien">Voir tous les plats
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 4.5 21 12l-7.5 7.5-1.4-1.4L17.2 13H3v-2h14.2l-5.1-5.1z"/></svg>
             </span>
@@ -100,7 +100,7 @@
     <div class="container">
       <div class="heading">
         <h2>Ce qu'en disent nos clients</h2>
-        <p>Noté 4,5 sur 5 sur Tripadvisor (134 avis) — 3ᵉ restaurant sur 9 à Cossonay, catégorie brasserie et cuisine suisse.</p>
+        <p>Noté 4,5 sur 5 sur Tripadvisor, avec plus de 130 avis — 3ᵉ restaurant sur 9 à Cossonay.</p>
       </div>
       <div class="avis-grid">
         <article class="avis">
@@ -116,8 +116,8 @@
           <cite>Lolotte1106 — Tripadvisor</cite>
         </article>
         <article class="avis">
-          <p>« Un excellent repas de midi qui sait conjuguer la convivialité aussi bien dans l'assiette qu'au niveau du service. Filets de perches meunière moelleux au délicieux goût de beurre noisette, bœuf tendre relevé par une sauce maison aromatique et élégamment épicée. »</p>
-          <cite>Guide gastronomique romand</cite>
+          <p>« Le SEUL endroit où le mot "morilles" est respecté ! Une quantité incroyable et une sauce délicieuse. Partout ailleurs, les morilles sont plutôt en décoration ! »</p>
+          <cite>Solenne P. — Tripadvisor</cite>
         </article>
       </div>
     </div>

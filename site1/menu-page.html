@@ -6,62 +6,10 @@
   <meta name="description" content="La carte d'AVRA Mykonos : mezze, plats principaux et desserts traditionnels grecs, à Bournens VD.">
   <meta name="theme-color" content="#0d5eaf">
   <title>La carte | AVRA Mykonos</title>
-  <style>
-    :root { --bleu-drapeau:#0d5eaf; --bleu-egee:#0a4a8a; --bleu-clair:#eaf3fb; --blanc-chaux:#ffffff; --sable:#f6f4ee; --terracotta:#c8622d; --encre:#1c2b38; --ligne:#dfe8f0; --ombre:0 16px 36px rgba(13,58,94,.14); --rayon:16px; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; color:var(--encre); background:var(--blanc-chaux); font-family:Georgia,'Times New Roman',serif; line-height:1.7; }
-    a { color:inherit; }
-    img { display:block; max-width:100%; }
-    .container { width:min(1120px,calc(100% - 2rem)); margin-inline:auto; }
-    :focus-visible { outline:3px solid var(--terracotta); outline-offset:3px; }
-    header { position:sticky; top:0; z-index:20; background:rgba(255,255,255,.96); backdrop-filter:blur(10px); border-bottom:2px solid var(--bleu-drapeau); }
-    .header-inner { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:1rem; padding-block:.6rem; flex-wrap:wrap; }
-    .brand { text-decoration:none; }
-    .brand strong { display:block; color:var(--bleu-egee); font-size:1.4rem; letter-spacing:.03em; }
-    .brand span { display:block; font-family:Arial,sans-serif; color:#5c7186; font-size:.72rem; letter-spacing:.05em; text-transform:uppercase; }
-    nav { display:flex; flex-wrap:wrap; gap:.1rem; font-family:Arial,sans-serif; }
-    nav a { padding:.45rem .58rem; border-radius:999px; color:var(--bleu-egee); font-size:.8rem; font-weight:700; text-decoration:none; }
-    nav a:hover, nav a[aria-current="page"] { background:var(--bleu-clair); }
-    .page-hero { padding:3.5rem 0 2.5rem; text-align:center; background:linear-gradient(180deg,var(--bleu-clair),var(--blanc-chaux)); }
-    .page-hero h1 { margin:0 0 .6rem; color:var(--bleu-egee); font-size:clamp(2.1rem,6vw,3.3rem); font-style:italic; }
-    .page-hero p { margin:0 auto; max-width:620px; font-family:Arial,sans-serif; color:#4f6478; }
-    .filters { display:flex; flex-wrap:wrap; gap:.55rem; justify-content:center; margin-top:1.5rem; font-family:Arial,sans-serif; }
-    .filters button { padding:.5rem 1.05rem; border:1px solid var(--bleu-drapeau); border-radius:999px; background:var(--blanc-chaux); color:var(--bleu-egee); font-weight:700; font-size:.85rem; cursor:pointer; transition:background .2s ease,color .2s ease; }
-    .filters button:hover, .filters button.active { background:var(--bleu-drapeau); color:var(--blanc-chaux); }
-    main { padding:3rem 0 4.5rem; }
-    .categorie { margin-bottom:3rem; }
-    .categorie h2 { color:var(--bleu-egee); font-size:1.9rem; margin-bottom:1.3rem; padding-bottom:.6rem; border-bottom:2px solid var(--bleu-clair); }
-    .plats-grid { display:grid; gap:1.1rem; grid-template-columns:1fr; }
-    .plat { border-radius:var(--rayon); background:var(--blanc-chaux); box-shadow:var(--ombre); overflow:hidden; display:flex; flex-direction:column; }
-    .plat .photo { width:100%; aspect-ratio:4/3; object-fit:cover; background:var(--sable); }
-    .plat .photo-placeholder { display:flex; align-items:center; justify-content:center; width:100%; aspect-ratio:4/3; background:var(--bleu-clair); color:var(--bleu-egee); font-family:Arial,sans-serif; font-size:.8rem; text-align:center; padding:1rem; }
-    .plat-body { padding:1.2rem 1.3rem 1.4rem; border-top:4px solid var(--terracotta); flex:1; display:flex; flex-direction:column; }
-    .plat-top { display:flex; align-items:baseline; justify-content:space-between; gap:.6rem; margin-bottom:.4rem; }
-    .plat h3 { margin:0; color:var(--bleu-egee); font-size:1.3rem; }
-    .plat .prix { font-family:Arial,sans-serif; font-weight:800; color:var(--terracotta); white-space:nowrap; font-size:.95rem; }
-    .plat .badge { display:inline-block; margin-bottom:.5rem; padding:.18rem .55rem; border-radius:999px; background:var(--bleu-clair); color:var(--bleu-egee); font-family:Arial,sans-serif; font-size:.72rem; font-weight:700; }
-    .plat p.desc { margin:0; font-family:Arial,sans-serif; font-size:.93rem; color:#3b4a55; }
-    .empty { text-align:center; padding:3rem 1rem; font-family:Arial,sans-serif; color:#4f6478; }
-    footer { padding:2.2rem 1rem; background:var(--bleu-egee); color:#eaf3fb; text-align:center; font-family:Arial,sans-serif; }
-    footer p { margin:.3rem 0; }
-    @media (min-width:640px) { .plats-grid { grid-template-columns:repeat(2,1fr); } }
-    @media (min-width:900px) { .plats-grid { grid-template-columns:repeat(3,1fr); } }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header>
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Retour à l'accueil AVRA Mykonos"><strong>AVRA Mykonos</strong><span>Taverne grecque – Bournens, Vaud</span></a>
-      <nav aria-label="Navigation principale">
-        <a href="index.html">Accueil</a>
-        <a href="menu-page.html" aria-current="page">La carte</a>
-        <a href="ambiance-page.html">Ambiance</a>
-        <a href="index.html#localisation">Localisation</a>
-        <a href="index.html#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+<body data-page="menu">
+  <div id="site-header-mount"></div>
 
   <section class="page-hero">
     <div class="container">
@@ -78,12 +26,8 @@
     <p class="empty">Chargement de la carte…</p>
   </main>
 
-  <footer>
-    <p><strong>AVRA Mykonos</strong></p>
-    <p>Taverne grecque à Bournens, canton de Vaud, Suisse</p>
-    <p>© 2026 AVRA Mykonos – Tous droits réservés</p>
-  </footer>
-
+  <div id="site-footer-mount"></div>
+  <script src="layout.js"></script>
   <script>
     let filtreActif = 'tous';
     let donneesMenu = null;
@@ -92,7 +36,6 @@
       try {
         const reponse = await fetch('menu.json');
         donneesMenu = await reponse.json();
-        document.getElementById('titre-restaurant').textContent = 'La carte';
         document.getElementById('sous-titre-restaurant').textContent =
           donneesMenu.restaurant.sous_titre + ' — mezze, plats principaux et desserts.';
         afficherMenu();

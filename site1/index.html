@@ -7,30 +7,13 @@
   <meta name="theme-color" content="#0d5eaf">
   <title>AVRA Mykonos | Taverne grecque à Bournens VD</title>
   <link rel="stylesheet" href="styles.css">
-  <script type="application/ld+json">
+  <script type="application/ld+json" id="ld-json-restaurant">
   {
     "@context": "https://schema.org",
     "@type": "Restaurant",
     "name": "AVRA Mykonos",
     "servesCuisine": "Grecque",
-    "priceRange": "CHF 30-50",
-    "telephone": "+41782418474",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Place du Collège 2",
-      "postalCode": "1035",
-      "addressLocality": "Bournens",
-      "addressRegion": "Vaud",
-      "addressCountry": "CH"
-    },
-    "openingHoursSpecification": [
-      {"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"12:00","closes":"15:00"},
-      {"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"19:00","closes":"23:30"}
-    ],
-    "sameAs": [
-      "https://www.facebook.com/p/Avra-Mykonos-61555550109667/",
-      "https://www.instagram.com/mykonosavra/"
-    ]
+    "priceRange": "CHF 30-50"
   }
   </script>
 </head>
@@ -38,12 +21,15 @@
   <div id="site-header-mount"></div>
 
   <main id="contenu">
-    <section id="accueil" class="hero">
+    <section id="accueil" class="hero" style="background-image:linear-gradient(180deg,rgba(10,45,80,.87),rgba(13,58,94,.74))">
       <div class="container hero-content">
         <span class="eyebrow">Cuisine grecque authentique</span>
         <h1>La Grèce dans l'assiette, l'hospitalité au cœur.</h1>
         <p>AVRA Mykonos vous invite à découvrir l'authenticité de la cuisine grecque dans un cadre élégant et chaleureux, au cœur de Bournens, en Suisse.</p>
-        <div class="hero-actions"><a class="btn" href="tel:+41782418474">Réserver par téléphone</a><a class="btn btn-outline" href="menu-page.html">Découvrir la carte</a></div>
+        <div class="hero-actions">
+          <a class="btn" id="lien-appel-hero" href="tel:">Réserver par téléphone</a>
+          <a class="btn btn-outline" href="menu-page.html">Découvrir la carte</a>
+        </div>
       </div>
     </section>
 
@@ -69,7 +55,7 @@
         <div class="heading"><h2>Découvrez AVRA Mykonos</h2><p>Deux univers à explorer : nos spécialités culinaires et l'ambiance chaleureuse de notre taverne.</p></div>
         <div class="teaser-grid">
           <a class="teaser" href="menu-page.html">
-            <img src="images/img_plat009.jpg" alt="Moussaka grecque gratinée" loading="lazy">
+            <img id="img-vignette-menu" src="" alt="Aperçu de la carte AVRA Mykonos" loading="lazy">
             <div class="teaser-body">
               <span class="teaser-tag">Spécialités</span>
               <h3>La carte</h3>
@@ -78,7 +64,7 @@
             </div>
           </a>
           <a class="teaser" href="ambiance-page.html">
-            <img src="images/img_amb007.jpg" alt="Terrasse d'une taverne grecque traditionnelle" loading="lazy">
+            <img id="img-vignette-ambiance" src="" alt="Aperçu de l'ambiance AVRA Mykonos" loading="lazy">
             <div class="teaser-body">
               <span class="teaser-tag">Ambiance</span>
               <h3>Découvrir le lieu</h3>
@@ -107,10 +93,10 @@
         <div class="heading"><h2>Où nous trouver</h2><p>Le restaurant est situé à Bournens, dans le canton de Vaud. Vous êtes les bienvenus pour venir découvrir notre cuisine sur place.</p></div>
         <div class="location-grid">
           <article class="card">
-            <address><strong>AVRA Mykonos</strong><br>Place du Collège 2<br>1035 Bournens, Vaud, Suisse</address>
+            <address id="adresse-localisation"></address>
             <p style="margin-top:1rem">Une réservation est recommandée, notamment les soirs de week-end. Appelez-nous pour organiser votre venue.</p>
           </article>
-          <div class="map"><iframe title="Carte de localisation d'AVRA Mykonos à Bournens" width="100%" height="450" style="border:0;" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" src="https://www.google.com/maps?q=Place+du+Coll%C3%A8ge+2,+1035+Bournens,+Vaud,+Suisse&output=embed"></iframe></div>
+          <div class="map"><iframe id="iframe-maps" title="Carte de localisation d'AVRA Mykonos" width="100%" height="450" style="border:0;" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" src=""></iframe></div>
         </div>
       </div>
     </section>
@@ -120,9 +106,12 @@
         <article class="card contact">
           <h2 style="color:var(--bleu-egee)">Contact</h2>
           <p style="font-family:Arial,sans-serif">Pour une réservation ou toute question, appelez-nous directement ou passez nous voir pour découvrir notre carte en vrai.</p>
-          <a class="phone" href="tel:+41782418474" aria-label="Appeler AVRA Mykonos au 078 241 84 74">+41 78 241 84 74</a>
-          <p style="font-family:Arial,sans-serif"><strong>AVRA Mykonos</strong><br>Place du Collège 2, 1035 Bournens, Vaud, Suisse</p>
-          <div class="contact-actions"><a class="btn" href="tel:+41782418474">Appeler maintenant</a><a class="btn btn-outline-blue" href="https://www.google.com/maps/search/?api=1&query=AVRA+Mykonos+Place+du+Coll%C3%A8ge+2+1035+Bournens" target="_blank" rel="noopener">Voir les avis Google</a></div>
+          <a class="phone" id="lien-appel-contact" href="tel:" aria-label="Appeler le restaurant">Chargement…</a>
+          <address id="adresse-contact" style="font-family:Arial,sans-serif"></address>
+          <div class="contact-actions">
+            <a class="btn" id="btn-appeler" href="tel:">Appeler maintenant</a>
+            <a class="btn btn-outline-blue" id="lien-avis-google" href="#" target="_blank" rel="noopener">Voir les avis Google</a>
+          </div>
         </article>
       </div>
     </section>
@@ -134,12 +123,11 @@
           <p style="font-family:Arial,sans-serif;color:#4f6478;max-width:480px;margin:.5rem auto 1.5rem">Une réservation est conseillée, en particulier le week-end.</p>
           <div class="horaires">
             <table>
-              <tbody>
-                <tr><th scope="row">Mercredi – Dimanche</th><td>12:00 – 15:00<br>19:00 – 23:30</td></tr>
-                <tr><th scope="row">Lundi – Mardi</th><td>Fermé</td></tr>
+              <tbody id="table-horaires">
+                <tr><td colspan="2" class="empty">Chargement des horaires…</td></tr>
               </tbody>
             </table>
-            <p class="horaires-note">Les horaires peuvent varier lors de jours fériés ; appelez-nous pour confirmer votre réservation.</p>
+            <p class="horaires-note" id="horaires-note"></p>
           </div>
         </article>
       </div>
@@ -148,5 +136,65 @@
 
   <div id="site-footer-mount"></div>
   <script src="layout.js"></script>
+  <script>
+    async function chargerInfos() {
+      try {
+        const reponse = await fetch('infos.json');
+        const data = await reponse.json();
+        const r = data.restaurant;
+
+        document.querySelectorAll('#lien-appel-hero, #lien-appel-contact, #btn-appeler').forEach(el => {
+          el.href = 'tel:' + r.telephone_lien;
+        });
+        document.getElementById('lien-appel-contact').textContent = r.telephone_affiche;
+        document.getElementById('lien-appel-contact').setAttribute('aria-label', 'Appeler ' + r.nom + ' au ' + r.telephone_affiche);
+
+        const adresseHTML = `<strong>${r.nom}</strong><br>${r.adresse.rue}<br>${r.adresse.npa} ${r.adresse.localite}, ${r.adresse.canton}, ${r.adresse.pays}`;
+        document.getElementById('adresse-localisation').innerHTML = adresseHTML;
+        document.getElementById('adresse-contact').innerHTML = adresseHTML;
+
+        document.getElementById('iframe-maps').src = r.google_maps_embed;
+        document.getElementById('lien-avis-google').href = r.google_maps_avis;
+
+        document.getElementById('img-vignette-menu').src = data.images_accueil.image_vignette_menu;
+        document.getElementById('img-vignette-ambiance').src = data.images_accueil.image_vignette_ambiance;
+        document.querySelector('#accueil.hero').style.backgroundImage =
+          `linear-gradient(180deg,rgba(10,45,80,.87),rgba(13,58,94,.74)), url('${data.images_accueil.image_hero}')`;
+
+        const corpsHoraires = document.getElementById('table-horaires');
+        corpsHoraires.innerHTML = '';
+        data.horaires.forEach(ligne => {
+          const tr = document.createElement('tr');
+          const th = document.createElement('th');
+          th.scope = 'row';
+          th.textContent = ligne.jours;
+          const td = document.createElement('td');
+          td.innerHTML = ligne.creneaux.join('<br>');
+          tr.appendChild(th);
+          tr.appendChild(td);
+          corpsHoraires.appendChild(tr);
+        });
+        document.getElementById('horaires-note').textContent = data.horaires_note;
+
+        const ld = document.getElementById('ld-json-restaurant');
+        const ldData = JSON.parse(ld.textContent);
+        ldData.telephone = r.telephone_lien;
+        ldData.address = {
+          "@type": "PostalAddress",
+          "streetAddress": r.adresse.rue,
+          "postalCode": r.adresse.npa,
+          "addressLocality": r.adresse.localite,
+          "addressRegion": r.adresse.canton,
+          "addressCountry": "CH"
+        };
+        ldData.sameAs = [r.facebook, r.instagram];
+        ld.textContent = JSON.stringify(ldData);
+      } catch (e) {
+        document.getElementById('table-horaires').innerHTML =
+          '<tr><td colspan="2" class="empty">Les informations n\'ont pas pu être chargées. Vérifiez que infos.json est bien présent.</td></tr>';
+      }
+    }
+    chargerInfos();
+  </script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+{
+  "restaurant": {
+    "nom": "AVRA Mykonos",
+    "sous_titre": "Taverne grecque – Bournens, Vaud",
+    "telephone_affiche": "+41 78 241 84 74",
+    "telephone_lien": "+41782418474",
+    "adresse": {
+      "rue": "Place du Collège 2",
+      "npa": "1035",
+      "localite": "Bournens",
+      "canton": "Vaud",
+      "pays": "Suisse"
+    },
+    "google_maps_embed": "https://www.google.com/maps?q=Place+du+Coll%C3%A8ge+2,+1035+Bournens,+Vaud,+Suisse&output=embed",
+    "google_maps_avis": "https://www.google.com/maps/search/?api=1&query=AVRA+Mykonos+Place+du+Coll%C3%A8ge+2+1035+Bournens",
+    "facebook": "https://www.facebook.com/p/Avra-Mykonos-61555550109667/",
+    "instagram": "https://www.instagram.com/mykonosavra/"
+  },
+  "images_accueil": {
+    "image_hero": "images/img_0001.jpg",
+    "image_vignette_menu": "images/img_0002.jpg",
+    "image_vignette_ambiance": "images/img_0001.jpg"
+  },
+  "horaires": [
+    { "jours": "Mercredi – Dimanche", "creneaux": ["12:00 – 15:00", "19:00 – 23:30"] },
+    { "jours": "Lundi – Mardi", "creneaux": ["Fermé"] }
+  ],
+  "horaires_note": "Les horaires peuvent varier lors de jours fériés ; appelez-nous pour confirmer votre réservation."
+}

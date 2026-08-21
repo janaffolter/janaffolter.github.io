@@ -1,0 +1,112 @@
+{
+  "restaurant": {
+    "sous_titre": "Cuisine suisse traditionnelle, généreuse et faite maison",
+    "devise": "CHF "
+  },
+  "categories": [
+    {
+      "id": "entrees",
+      "nom": "Entr&eacute;es",
+      "plats": [
+        {
+          "nom": "Feuillet&eacute; aux morilles",
+          "description": "Feuillet&eacute; maison garni d&rsquo;une g&eacute;n&eacute;reuse sauce cr&eacute;meuse aux vraies morilles, un classique pl&eacute;biscit&eacute; par les habitu&eacute;s.",
+          "prix": 22,
+          "prix_label": null,
+          "image": "images/img_plat001.webp",
+          "vegetarien": false
+        },
+        {
+          "nom": "Filets de perches",
+          "description": "Les c&eacute;l&egrave;bres filets de perches du Br&ucirc;lot, la sp&eacute;cialit&eacute; qui fait la renomm&eacute;e de la maison, servis meuni&egrave;re.",
+          "prix": 28,
+          "prix_label": null,
+          "image": "images/img_plat002.jpg",
+          "vegetarien": false
+        },
+        {
+          "nom": "Foie gras maison",
+          "description": "Foie gras pr&eacute;par&eacute; maison par le chef, une recette fid&egrave;le depuis l&rsquo;ouverture du restaurant.",
+          "prix": 24,
+          "prix_label": null,
+          "image": "images/img_plat009.jpg",
+          "vegetarien": false
+        }
+      ]
+    },
+    {
+      "id": "plats",
+      "nom": "Plats principaux",
+      "plats": [
+        {
+          "nom": "Tournedos sauce Br&ucirc;lot",
+          "description": "M&eacute;daillon de b&oe;uf accompagn&eacute; de la fameuse sauce maison Br&ucirc;lot et de frites fraîches.",
+          "prix": 38,
+          "prix_label": null,
+          "image": "images/img_plat006.jpg",
+          "vegetarien": false
+        },
+        {
+          "nom": "Pi&egrave;ce de b&oe;uf sauce aux morilles",
+          "description": "Belle pi&egrave;ce de b&oe;uf servie avec une sauce riche et g&eacute;n&eacute;reuse aux morilles.",
+          "prix": 37,
+          "prix_label": null,
+          "image": "images/img_plat007.jpg",
+          "vegetarien": false
+        },
+        {
+          "nom": "Entrec&ocirc;te",
+          "description": "Belle entrec&ocirc;te de 250 &agrave; 300 g, cuite selon votre goût, servie avec sauce Br&ucirc;lot et frites maison.",
+          "prix": 42,
+          "prix_label": null,
+          "image": "images/img_plat004.jpg",
+          "vegetarien": false
+        },
+        {
+          "nom": "Steak tartare",
+          "description": "Tartare de b&oe;uf pr&eacute;par&eacute; &agrave; la commande. Pr&eacute;cisez vos pr&eacute;f&eacute;rences d&rsquo;assaisonnement au service.",
+          "prix": 32,
+          "prix_label": null,
+          "image": "images/img_plat005.jpg",
+          "vegetarien": false
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "nom": "Desserts",
+      "plats": [
+        {
+          "nom": "Assiette de desserts maison",
+          "description": "S&eacute;lection de desserts faits maison, servis en portions copieuses.",
+          "prix": 12,
+          "prix_label": null,
+          "image": "images/img_plat008.jpg",
+          "vegetarien": true
+        }
+      ]
+    },
+    {
+      "id": "boissons",
+      "nom": "Boissons",
+      "plats": [
+        {
+          "nom": "Pinot noir vaudois (vin de la maison)",
+          "description": "S&eacute;lection de pinot noir suisse propos&eacute; comme vin de la maison.",
+          "prix": 25,
+          "prix_label": null,
+          "image": "images/img_vin001.webp",
+          "vegetarien": true
+        },
+        {
+          "nom": "Liqueurs maison",
+          "description": "Liqueurs digestives pr&eacute;par&eacute;es par la maison, souvent offertes en fin de repas par la patronne.",
+          "prix": 16,
+          "prix_label": null,
+          "image": "images/img_vin002.webp",
+          "vegetarien": true
+        }
+      ]
+    }
+  ]
+}

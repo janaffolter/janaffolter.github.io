@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La carte</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; color: #2f2f2f; }
+    main { max-width: 900px; margin: 0 auto; padding: 2rem 1.25rem; }
+    h1, h2 { color: #5a3825; }
+    section { margin-top: 3rem; }
+    .pdf-viewer { width: 100%; height: 700px; border: 1px solid #ddd; border-radius: 8px; }
+    .download-link { display: inline-block; margin-top: 1rem; color: #5a3825; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <main>
+    <section id="la-carte">
+      <h1 id="titre-restaurant">La carte</h1>
+      <p id="sous-titre-restaurant">Cuisine suisse traditionnelle, généreuse et faite maison.</p>
+      <p>La carte change légèrement selon les arrivages et la saison, à découvrir sur place.</p>
+    </section>
+
+    <section id="menus-de-la-semaine">
+      <h2>Menus de la semaine</h2>
+      <p>Découvrez nos menus de la semaine, préparés maison selon les produits de saison.</p>
+
+      <!-- Remplacez menu-de-la-semaine.pdf par le nom réel de votre fichier PDF. -->
+      <iframe
+        class="pdf-viewer"
+        src="documents/menu-de-la-semaine.pdf"
+        title="Menus de la semaine">
+        Votre navigateur ne peut pas afficher le PDF.
+      </iframe>
+
+      <a class="download-link" href="documents/menu-de-la-semaine.pdf" target="_blank" rel="noopener">
+        Télécharger les menus de la semaine (PDF)
+      </a>
+    </section>
+  </main>
+</body>
+</html>

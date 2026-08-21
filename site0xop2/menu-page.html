@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La carte – Le Br&ucirc;lot, Cossonay</title>
+  <meta name="description" content="D&eacute;couvrez la carte du restaurant Le Br&ucirc;lot &agrave; Cossonay : filets de perches, viandes de b&oe;uf, entr&eacute;es, desserts et boissons.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="menu">
+  <a class="skip-link" href="#contenu-principal">Aller au contenu principal</a>
+
+  <div id="site-header-mount"></div>
+
+  <main id="contenu-principal">
+    <section class="section">
+      <div class="container">
+        <div class="heading">
+          <h1>La carte</h1>
+          <p>Cuisine suisse traditionnelle, g&eacute;n&eacute;reuse et faite maison.</p>
+        </div>
+
+        <p style="text-align:center; max-width:700px; margin:0 auto 2rem;">
+          Notre carte &eacute;volue l&eacute;g&egrave;rement selon les arrivages et la saison.
+          D&eacute;couvez &eacute;galement nos <a href="menus-semaine.html">menus de la semaine</a>.
+        </p>
+
+        <div id="menu-container">
+          <p style="text-align:center;">Chargement de la carte&hellip;</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-mount"></div>
+
+  <script src="layout.js"></script>
+  <script>
+    async function chargerMenu() {
+      try {
+        const reponse = await fetch('menu.json');
+        const data = await reponse.json();
+        const devise = data.restaurant.devise || 'CHF ';
+        const container = document.getElementById('menu-container');
+
+        let html = '';
+        data.categories.forEach(cat => {
+          html += '<section class="menu-category">';
+          html += '<h2>' + cat.nom + '</h2>';
+          html += '<div class="menu-grid">';
+
+          cat.plats.forEach(plat => {
+            const prixTexte = plat.prix != null ? devise + plat.prix : (plat.prix_label || '');
+            const img = plat.image ? '<img src="' + plat.image + '" alt="' + plat.nom + ' au restaurant Le Br&ucirc;lot">' : '';
+            const badges = [];
+            if (plat.vegetarien) badges.push('<span class="badge vegetarien">V&eacute;g&eacute;tarien</span>');
+
+            html += '<article class="menu-item">';
+            html += '<div class="menu-item-image">' + img + '</div>';
+            html += '<div class="menu-item-content">';
+            html += '<h3>' + plat.nom + '</h3>';
+            if (badges.length) html += '<div class="menu-badges">' + badges.join('') + '</div>';
+            html += '<p>' + plat.description + '</p>';
+            html += '<p class="menu-prix">' + prixTexte + '</p>';
+            html += '</div>';
+            html += '</article>';
+          });
+
+          html += '</div></section>';
+        });
+
+        container.innerHTML = html;
+      } catch (e) {
+        console.warn('Erreur chargement menu.json :', e);
+        document.getElementById('menu-container').innerHTML =
+          '<p style="text-align:center;">La carte n&rsquo;est pas disponible pour le moment. Merci de nous contacter.</p>';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', chargerMenu);
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ambiance – Ambiance au Br&ucirc;lot, Cossonay</title>
+  <meta name="description" content="D&eacute;couvrez l&rsquo;ambiance conviviale et familiale du restaurant Le Br&ucirc;lot au Tennis Club de Cossonay.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="ambiance">
+  <a class="skip-link" href="#contenu-principal">Aller au contenu principal</a>
+
+  <div id="site-header-mount"></div>
+
+  <main id="contenu-principal">
+    <section class="section">
+      <div class="container">
+        <div class="heading">
+          <h1>Ambiance au Br&ucirc;lot</h1>
+          <p>Un lieu chaleureux, simple et g&eacute;n&eacute;reux, loin du d&eacute;cor sophistiqu&eacute;.</p>
+        </div>
+
+        <p style="text-align:center; max-width:700px; margin:0 auto 3rem;">
+          Nich&eacute; au cœur du Tennis Club de Cossonay, Le Br&ucirc;lot cultive une atmosph&egrave;re
+          conviviale et familiale, riche en g&eacute;n&eacute;rosit&eacute; et en chaleur humaine.
+        </p>
+
+        <div id="ambiance-container">
+          <p style="text-align:center;">Chargement des photos&hellip;</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-mount"></div>
+
+  <script src="layout.js"></script>
+  <script>
+    async function chargerAmbiance() {
+      try {
+        const reponse = await fetch('ambiance.json');
+        const data = await reponse.json();
+        const container = document.getElementById('ambiance-container');
+
+        let html = '<div class="ambiance-grid">';
+        data.photos.forEach(photo => {
+          html += '<figure class="ambiance-photo">';
+          html += '<img src="' + photo.image + '" alt="' + photo.legende + '">';
+          html += '<figcaption>' + photo.legende + '</figcaption>';
+          html += '</figure>';
+        });
+        html += '</div>';
+
+        container.innerHTML = html;
+      } catch (e) {
+        console.warn('Erreur chargement ambiance.json :', e);
+        document.getElementById('ambiance-container').innerHTML =
+          '<p style="text-align:center;">Les photos ne sont pas disponibles pour le moment.</p>';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', chargerAmbiance);
+  </script>
+</body>
+</html>

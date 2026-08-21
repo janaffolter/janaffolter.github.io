@@ -49,8 +49,8 @@
         {
           "nom": "Pièce de bœuf sauce aux morilles",
           "description": "Belle pièce de bœuf servie avec une sauce riche et généreuse aux morilles.",
-          "prix": null,
-          "prix_label": "Prix à confirmer avec le restaurant",
+          "prix": 37,
+          "prix_label": null,
           "image": "images/img_plat007.jpg",
           "vegetarien": false
         },
@@ -80,7 +80,7 @@
           "nom": "Assiette de desserts maison",
           "description": "Sélection de desserts faits maison, servis en portions copieuses.",
           "prix": 12.0,
-          "prix_label": "Prix à confirmer avec le restaurant",
+          "prix_label": null,
           "image": "images/img_plat008.jpg",
           "vegetarien": true
         }
@@ -94,7 +94,7 @@
           "nom": "Pinot noir vaudois (vin de la maison)",
           "description": "Sélection de pinot noir suisse proposé comme vin de la maison.",
           "prix": 25,
-          "prix_label": "Prix à confirmer avec le restaurant",
+          "prix_label": null,
           "image": null,
           "vegetarien": true
         },
@@ -102,7 +102,7 @@
           "nom": "Liqueurs maison",
           "description": "Liqueurs digestives préparées par la maison, souvent offertes en fin de repas par la patronne.",
           "prix": 16,
-          "prix_label": "Prix à confirmer avec le restaurant",
+          "prix_label": null,
           "image": null,
           "vegetarien": true
         }

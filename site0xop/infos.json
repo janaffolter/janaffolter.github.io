@@ -18,9 +18,9 @@
     "instagram": null
   },
   "images_accueil": {
-    "image_hero": "images/img_0001.jpg",
-    "image_vignette_menu": "images/img_0002.jpg",
-    "image_vignette_ambiance": "images/img_0003.jpg"
+    "image_hero": "images/img_amb002.png",
+    "image_vignette_menu": "images/img_plat0002.jpg",
+    "image_vignette_ambiance": "images/img_amb001.png"
   },
   "horaires": [
     { "jours": "Lundi", "creneaux": ["Fermé"] },

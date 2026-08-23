@@ -1,154 +1,86 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="La carte du Brûlot : filets de perches, sauces maison, viandes et desserts traditionnels suisses, Cossonay VD.">
-<meta name="theme-color" content="#0d5eaf">
-<title>La carte — Le Brûlot</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La carte – Le Br&ucirc;lot, Cossonay</title>
+  <meta name="description" content="D&eacute;couvrez la carte du restaurant Le Br&ucirc;lot &agrave; Cossonay : filets de perches, viandes de b&oe;uf, entr&eacute;es, desserts et boissons.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="menu">
-<div id="site-header-mount"></div>
+  <a class="skip-link" href="#contenu-principal">Aller au contenu principal</a>
 
+  <div id="site-header-mount"></div>
 
+  <main id="contenu-principal">
+    <section class="section">
+      <div class="container">
+        <div class="heading">
+          <h1>La carte</h1>
+          <p>Cuisine suisse traditionnelle, g&eacute;n&eacute;reuse et faite maison.</p>
+        </div>
 
-<section class="page-hero">
-  <div class="container">
-    <h1>Menus de la semaine</h1>
-    <p>Découvrez nos menus de la semaine, préparés maison selon les produits de saison.</p><br>
-    <a class="download-link" href="documents/menu-de-la-semaine.pdf" target="_blank" rel="noopener">
-        Télécharger les menus de la semaine (PDF)
-    </a>
-</section>
+        <p style="text-align:center; max-width:700px; margin:0 auto 2rem;">
+          Notre carte &eacute;volue l&eacute;g&egrave;rement selon les arrivages et la saison.<br>
+          D&eacute;couvez &eacute;galement nos <a href="menus-semaine.html">menus de la semaine</a>.
+        </p>
 
+        <div id="menu-container">
+          <p style="text-align:center;">Chargement de la carte&hellip;</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<section class="page-hero">
-  <div class="container">
-    <h1 id="titre-restaurant">La carte</h1>
-    <p id="sous-titre-restaurant">La carte change légèrement selon les arrivages et la saison, à découvrir sur place.</p>
-    <div class="filters" id="filtres">
-      <button type="button" data-filtre="tous" class="active">Tous les plats</button>
-      <button type="button" data-filtre="vegetarien">Végétarien</button>
-    </div>
-  </div>
-</section>
+  <div id="site-footer-mount"></div>
 
-<main class="container" id="menu-contenu">
-  <p class="empty">Chargement de la carte…</p>
-</main>
+  <script src="layout.js"></script>
+  <script>
+    async function chargerMenu() {
+      try {
+        const reponse = await fetch('menu.json');
+        const data = await reponse.json();
+        const devise = data.restaurant.devise || 'CHF ';
+        const container = document.getElementById('menu-container');
 
-<div id="site-footer-mount"></div>
+        let html = '';
+        data.categories.forEach(cat => {
+          html += '<section class="menu-category">';
+          html += '<h2>' + cat.nom + '</h2>';
+          html += '<div class="menu-grid">';
 
-<script src="layout.js"></script>
-<script>
-let filtreActif = 'tous';
-let donneesMenu = null;
+          cat.plats.forEach(plat => {
+            const prixTexte = plat.prix != null ? devise + plat.prix : (plat.prix_label || '');
+            const img = plat.image ? '<img src="' + plat.image + '" alt="' + plat.nom + ' au restaurant Le Br&ucirc;lot">' : '';
+            const badges = [];
+            if (plat.vegetarien) badges.push('<span class="badge vegetarien">V&eacute;g&eacute;tarien</span>');
 
-async function chargerMenu() {
-  try {
-    const reponse = await fetch('menu.json');
-    donneesMenu = await reponse.json();
-    document.getElementById('sous-titre-restaurant').textContent =
-      donneesMenu.restaurant.sous_titre || 'Cuisine suisse traditionnelle, généreuse et faite maison.';
-    afficherMenu();
-  } catch (e) {
-    document.getElementById('menu-contenu').innerHTML =
-      '<p class="empty">La carte n\'a pas pu être chargée. Vérifiez que menu.json est bien présent à côté de cette page.</p>';
-  }
-}
+            html += '<article class="menu-item">';
+            html += '<div class="menu-item-image">' + img + '</div>';
+            html += '<div class="menu-item-content">';
+            html += '<h3>' + plat.nom + '</h3>';
+            if (badges.length) html += '<div class="menu-badges">' + badges.join('') + '</div>';
+            html += '<p>' + plat.description + '</p>';
+            html += '<p class="menu-prix">' + prixTexte + '</p>';
+            html += '</div>';
+            html += '</article>';
+          });
 
-function formatPrix(plat, devise) {
-  if (plat.prix_label) return plat.prix_label;
-  if (plat.prix !== null && plat.prix !== undefined) return plat.prix.toFixed(2) + ' ' + devise;
-  return 'Prix à confirmer avec le restaurant';
-}
+          html += '</div></section>';
+        });
 
-function afficherMenu() {
-  const devise = donneesMenu.restaurant.devise || 'CHF ';
-  const conteneur = document.getElementById('menu-contenu');
-  conteneur.innerHTML = '';
-
-  donneesMenu.categories.forEach(cat => {
-    const plats = cat.plats.filter(p => filtreActif === 'tous' || (filtreActif === 'vegetarien' && p.vegetarien));
-    if (plats.length === 0) return;
-
-    const section = document.createElement('section');
-    section.className = 'categorie';
-    const h2 = document.createElement('h2');
-    h2.textContent = cat.nom;
-    section.appendChild(h2);
-
-    const grid = document.createElement('div');
-    grid.className = 'plats-grid';
-
-    plats.forEach(plat => {
-      const carte = document.createElement('article');
-      carte.className = 'plat';
-
-      if (plat.image) {
-        const img = document.createElement('img');
-        img.className = 'photo';
-        img.src = plat.image;
-        img.alt = plat.nom;
-        img.loading = 'lazy';
-        carte.appendChild(img);
-      } else {
-        const ph = document.createElement('div');
-        ph.className = 'photo-placeholder';
-        ph.textContent = 'Photo à venir';
-        carte.appendChild(ph);
+        container.innerHTML = html;
+      } catch (e) {
+        console.warn('Erreur chargement menu.json :', e);
+        document.getElementById('menu-container').innerHTML =
+          '<p style="text-align:center;">La carte n&rsquo;est pas disponible pour le moment. Merci de nous contacter.</p>';
       }
+    }
 
-      const body = document.createElement('div');
-      body.className = 'plat-body';
-
-      if (plat.vegetarien) {
-        const badge = document.createElement('span');
-        badge.className = 'badge';
-        badge.textContent = 'Végétarien';
-        body.appendChild(badge);
-      }
-
-      const top = document.createElement('div');
-      top.className = 'plat-top';
-      const h3 = document.createElement('h3');
-      h3.textContent = plat.nom;
-      const prix = document.createElement('span');
-      prix.className = 'prix';
-      prix.textContent = formatPrix(plat, devise);
-      top.appendChild(h3);
-      top.appendChild(prix);
-      body.appendChild(top);
-
-      const desc = document.createElement('p');
-      desc.className = 'desc';
-      desc.textContent = plat.description;
-      body.appendChild(desc);
-
-      carte.appendChild(body);
-      grid.appendChild(carte);
-    });
-
-    section.appendChild(grid);
-    conteneur.appendChild(section);
-  });
-
-  if (conteneur.children.length === 0) {
-    conteneur.innerHTML = '<p class="empty">Aucun plat ne correspond à ce filtre.</p>';
-  }
-}
-
-document.getElementById('filtres').addEventListener('click', (e) => {
-  const btn = e.target.closest('button');
-  if (!btn) return;
-  document.querySelectorAll('#filtres button').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  filtreActif = btn.dataset.filtre;
-  if (donneesMenu) afficherMenu();
-});
-
-chargerMenu();
-</script>
+    document.addEventListener('DOMContentLoaded', chargerMenu);
+  </script>
 </body>
 </html>

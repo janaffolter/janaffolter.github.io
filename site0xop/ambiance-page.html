@@ -1,66 +1,68 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="L'ambiance du Brûlot à Cossonay VD : photos du restaurant, de la salle et de l'esprit convivial de la maison.">
-<meta name="theme-color" content="#0d5eaf">
-<title>Ambiance — Le Brûlot</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ambiance – Ambiance au Br&ucirc;lot, Cossonay</title>
+  <meta name="description" content="D&eacute;couvrez l&rsquo;ambiance conviviale et familiale du restaurant Le Br&ucirc;lot au Tennis Club de Cossonay.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body data-page="ambiance">
-<div id="site-header-mount"></div>
+  <a class="skip-link" href="#contenu-principal">Aller au contenu principal</a>
 
-<section class="page-hero">
-  <div class="container">
-    <h1 id="titre-ambiance">Ambiance</h1>
-    <p id="intro-ambiance">Chargement…</p>
-  </div>
-</section>
+  <div id="site-header-mount"></div>
 
-<main class="container">
-  <div class="gallery" id="galerie-contenu">
-    <p class="empty">Chargement des photos…</p>
-  </div>
-</main>
+  <main id="contenu-principal">
+    <section class="section">
+      <div class="container">
+        <div class="heading">
+          <h1>Ambiance au Br&ucirc;lot</h1>
+          <p>Un lieu chaleureux, simple et g&eacute;n&eacute;reux, loin du d&eacute;cor sophistiqu&eacute;.</p>
+        </div>
 
-<div id="site-footer-mount"></div>
+        <p style="text-align:center; max-width:700px; margin:0 auto 3rem;">
+          Nich&eacute; au cœur du Tennis Club de Cossonay, Le Br&ucirc;lot cultive une atmosph&egrave;re
+          conviviale et familiale, riche en g&eacute;n&eacute;rosit&eacute; et en chaleur humaine.
+        </p>
 
-<script src="layout.js"></script>
-<script>
-async function chargerAmbiance() {
-  try {
-    const reponse = await fetch('ambiance.json');
-    const data = await reponse.json();
-    document.getElementById('titre-ambiance').textContent = data.titre;
-    document.getElementById('intro-ambiance').textContent = data.intro;
+        <div id="ambiance-container">
+          <p style="text-align:center;">Chargement des photos&hellip;</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    const galerie = document.getElementById('galerie-contenu');
-    galerie.innerHTML = '';
+  <div id="site-footer-mount"></div>
 
-    if (!data.photos || data.photos.length === 0) {
-      galerie.innerHTML = '<p class="empty">Aucune photo pour le moment.</p>';
-      return;
+  <script src="layout.js"></script>
+  <script>
+    async function chargerAmbiance() {
+      try {
+        const reponse = await fetch('ambiance.json');
+        const data = await reponse.json();
+        const container = document.getElementById('ambiance-container');
+
+        let html = '<div class="ambiance-grid">';
+        data.photos.forEach(photo => {
+          html += '<figure class="ambiance-photo">';
+          html += '<img src="' + photo.image + '" alt="' + photo.legende + '">';
+          html += '<figcaption>' + photo.legende + '</figcaption>';
+          html += '</figure>';
+        });
+        html += '</div>';
+
+        container.innerHTML = html;
+      } catch (e) {
+        console.warn('Erreur chargement ambiance.json :', e);
+        document.getElementById('ambiance-container').innerHTML =
+          '<p style="text-align:center;">Les photos ne sont pas disponibles pour le moment.</p>';
+      }
     }
 
-    data.photos.forEach(photo => {
-      const fig = document.createElement('figure');
-      const img = document.createElement('img');
-      img.src = photo.image;
-      img.alt = photo.legende;
-      img.loading = 'lazy';
-      const caption = document.createElement('figcaption');
-      caption.textContent = photo.legende;
-      fig.appendChild(img);
-      fig.appendChild(caption);
-      galerie.appendChild(fig);
-    });
-  } catch (e) {
-    document.getElementById('galerie-contenu').innerHTML =
-      '<p class="empty">Les photos n\'ont pas pu être chargées. Vérifiez que ambiance.json est bien présent à côté de cette page.</p>';
-  }
-}
-chargerAmbiance();
-</script>
+    document.addEventListener('DOMContentLoaded', chargerAmbiance);
+  </script>
 </body>
 </html>

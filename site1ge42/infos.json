@@ -1,7 +1,7 @@
 {
   "restaurant": {
-    "nom": "Avra Mykonos",
-    "sous_titre": "Cuisine grecque authentique – Bournens, Vaud",
+    "nom": "Avra Mykonos @ Bournens",
+    "sous_titre": "Taverne grecque – Bournens, Vaud",
     "telephone_affiche": "021 888 23 17",
     "telephone_lien": "+41218882317",
     "adresse": {
@@ -15,16 +15,14 @@
     "google_maps_avis": "https://www.google.com/maps/search/?api=1&query=AVRA+Mykonos+Place+du+Coll%C3%A8ge+2+1035+Bournens",
     "facebook": "https://www.facebook.com/profile.php?id=44567568310",
     "instagram": "https://www.instagram.com/avramykonos/",
-    "tripadvisor": "https://fr.tripadvisor.ch/Restaurant_Review-g4353412-d27694959-Reviews-Avra_Mykonos-Bournens_Canton_of_Vaud.html",
-    "site_web": "https://www.avra-mykonos.ch/",
-    "email": "avramykonos.ch@gmail.com"
+    "tripadvisor": "https://fr.tripadvisor.ch/Restaurant_Review-g4353412-d27694959-Reviews-Avra_Mykonos-Bournens_Canton_of_Vaud.html"
   },
   "menu_semaine": true,
   "accueil": {
     "hero": {
-      "image": "images/ambiance07.webp",
+      "image": "images/ambiance02.webp",
       "eyebrow": "Taverne grecque",
-      "titre": "Avra Mykonos",
+      "titre": "Avra Mykonos @ Bournens",
       "description": "Découvrez l’authenticité de la cuisine grecque dans un cadre élégant et chaleureux au cœur de Bournens.",
       "boutons": [
         { "label": "Voir la carte", "href": "menu-page.html", "class": "btn btn-outline" },
@@ -39,9 +37,9 @@
     "reservation": "Réservation conseillée au 021 888 23 17",
     "temoignages": [
       {
+        "nom": "TripAdvisor",
         "note": 4,
-        "texte": "Note moyenne 4.1/5 — 8 avis. Voir la page TripAdvisor pour tous les avis.",
-        "nom": "TripAdvisor"
+        "texte": "<b>Note moyenne</b> 4.1/5 — 8 avis. Voir la page TripAdvisor pour tous les avis."
       }
     ]
   },

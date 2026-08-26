@@ -5,6 +5,7 @@ html { scroll-behavior:smooth; }
   --bois-brulot:#5c3a24;
   --braise:#a63c1e;
   --braise-vive:#c9481f;
+  --braise-vive-rgb: 201,72,31;
   --cuivre:#b4813a;
   --creme:#f7f0e4;
   --creme-clair:#fbf6ec;
@@ -35,22 +36,44 @@ nav a { padding:.45rem .58rem; border-radius:999px; color:var(--bois-brulot); fo
 nav a:hover, nav a[aria-current="page"] { background:var(--creme); color:var(--braise-vive); }
 nav .btn { margin-left:.5rem; }
 
-/* Hero page d'accueil */
-.hero { color:var(--blanc-chaux); background-color:var(--bois-fonce); background-size:cover; background-position:center; padding:6rem 0 5rem; text-align:center; }
-.hero-content { max-width:760px; margin-inline:auto; }
+.hero { position:relative; color:var(--blanc-chaux); background-color:var(--bois-fonce); background-size:cover; background-position:center; padding:6rem 0 5rem; text-align:center; }
+.hero::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(59,36,24,.25), rgba(42,32,25,.85)); }
+.hero-content { position:relative; z-index:2; max-width:760px; margin-inline:auto; }
 .eyebrow { display:inline-block; margin-bottom:1.1rem; padding:.35rem .8rem; border:1px solid rgba(255,255,255,.65); border-radius:999px; font-family:Arial,sans-serif; font-size:.76rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
 h1,h2,h3 { margin-top:0; font-family:'Oswald','Segoe UI',Arial,sans-serif; text-transform:none; }
 h1 { margin-bottom:1.1rem; font-size:clamp(2.3rem,7vw,4.4rem); line-height:1.08; font-style:normal; font-weight:700; text-transform:uppercase; letter-spacing:.01em; }
 .hero p { max-width:620px; margin:0 auto 2rem; font-size:1.15rem; }
-.btn { display:inline-block; border:2px solid var(--braise-vive); border-radius:999px; padding:.8rem 1.3rem; background:var(--braise-vive); color:var(--blanc-chaux); font-family:Arial,sans-serif; font-weight:700; text-decoration:none; transition:transform .2s ease,background .2s ease; }
-.btn:hover { background:#9c3416; border-color:#9c3416; transform:translateY(-2px); }
-.btn-outline { background:transparent; color:var(--blanc-chaux); border-color:var(--blanc-chaux); }
-.btn-outline:hover { background:rgba(255,255,255,.15); }
-.btn-outline-blue { background:transparent; color:var(--bois-brulot); border-color:var(--bois-brulot); }
-.btn-outline-blue:hover { background:var(--creme); }
+.btn {
+  display:inline-block;
+  border:2px solid rgb(var(--braise-vive-rgb));
+  border-radius:999px;
+  padding:.8rem 1.3rem;
+  background:rgba(var(--braise-vive-rgb), .3);
+  color:var(--blanc-chaux);
+  font-family:Arial,sans-serif;
+  font-weight:700;
+  text-decoration:none;
+  transition:transform .2s ease, background .2s ease;
+}
+.btn:hover {
+  background:rgba(var(--braise-vive-rgb), .55);
+  border-color:rgb(var(--braise-vive-rgb));
+  transform:translateY(-2px);
+}
+.btn-outline,
+.btn-outline-blue {
+  background:rgba(var(--braise-vive-rgb), .3);
+  color:var(--blanc-chaux);
+  border:2px solid rgb(var(--braise-vive-rgb));
+}
+.btn-outline:hover,
+.btn-outline-blue:hover {
+  background:rgba(var(--braise-vive-rgb), .55);
+  border-color:rgb(var(--braise-vive-rgb));
+}
 .hero-actions { display:flex; flex-wrap:wrap; gap:.7rem; justify-content:center; }
 
-/* Sections g&eacute;n&eacute;riques */
+/* Sections génériques */
 .section { padding:4.5rem 0; }
 .section-alt { background:var(--creme); }
 .section-sable { background:var(--creme-clair); }
@@ -69,15 +92,15 @@ h1 { margin-bottom:1.1rem; font-size:clamp(2.3rem,7vw,4.4rem); line-height:1.08;
 .value strong { display:block; margin-bottom:.15rem; color:var(--bois-brulot); font-family:'Oswald',Arial,sans-serif; font-size:1.05rem; text-transform:uppercase; letter-spacing:.02em; }
 
 /* Vignettes de renvoi (accueil) */
-.teaser-grid { display:grid; gap:1.3rem; grid-template-columns:1fr; }
+.teaser-grid { display:grid; gap:1.3rem; grid-template-columns:1fr; justify-items:center; }
 @media (min-width: 768px) {
   .teaser-grid { grid-template-columns: repeat(3, 1fr); }
 }
-.teaser { position:relative; display:block; overflow:hidden; border-radius:var(--rayon); box-shadow:var(--ombre); text-decoration:none; color:var(--blanc-chaux); min-height:260px; }
+.teaser { position:relative; display:block; overflow:hidden; border-radius:var(--rayon); box-shadow:var(--ombre); text-decoration:none; color:var(--blanc-chaux); min-height:260px; width:100%; max-width:360px; }
 .teaser img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; transition:transform .4s ease; }
 .teaser:hover img { transform:scale(1.07); }
 .teaser::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,rgba(59,36,24,.15),rgba(42,32,25,.9)); }
-.teaser-body { position:relative; z-index:2; display:flex; flex-direction:column; justify-content:flex-end; height:100%; min-height:260px; padding:1.6rem; }
+.teaser-body { position:relative; z-index:2; display:flex; flex-direction:column; justify-content:flex-start; height:100%; min-height:260px; padding:1.6rem; }
 .teaser-tag { display:inline-block; margin-bottom:.5rem; padding:.25rem .65rem; border-radius:999px; background:rgba(255,255,255,.2); border:1px solid rgba(255,255,255,.5); font-family:Arial,sans-serif; font-size:.72rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; width:fit-content; }
 .teaser h3 { margin:0 0 .4rem; font-size:1.6rem; font-style:normal; text-transform:uppercase; }
 .teaser p { margin:0 0 .8rem; font-family:Arial,sans-serif; font-size:.92rem; max-width:420px; }
@@ -154,3 +177,17 @@ footer.site-footer { background:var(--bois-fonce); color:var(--blanc-chaux); pad
 .social-link:hover { background:rgba(255,255,255,.2); }
 .social-placeholder { font-size:.85rem; color:#c9b8a3; }
 .footer-bottom { grid-column:1 / -1; text-align:center; margin-top:.5rem; font-size:.85rem; color:#c9b8a3; }
+
+/* TripAdvisor variant */
+.social-link.tripadvisor { background:#34E0A1; color:#053422; }
+.social-link.tripadvisor svg { width:18px; height:18px; vertical-align:middle; margin-right:.45rem; fill:currentColor; }
+.social-link.tripadvisor:hover { filter:brightness(.92); }
+
+/* Facebook & Instagram variants */
+.social-link.facebook { background:#1877F2; color:#fff; }
+.social-link.facebook svg { width:18px; height:18px; vertical-align:middle; margin-right:.45rem; fill:currentColor; }
+.social-link.facebook:hover { filter:brightness(.92); }
+
+.social-link.instagram { background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af); color:#fff; }
+.social-link.instagram svg { width:18px; height:18px; vertical-align:middle; margin-right:.45rem; fill:currentColor; }
+.social-link.instagram:hover { filter:brightness(.92); }

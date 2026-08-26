@@ -13,7 +13,7 @@
           "description": "Feuilleté maison garni d'une généreuse sauce crémeuse aux vraies morilles, un classique plébiscité par les habitués.",
           "prix": null,
           "prix_label": "Prix à confirmer avec le restaurant",
-          "image": "images/img_plat001.webp",
+          "image": "images/menu001.webp",
           "vegetarien": false
         },
         {
@@ -21,7 +21,7 @@
           "description": "Les célèbres filets de perches du Brûlot, la spécialité qui fait la renommée de la maison, servis meunière.",
           "prix": null,
           "prix_label": "Prix à confirmer avec le restaurant",
-          "image": "images/img_plat002.jpg",
+          "image": "images/menu002.webp",
           "vegetarien": false
         },
         {
@@ -29,7 +29,7 @@
           "description": "Foie gras préparé maison par le chef, une recette fidèle depuis l'ouverture du restaurant.",
           "prix": null,
           "prix_label": "Prix à confirmer avec le restaurant",
-          "image": "images/img_plat009.jpg",
+          "image": "images/menu009.webp",
           "vegetarien": false
         }
       ]
@@ -43,7 +43,7 @@
           "description": "Médaillon de bœuf accompagné de la fameuse sauce maison Brûlot et de frites fraîches.",
           "prix": null,
           "prix_label": "Prix à confirmer avec le restaurant",
-          "image": "images/img_plat006.jpg",
+          "image": "images/menu006.webp",
           "vegetarien": false
         },
         {
@@ -51,7 +51,7 @@
           "description": "Belle pièce de bœuf servie avec une sauce riche et généreuse aux morilles.",
           "prix": 37,
           "prix_label": null,
-          "image": "images/img_plat007.jpg",
+          "image": "images/menu007.webp",
           "vegetarien": false
         },
         {
@@ -59,7 +59,7 @@
           "description": "Belle entrecôte de 250 à 300 g, cuite selon votre goût, servie avec sauce Brûlot et frites maison.",
           "prix": null,
           "prix_label": "Prix à confirmer avec le restaurant",
-          "image": "images/img_plat004.jpg",
+          "image": "images/menu004.webp",
           "vegetarien": false
         },
         {
@@ -67,7 +67,7 @@
           "description": "Tartare de bœuf préparé à la commande. Précisez vos préférences d'assaisonnement au service.",
           "prix": null,
           "prix_label": "Prix à confirmer avec le restaurant",
-          "image": "images/img_plat005.jpg",
+          "image": "images/menu005.webp",
           "vegetarien": false
        }
       ]
@@ -81,7 +81,7 @@
           "description": "Sélection de desserts faits maison, servis en portions copieuses.",
           "prix": 12.0,
           "prix_label": null,
-          "image": "images/img_plat008.jpg",
+          "image": "images/menu008.webp",
           "vegetarien": true
         }
       ]
@@ -95,7 +95,7 @@
           "description": "Sélection de pinot noir suisse proposé comme vin de la maison.",
           "prix": 25,
           "prix_label": null,
-          "image": "images/img_vin001.webp",
+          "image": "images/menu011.webp",
           "vegetarien": true
         },
         {
@@ -103,7 +103,7 @@
           "description": "Liqueurs digestives préparées par la maison, souvent offertes en fin de repas par la patronne.",
           "prix": 16,
           "prix_label": null,
-          "image": "images/img_vin002.webp",
+          "image": "images/menu012.webp",
           "vegetarien": true
         }
       ]

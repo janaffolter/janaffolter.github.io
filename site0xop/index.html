@@ -16,89 +16,32 @@
   <div id="site-header-mount"></div>
 
   <main id="contenu-principal">
-    <section class="hero" style="background-image: url('images/ambiance02.webp');">
-      <div class="hero-content">
-        <span class="eyebrow">Brasserie traditionnelle</span>
-        <h1>Le Brûlot</h1>
-        <p>Une cuisine généreuse, faite maison, inspirée des classiques suisses. Filets de perches, viandes de boeuf et ambiance chaleureuse au cœur du Tennis Club de Cossonay.</p>
-        <div class="hero-actions">
-          <a class="btn" href="tel:+41218611541">Réserver par téléphone</a>
-          <a class="btn btn-outline" href="menu-page.html">Voir la carte</a>
-          <a class="btn btn-outline-blue" href="infos.html">Infos pratiques</a>
-        </div>
-      </div>
-    </section>
+    <section class="hero" id="hero-home"></section>
 
     <section class="section">
       <div class="container">
-        <div class="intro-grid">
-          <div class="card">
-            <h2>Une cuisine de brasserie, authentique et généreuse</h2>
-            <p>Installé au sein du Tennis Club de Cossonay depuis plus de vingt ans, Le Brûlot propose une cuisine de brasserie traditionnelle, simple et bien exécutée.</p>
-            <p>Aux fourneaux, Manuel et Cristina perpétuent des classiques fidèles à l’esprit de la maison, tandis qu’en salle, l’accueil reste chaleureux et familial.</p>
-          </div>
-          <div class="values">
-            <div class="value">
-              <strong>Spécialités</strong>
-              Filets de perches meunière, viandes de boeuf et sauce maison « Le Brûlot »
-            </div>
-            <div class="value">
-              <strong>Ambiance</strong>
-              Conviviale, familiale, loin du décor sophistiqué, riche en générosité
-            </div>
-            <div class="value">
-              <strong>Réservation</strong>
-              Fortement conseillée au 021 861 15 41, surtout le week-end
-            </div>
-          </div>
-        </div>
+        <div class="intro-grid" id="accueil-intro"></div>
       </div>
+    </section>
+
+    <section class="section section-alt testimonials-section" id="testimonials-section">
+     <div class="container">
+       <div class="heading">
+         <h2>Nos clients nous recommandent</h2>
+         <p>Une ambiance familière, des plats généreux et un accueil toujours chaleureux.</p>
+       </div>
+       <div class="testimonials-grid" id="temoignages-grid"></div>
+       <div class="testimonial-source" id="tripadvisor-source"></div>
+     </div>
     </section>
 
     <section class="section section-sable">
       <div class="container">
-          <div class="heading">
+        <div class="heading">
           <h2>Découvrir</h2>
-          <p>Explorez notre carte, nos menus de la semaine et l’ambiance du restaurant.</p>
+          <p id="decouvrir-texte">Explorez notre carte, nos menus de la semaine et l’ambiance du restaurant.</p>
         </div>
-        <div class="teaser-grid">
-          <a class="teaser" href="menu-page.html">
-            <img src="images/menu005.jpg" alt="Assiette de steak tartare au restaurant Le Brûlot">
-            <div class="teaser-body">
-              <span class="teaser-tag">La carte</span>
-              <h3>Filets de perches et viandes de boeuf</h3>
-              <p>Découvrez nos plats signatures, préparés avec des produits de saison.</p>
-              <span class="lien">
-                Voir la carte
-                <svg viewBox="0 0 24 24"><path d="M13 5l7 7-7 7M5 12h14"/></svg>
-              </span>
-            </div>
-          </a>
-          <a class="teaser" href="menus-semaine.html">
-            <img src="images/menu001.webp" alt="Feuilleté aux morilles, suggestion de saison">
-            <div class="teaser-body">
-              <span class="teaser-tag">Nouveau</span>
-              <h3>Menus de la semaine</h3>
-              <p>Chaque semaine, de nouvelles suggestions préparées maison selon les arrivages.</p>
-              <span class="lien">
-                Voir les menus
-                <svg viewBox="0 0 24 24"><path d="M13 5l7 7-7 7M5 12h14"/></svg>
-              </span>
-            </div>
-          </a>
-          <a class="teaser" href="ambiance-page.html">
-            <img src="images/ambiance01.webp" alt="Salle du restaurant Le Brûlot, ambiance conviviale et familiale">
-            <div class="teaser-body">
-              <span class="teaser-tag">Ambiance</span>
-              <h3>Un lieu chaleureux et familial</h3>
-              <p>Une atmosphère simple et généreuse, loin du décor sophistiqué.</p>
-              <span class="lien">
-                Voir l’ambiance
-                <svg viewBox="0 0 24 24"><path d="M13 5l7 7-7 7M5 12h14"/></svg>
-              </span>
-            </div>
-          </a>
-        </div>
+        <div class="teaser-grid" id="decouvrir-grid"></div>
       </div>
     </section>
   </main>
@@ -106,5 +49,114 @@
   <div id="site-footer-mount"></div>
 
   <script src="layout.js"></script>
+  <script>
+    async function chargerAccueilInfos() {
+      try {
+        const reponse = await fetch('infos.json');
+        const data = await reponse.json();
+        const hero = document.getElementById('hero-home');
+        const container = document.getElementById('accueil-intro');
+        const testimonialsGrid = document.getElementById('temoignages-grid');
+        const testimonialSection = document.getElementById('testimonials-section');
+        const tripadvisorSource = document.getElementById('tripadvisor-source');
+        const discoverGrid = document.getElementById('decouvrir-grid');
+        const discoverText = document.getElementById('decouvrir-texte');
+
+        if (hero && data.accueil?.hero) {
+          hero.style.backgroundImage = `url('${data.accueil.hero.image}')`;
+          hero.innerHTML = `
+            <div class="hero-content">
+              <span class="eyebrow">${data.accueil.hero.eyebrow}</span>
+              <h1>${data.accueil.hero.titre}</h1>
+              <p>${data.accueil.hero.description}</p>
+              <div class="hero-actions">
+                ${data.accueil.hero.boutons.map(button => `
+                  <a class="${button.class}" href="${button.href}">${button.label}</a>
+                `).join('')}
+              </div>
+            </div>
+          `;
+        }
+
+        if (!container || !data.accueil) return;
+
+        const reservation = data.accueil.reservation
+          .replace(
+            data.restaurant.telephone_affiche,
+            `<a href="tel:${data.restaurant.telephone_lien}">${data.restaurant.telephone_affiche}</a>`
+          );
+
+        container.innerHTML = `
+          <div class="card">
+            <h2>${data.accueil.intro_titre}</h2>
+            <p>${data.accueil.intro_texte_1}</p>
+            <p>${data.accueil.intro_texte_2}</p>
+          </div>
+          <div class="values">
+            <div class="value">
+              <strong>Spécialités</strong>
+              ${data.accueil.specialites}
+            </div>
+            <div class="value">
+              <strong>Ambiance</strong>
+              ${data.accueil.ambiance}
+            </div>
+            <div class="value">
+              <strong>Réservation</strong>
+              ${reservation}
+            </div>
+          </div>
+        `;
+
+        if (!data.restaurant?.tripadvisor) {
+          if (testimonialSection) testimonialSection.remove();
+        } else if (tripadvisorSource) {
+          tripadvisorSource.innerHTML = `
+            <a class="social-link tripadvisor" href="${data.restaurant.tripadvisor}" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2c2.8 0 5 2.2 5 5s-2.2 5-5 5-5-2.2-5-5 2.2-5 5-5zm0 12c3.9 0 7 3.1 7 7H5c0-3.9 3.1-7 7-7z"/></svg>
+              Voir tous les avis sur Tripadvisor
+            </a>
+          `;
+        }
+
+        if (discoverText) {
+          discoverText.textContent = data.menu_semaine === false
+            ? 'Explorez notre carte et l’ambiance du restaurant.'
+            : 'Explorez notre carte, nos menus de la semaine et l’ambiance du restaurant.';
+        }
+
+        if (testimonialsGrid && Array.isArray(data.accueil?.temoignages) && data.accueil.temoignages.length) {
+          testimonialsGrid.innerHTML = data.accueil.temoignages.map(item => `
+            <article class="testimonial-card">
+              <div class="testimonial-stars" aria-label="${item.note} étoiles sur 5">${'★'.repeat(item.note)}${'☆'.repeat(5 - item.note)}</div>
+              <p class="testimonial-quote">“${item.texte}”</p>
+              <strong>${item.nom}</strong>
+            </article>
+          `).join('');
+        }
+
+        if (discoverGrid && Array.isArray(data.decouvrir)) {
+          discoverGrid.innerHTML = data.decouvrir.map(item => `
+            <a class="teaser" href="${item.lien}">
+              <img src="${item.image}" alt="${item.alt}">
+              <div class="teaser-body">
+                <span class="teaser-tag">${item.tag}</span>
+                <h3>${item.titre}</h3>
+                <p>${item.description}</p>
+                <span class="lien">
+                  ${item.tag === 'La carte' ? 'Voir la carte' : item.tag === 'Nouveau' ? 'Voir les menus' : 'Voir l’ambiance'}
+                  <svg viewBox="0 0 24 24"><path d="M13 5l7 7-7 7M5 12h14"/></svg>
+                </span>
+              </div>
+            </a>
+          `).join('');
+        }
+      } catch (e) {
+        console.warn('Erreur chargement infos.json pour l’accueil :', e);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', chargerAccueilInfos);
+  </script>
 </body>
 </html>

@@ -16,8 +16,69 @@
     "facebook": null,
     "instagram": null,
     "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g1022770-d7691268-Reviews-Le_Brulot-Cossonay_Canton_of_Vaud.html"
-  },
+    },
   "menu_semaine": true,
+  "accueil": {
+    "hero": {
+      "image": "images/ambiance02.webp",
+      "eyebrow": "Brasserie traditionnelle",
+      "titre": "Le Brûlot",
+      "description": "Une cuisine généreuse, faite maison, inspirée des classiques suisses. Filets de perches, viandes de boeuf et ambiance chaleureuse au cœur du Tennis Club de Cossonay.",
+      "boutons": [
+        { "label": "Voir la carte", "href": "menu-page.html", "class": "btn btn-outline" },
+        { "label": "Infos pratiques", "href": "infos.html", "class": "btn btn-outline-blue" }
+      ]
+    },
+    "intro_titre": "Une cuisine de brasserie, authentique et généreuse",
+    "intro_texte_1": "Installé au sein du Tennis Club de Cossonay depuis plus de vingt ans, Le Brûlot propose une cuisine de brasserie traditionnelle, simple et bien exécutée.",
+    "intro_texte_2": "Aux fourneaux, Manuel et Cristina perpétuent des classiques fidèles à l’esprit de la maison, tandis qu’en salle, l’accueil reste chaleureux et familial.",
+    "specialites": "Filets de perches meunière, viandes de boeuf et sauce maison « Le Brûlot »",
+    "ambiance": "Conviviale, familiale, loin du décor sophistiqué, riche en générosité",
+    "reservation": "Fortement conseillée au 021 861 15 41, surtout le week-end",
+    "temoignages": [
+      {
+        "nom": "Curious00650937941",
+        "note": 5,
+        "texte": "<b>Un vrai plaisir pour les yeux et l'estomac.</b><br>Excellents filets de perches, les meilleurs loin à la ronde, la viande tendre à souhaitez et la sauce brùlot un délice !!!!<br>Merci !"
+      },
+      {
+        "nom": "Ana Paula S",
+        "note": 5,
+        "texte": "<b>Wonderful</b><br>Comida maravilhosa e atendimento impecável. Chef Manu muito simpático. Nós recebeu na porta. Lugar bem intimista. Frequentado pelos locais da cidade."
+      },
+      {
+        "nom": "chrisbournival",
+        "note": 4,
+        "texte": "<b>Exceeeelllent filets de perches</b><br>Probably the best I've had in my 27 years in the region! The place is always packed, so reserving is a good idea. Don't mind the setting... you're kind of in the middle of tennis club and courts , the food will make you feel you're in a refined setting 😃"
+      }
+    ]
+  },
+  "decouvrir": [
+    {
+      "tag": "La carte",
+      "titre": "Filets de perches et viandes de boeuf",
+      "description": "Découvrez nos plats signatures, préparés avec des produits de saison.",
+      "lien": "menu-page.html",
+      "image": "images/menu005.webp",
+      "alt": "Assiette de steak tartare au restaurant Le Brûlot"
+    },
+    {
+      "tag": "Nouveau",
+      "titre": "Menus de la semaine",
+      "description": "Chaque semaine, de nouvelles suggestions préparées maison selon les arrivages.",
+      "lien": "menus-semaine.html",
+      "image": "images/menu001.webp",
+      "alt": "Feuilleté aux morilles, suggestion de saison"
+    },
+    {
+      "tag": "Ambiance",
+      "titre": "Un lieu chaleureux et familial",
+      "description": "Une atmosphère simple et généreuse, loin du décor sophistiqué.",
+      "lien": "ambiance-page.html",
+      "image": "images/ambiance01.webp",
+      "alt": "Salle du restaurant Le Brûlot, ambiance conviviale et familiale"
+    }
+  ],
   "images_accueil": {
     "image_hero": "images/ambiance02.webp",
     "image_vignette_menu": "images/menu005.jpg",

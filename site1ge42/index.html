@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avra Mykonos @ Bournens — Taverne grecque à Bournens</title>
+  <meta name="description" content="Avra Mykonos @ Bournens : taverne grecque proposant mezzés, spécialités traditionnelles et plats conviviaux au cœur de Bournens.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="accueil">
+  <a class="skip-link" href="#contenu-principal">Aller au contenu principal</a>
+
+  <div id="site-header-mount"></div>
+
+  <main id="contenu-principal">
+    <section class="hero" id="hero-home"></section>
+
+    <section class="section">
+      <div class="container">
+        <div class="intro-grid" id="accueil-intro"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt testimonials-section" id="testimonials-section">
+     <div class="container">
+       <div class="heading">
+         <h2>Nos clients nous recommandent</h2>
+         <p>Une ambiance familière, des plats généreux et un accueil toujours chaleureux.</p>
+       </div>
+       <div class="testimonials-grid" id="temoignages-grid"></div>
+       <div class="testimonial-source" id="tripadvisor-source"></div>
+     </div>
+    </section>
+
+    <section class="section section-sable">
+      <div class="container">
+        <div class="heading">
+          <h2>Découvrir</h2>
+          <p id="decouvrir-texte">Explorez notre carte, nos menus de la semaine et l’ambiance du restaurant.</p>
+        </div>
+        <div class="teaser-grid" id="decouvrir-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-mount"></div>
+
+  <script src="layout.js"></script>
+  <script>
+    async function chargerAccueilInfos() {
+      try {
+        const reponse = await fetch('infos.json');
+        const data = await reponse.json();
+        const hero = document.getElementById('hero-home');
+        const container = document.getElementById('accueil-intro');
+        const testimonialsGrid = document.getElementById('temoignages-grid');
+        const testimonialSection = document.getElementById('testimonials-section');
+        const tripadvisorSource = document.getElementById('tripadvisor-source');
+        const discoverGrid = document.getElementById('decouvrir-grid');
+        const discoverText = document.getElementById('decouvrir-texte');
+
+        if (hero && data.accueil?.hero) {
+          hero.style.backgroundImage = `url('${data.accueil.hero.image}')`;
+          hero.innerHTML = `
+            <div class="hero-content">
+              <span class="eyebrow">${data.accueil.hero.eyebrow}</span>
+              <h1>${data.accueil.hero.titre}</h1>
+              <p>${data.accueil.hero.description}</p>
+              <div class="hero-actions">
+                ${data.accueil.hero.boutons.map(button => `
+                  <a class="${button.class}" href="${button.href}">${button.label}</a>
+                `).join('')}
+              </div>
+            </div>
+          `;
+        }
+
+        if (!container || !data.accueil) return;
+
+        const reservation = data.accueil.reservation
+          .replace(
+            data.restaurant.telephone_affiche,
+            `<a href="tel:${data.restaurant.telephone_lien}">${data.restaurant.telephone_affiche}</a>`
+          );
+
+        container.innerHTML = `
+          <div class="card">
+            <h2>${data.accueil.intro_titre}</h2>
+            <p>${data.accueil.intro_texte_1}</p>
+            <p>${data.accueil.intro_texte_2}</p>
+          </div>
+          <div class="values">
+            <div class="value">
+              <strong>Spécialités</strong>
+              ${data.accueil.specialites}
+            </div>
+            <div class="value">
+              <strong>Ambiance</strong>
+              ${data.accueil.ambiance}
+            </div>
+            <div class="value">
+              <strong>Réservation</strong>
+              ${reservation}
+            </div>
+          </div>
+        `;
+
+        if (!data.restaurant?.tripadvisor) {
+          if (testimonialSection) testimonialSection.remove();
+        } else if (tripadvisorSource) {
+          tripadvisorSource.innerHTML = `
+            <a class="social-link tripadvisor" href="${data.restaurant.tripadvisor}" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2c2.8 0 5 2.2 5 5s-2.2 5-5 5-5-2.2-5-5 2.2-5 5-5zm0 12c3.9 0 7 3.1 7 7H5c0-3.9 3.1-7 7-7z"/></svg>
+              Voir tous les avis sur Tripadvisor
+            </a>
+          `;
+        }
+
+        if (discoverText) {
+          discoverText.textContent = data.menu_semaine === false
+            ? 'Explorez notre carte et l’ambiance du restaurant.'
+            : 'Explorez notre carte, nos menus de la semaine et l’ambiance du restaurant.';
+        }
+
+        if (testimonialsGrid && Array.isArray(data.accueil?.temoignages) && data.accueil.temoignages.length) {
+          testimonialsGrid.innerHTML = data.accueil.temoignages.map(item => `
+            <article class="testimonial-card">
+              <div class="testimonial-stars" aria-label="${item.note} étoiles sur 5">${'★'.repeat(item.note)}${'☆'.repeat(5 - item.note)}</div>
+              <p class="testimonial-quote">“${item.texte}”</p>
+              <strong>${item.nom}</strong>
+            </article>
+          `).join('');
+        }
+
+        if (discoverGrid && Array.isArray(data.decouvrir)) {
+          discoverGrid.innerHTML = data.decouvrir.map(item => `
+            <a class="teaser" href="${item.lien}">
+              <img src="${item.image}" alt="${item.alt}">
+              <div class="teaser-body">
+                <span class="teaser-tag">${item.tag}</span>
+                <h3>${item.titre}</h3>
+                <p>${item.description}</p>
+                <span class="lien">
+                  ${item.tag === 'La carte' ? 'Voir la carte' : item.tag === 'Nouveau' ? 'Voir les menus' : 'Voir l’ambiance'}
+                  <svg viewBox="0 0 24 24"><path d="M13 5l7 7-7 7M5 12h14"/></svg>
+                </span>
+              </div>
+            </a>
+          `).join('');
+        }
+      } catch (e) {
+        console.warn('Erreur chargement infos.json pour l’accueil :', e);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', chargerAccueilInfos);
+  </script>
+</body>
+</html>

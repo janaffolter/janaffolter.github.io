@@ -1,0 +1,10 @@
+{
+  "titre": "L’ambiance d’AVRA Mykonos",
+  "intro": "AVRA Mykonos propose un cadre élégant, chaleureux et convivial au cœur de Bournens, où découvrir les saveurs de la cuisine grecque.",
+  "photos": [
+    { "image": "images/ambiance01.webp", "legende": "La salle du restaurant AVRA Mykonos — photo à confirmer avec le restaurant" },
+    { "image": "images/ambiance02.webp", "legende": "L’ambiance du restaurant — photo à confirmer avec le restaurant" },
+    { "image": "images/ambiance03.webp", "legende": "Vue extérieure du restaurant à Bournens — photo à confirmer avec le restaurant" },
+    { "image": "images/ambiance04.webp", "legende": "Une spécialité grecque servie au restaurant — photo à confirmer avec le restaurant" }
+  ]
+}

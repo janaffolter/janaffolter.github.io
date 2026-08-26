@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infos pratiques – Avra Mykonos @ Bournens</title>
+  <meta name="description" content="Adresse, horaires, téléphone et accès au restaurant Avra Mykonos @ Bournens.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Source+Sans+3:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="infos">
+  <a class="skip-link" href="#contenu-principal">Aller au contenu principal</a>
+
+  <div id="site-header-mount"></div>
+
+  <main id="contenu-principal">
+    <section class="section">
+      <div class="container">
+        <div class="heading">
+          <h1>Infos pratiques</h1>
+          <p>Toutes les informations pour se rendre chez nous et réserver votre table.</p>
+        </div>
+
+        <div class="infos-grid">
+          <div class="infos-card">
+            <h2>Coordonnées</h2>
+              <p>Avra Mykonos @ Bournens<br>
+              Place du Collège 2<br>
+            1035 Bournens<br>
+            Canton de Vaud, Suisse<br><br>
+              Téléphone : 
+              <a href="tel:+41218882317">021 888 23 17</a>
+            </p>
+        </div>
+
+          <div class="infos-card">
+            <h2>Horaires</h2>
+            <div id="horaires-container">
+              <p>Chargement des horaires…</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-section">
+          <h2>Localisation</h2>
+          <iframe
+            class="map-embed"
+            src="https://www.google.com/maps?q=Place+du+Coll%C3%A8ge+2,+1035+Bournens,+Vaud,+Suisse&output=embed"
+            title="Carte Google Maps – Avra Mykonos @ Bournens">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer-mount"></div>
+
+  <script src="layout.js"></script>
+  <script>
+    async function chargerHoraires() {
+      try {
+        const reponse = await fetch('infos.json');
+        const data = await reponse.json();
+        const container = document.getElementById('horaires-container');
+
+        let html = '<ul class="horaires-list">';
+        data.horaires.forEach(h => {
+          html += '<li><span class="horaires-jours">' + h.jours + '</span>';
+          html += '<span class="horaires-creneaux">' + h.creneaux.join(', ') + '</span></li>';
+        });
+        html += '</ul>';
+
+        if (data.horaires_note) {
+          html += '<p class="horaires-note">' + data.horaires_note + '</p>';
+        }
+
+        container.innerHTML = html;
+      } catch (e) {
+        console.warn('Erreur chargement infos.json pour horaires :', e);
+        document.getElementById('horaires-container').innerHTML =
+          '<p>Merci de nous contacter pour confirmer les horaires.</p>';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', chargerHoraires);
+  </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+{
+  "restaurant": {
+    "nom": "Avra Mykonos @ Bournens",
+    "sous_titre": "Cuisine grecque authentique – Bournens, Vaud",
+    "telephone_affiche": "021 888 23 17",
+    "telephone_lien": "+41218882317",
+    "adresse": {
+      "rue": "Place du Collège 2",
+      "npa": "1035",
+      "localite": "Bournens",
+      "canton": "Vaud",
+      "pays": "Suisse"
+    },
+    "google_maps_embed": "https://www.google.com/maps?q=Place+du+Coll%C3%A8ge+2,+1035+Bournens,+Vaud,+Suisse&output=embed",
+    "google_maps_avis": "https://www.google.com/maps/search/?api=1&query=AVRA+Mykonos+Place+du+Coll%C3%A8ge+2+1035+Bournens",
+    "facebook": null,
+    "instagram": null,
+    "tripadvisor": "https://fr.tripadvisor.ch/Restaurant_Review-g4353412-d27694959-Reviews-Avra_Mykonos-Bournens_Canton_of_Vaud.html",
+    "site_web": "https://www.avra-mykonos.ch/",
+    "email": "avramykonos.ch@gmail.com"
+  },
+  "menu_semaine": true,
+  "accueil": {
+    "hero": {
+      "image": "images/ambiance02.webp",
+      "eyebrow": "Taverne grecque",
+      "titre": "Avra Mykonos @ Bournens",
+      "description": "Découvrez l’authenticité de la cuisine grecque dans un cadre élégant et chaleureux au cœur de Bournens.",
+      "boutons": [
+        { "label": "Voir la carte", "href": "menu-page.html", "class": "btn btn-outline" },
+        { "label": "Infos pratiques", "href": "infos.html", "class": "btn btn-outline-blue" }
+      ]
+    },
+    "intro_titre": "L’authenticité de la cuisine grecque à Bournens",
+    "intro_texte_1": "AVRA Mykonos vous invite à découvrir une cuisine grecque généreuse et authentique, dans un cadre élégant, chaleureux et convivial.",
+    "intro_texte_2": "La carte propose notamment des spécialités grecques traditionnelles, des mezzés, des plats de viande ainsi que des options végétariennes.",
+    "specialites": "Mezzés grecs, moussaka, feuilles de chou farcies, viandes grillées et spécialités traditionnelles",
+    "ambiance": "Élégante, chaleureuse et conviviale, au cœur du village de Bournens",
+    "reservation": "Réservation conseillée au 021 888 23 17",
+    "temoignages": []
+  },
+  "decouvrir": [
+    {
+      "tag": "La carte",
+      "titre": "Spécialités grecques",
+      "description": "Découvrez une cuisine grecque authentique et généreuse.",
+      "lien": "menu-page.html",
+      "image": "images/menu005.webp",
+      "alt": "Plat grec du restaurant AVRA Mykonos"
+    },
+    {
+      "tag": "Nouveau",
+      "titre": "Menus de la semaine",
+      "description": "Des suggestions régulièrement renouvelées selon les produits disponibles.",
+      "lien": "menus-semaine.html",
+      "image": "images/menu001.webp",
+      "alt": "Suggestion de la semaine au restaurant AVRA Mykonos"
+    },
+    {
+      "tag": "Ambiance",
+      "titre": "Un cadre élégant et chaleureux",
+      "description": "Un lieu convivial pour découvrir les saveurs de la Grèce.",
+      "lien": "ambiance-page.html",
+      "image": "images/ambiance01.webp",
+      "alt": "Salle du restaurant AVRA Mykonos"
+    }
+  ],
+  "images_accueil": {
+    "image_hero": "images/ambiance02.webp",
+    "image_vignette_menu": "images/menu005.jpg",
+    "image_vignette_ambiance": "images/ambiance01.webp"
+  },
+  "horaires": [
+    { "jours": "Mercredi – Samedi", "creneaux": ["12:00 – 14:30", "19:00 – 23:00"] },
+    { "jours": "Dimanche", "creneaux": ["12:00 – 21:00"] },
+    { "jours": "Lundi – Mardi", "creneaux": ["Fermé"] }
+  ],
+  "horaires_note": "Horaires à confirmer directement auprès du restaurant. Réservation conseillée."
+}

@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="L'artisan Marocain : poteries artisanales marocaines faites main à Mex, Vaud.">
+  <title>L'artisan Marocain | Poteries artisanales à Mex, Vaud</title>
+  <style>
+    :root {
+      --argile: #b95738;
+      --terre: #7b3927;
+      --ocre: #c28a35;
+      --sable: #ead9bf;
+      --creme: #faf6ef;
+      --encre: #30231e;
+      --blanc: #ffffff;
+      --ombre: 0 16px 38px rgba(64, 36, 24, .12);
+      --rayon: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--encre);
+      background: var(--creme);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    section { scroll-margin-top: 7rem; }
+
+    .container {
+      width: min(1120px, calc(100% - 2rem));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(250, 246, 239, .96);
+      border-bottom: 1px solid rgba(123, 57, 39, .14);
+      backdrop-filter: blur(10px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      min-height: 72px;
+      padding-block: .7rem;
+    }
+
+    .brand { text-decoration: none; }
+    .brand strong {
+      display: block;
+      color: var(--terre);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.3rem;
+      line-height: 1.1;
+    }
+    .brand span { display: block; font-size: .74rem; color: #6b554b; }
+
+    nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: .15rem; }
+    nav a {
+      padding: .4rem .55rem;
+      border-radius: 999px;
+      color: var(--terre);
+      font-size: .82rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    nav a:hover { background: var(--sable); }
+
+    .hero {
+      background:
+        radial-gradient(circle at 8% 10%, rgba(255,255,255,.34), transparent 30%),
+        linear-gradient(125deg, var(--terre), var(--argile) 52%, var(--ocre));
+      color: var(--blanc);
+      padding: 5rem 0 4.5rem;
+    }
+    .hero-content { max-width: 760px; }
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: .35rem .75rem;
+      border: 1px solid rgba(255,255,255,.45);
+      border-radius: 999px;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; }
+    h1 { margin: 0; font-size: clamp(2.35rem, 8vw, 4.75rem); line-height: 1.04; }
+    .hero p { max-width: 650px; margin: 1.35rem 0 2rem; font-size: 1.1rem; }
+    .btn {
+      display: inline-block;
+      padding: .85rem 1.25rem;
+      border-radius: 999px;
+      background: var(--blanc);
+      color: var(--terre);
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 8px 18px rgba(45, 20, 10, .2);
+      transition: transform .2s ease, background .2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); background: var(--sable); }
+
+    .section { padding: 4.5rem 0; }
+    .section-alt { background: #f1e3cf; }
+    .section-heading { max-width: 720px; margin-bottom: 2rem; }
+    .section-heading h2 { margin: 0 0 .55rem; color: var(--terre); font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; }
+    .section-heading p { margin: 0; color: #604a3d; }
+
+    .savoir-faire {
+      display: grid;
+      gap: 1.4rem;
+      grid-template-columns: 1fr;
+    }
+    .intro-card, .contact-card, .location-card {
+      padding: 1.5rem;
+      border-radius: var(--rayon);
+      background: var(--blanc);
+      box-shadow: var(--ombre);
+    }
+    .intro-card p { margin: 0; }
+    .values { display: grid; gap: .85rem; }
+    .value {
+      padding: 1.1rem;
+      border-left: 4px solid var(--ocre);
+      border-radius: 0 10px 10px 0;
+      background: rgba(255,255,255,.68);
+    }
+    .value strong { display: block; color: var(--terre); margin-bottom: .15rem; }
+
+    .products-grid, .gallery-grid { display: grid; gap: 1.15rem; }
+    .products-grid { grid-template-columns: 1fr; }
+    .product-card {
+      padding: 1.55rem;
+      border-radius: var(--rayon);
+      background: var(--blanc);
+      border-top: 5px solid var(--ocre);
+      box-shadow: var(--ombre);
+    }
+    .product-card h3 { margin: 0 0 .65rem; color: var(--terre); font-size: 1.55rem; }
+    .product-card p { margin: 0; }
+
+    .gallery-grid { grid-template-columns: 1fr; }
+    figure {
+      margin: 0;
+      overflow: hidden;
+      border-radius: 14px;
+      background: var(--blanc);
+      box-shadow: 0 10px 26px rgba(64, 36, 24, .13);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    figure:hover { transform: translateY(-5px); box-shadow: 0 18px 34px rgba(64, 36, 24, .22); }
+    figure img {
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+      transition: transform .35s ease;
+    }
+    figure:hover img { transform: scale(1.05); }
+    figcaption { padding: .8rem 1rem; color: var(--terre); font-weight: 800; }
+
+    .location-layout { display: grid; gap: 1.35rem; }
+    address { margin: 0 0 1rem; font-style: normal; }
+    .location-card p { margin: .6rem 0 0; }
+    .map { overflow: hidden; min-height: 380px; border-radius: var(--rayon); box-shadow: var(--ombre); }
+    .map iframe { display: block; width: 100%; height: 100%; min-height: 380px; border: 0; }
+
+    .contact-card { text-align: center; }
+    .contact-card h2 { margin-top: 0; color: var(--terre); font-size: clamp(2rem, 5vw, 3rem); }
+    .phone {
+      display: inline-block;
+      margin: .5rem 0 1.2rem;
+      color: var(--argile);
+      font-size: clamp(1.45rem, 5vw, 2rem);
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .phone:hover { color: var(--ocre); }
+    .contact-card p { max-width: 650px; margin: .8rem auto; }
+
+    footer { padding: 2.5rem 1rem; background: var(--encre); color: #f8ecdd; text-align: center; }
+    footer p { margin: .35rem 0; }
+    footer strong { color: var(--sable); font-family: Georgia, 'Times New Roman', serif; font-size: 1.2rem; }
+
+    @media (min-width: 640px) {
+      .products-grid { grid-template-columns: repeat(3, 1fr); }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (min-width: 860px) {
+      .header-inner { min-height: 78px; }
+      nav a { font-size: .9rem; padding: .5rem .7rem; }
+      .savoir-faire { grid-template-columns: 1.35fr .9fr; align-items: stretch; }
+      .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+      .location-layout { grid-template-columns: .8fr 1.2fr; align-items: stretch; }
+      .location-card { display: flex; flex-direction: column; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#accueil" aria-label="Retour à l'accueil">
+        <strong>L'artisan Marocain</strong>
+        <span>Fabricant de poteries artisanales marocaines – Mex, Vaud</span>
+      </a>
+      <nav aria-label="Navigation principale">
+        <a href="#accueil">Accueil</a>
+        <a href="#savoir-faire">Savoir-faire</a>
+        <a href="#produits">Produits</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#localisation">Localisation</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="accueil" class="hero">
+      <div class="container hero-content">
+        <span class="eyebrow">Poterie traditionnelle marocaine</span>
+        <h1>Des pièces façonnées à la main, entre terre et tradition.</h1>
+        <p>À Mex, dans le canton de Vaud, L'artisan Marocain crée des tajines, vases, assiettes et objets décoratifs uniques, inspirés d'un savoir-faire marocain authentique.</p>
+        <a class="btn" href="#contact">Nous contacter</a>
+      </div>
+    </section>
+
+    <section id="savoir-faire" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Un savoir-faire vivant</h2>
+          <p>Chaque création est le fruit d'un geste patient, de matières naturelles et de techniques transmises au fil des générations.</p>
+        </div>
+        <div class="savoir-faire">
+          <article class="intro-card">
+            <p>L'artisan Marocain travaille selon une technique ancestrale, avec des outils et des méthodes traditionnelles. L'argile rouge, jaune ou blanche est préparée puis façonnée à la main pour donner naissance à des objets utiles et décoratifs.</p>
+            <p>Les irrégularités délicates, les nuances de matière et les finitions font partie de l'âme de chaque pièce. Ici, aucune production standardisée : chaque poterie raconte sa propre histoire et met à l'honneur l'artisanat marocain.</p>
+          </article>
+          <div class="values" aria-label="Les valeurs de l'atelier">
+            <div class="value"><strong>Techniques ancestrales</strong>Des gestes traditionnels respectés à chaque étape de fabrication.</div>
+            <div class="value"><strong>Argiles naturelles</strong>Argile rouge, jaune et blanche, choisie pour ses teintes et son caractère.</div>
+            <div class="value"><strong>Pièces uniques</strong>Des créations faites main, avec leur personnalité propre.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="produits" class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Nos créations</h2>
+          <p>Des objets inspirés des formes, des usages et de la chaleur des intérieurs marocains.</p>
+        </div>
+        <div class="products-grid">
+          <article class="product-card">
+            <h3>Tajines</h3>
+            <p>Nos tajines sont pensés pour la cuisson traditionnelle comme pour la décoration. Leurs formes généreuses et leurs teintes naturelles apportent une note authentique à la cuisine et à la table.</p>
+          </article>
+          <article class="product-card">
+            <h3>Vases et décoration</h3>
+            <p>Vases, cache-pots et objets décoratifs façonnés à la main donnent du caractère à votre intérieur. Chaque création valorise la texture de l'argile et l'élégance des inspirations marocaines.</p>
+          </article>
+          <article class="product-card">
+            <h3>Assiettes et plats</h3>
+            <p>Assiettes et plats décoratifs complètent une table chaleureuse ou habillent un mur avec style. Ils célèbrent la beauté des pièces utiles, singulières et réalisées avec soin.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="galerie" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Galerie de créations</h2>
+          <p>Quelques exemples de pièces réalisées à la main dans l'atelier de Mex.</p>
+        </div>
+        <div class="gallery-grid">
+          <figure><img src="https://lamaisondupotier.com/cdn/shop/files/Plat_Tajine_en_terre_cuite_poterie_artisanale.png?v=1761645711&width=1445" alt="Tajine marocain en argile rouge" loading="lazy"><figcaption>Tajine rouge</figcaption></figure>
+          <figure><img src="https://m.media-amazon.com/images/I/61eoQviqeiL._AC_.jpg" alt="Vase décoratif en argile jaune" loading="lazy"><figcaption>Vase décoratif</figcaption></figure>
+          <figure><img src="https://influencesauthentik.com/wp-content/uploads/2024/11/vaisselle-artisanle.webp" alt="Assiette décorative marocaine" loading="lazy"><figcaption>Assiette marocaine</figcaption></figure>
+          <figure><img src="il_1140xN.7472493181_o10d.webp" alt="Tajine marocaine 12 pouces" loading="lazy"><figcaption>Jarre Berbère</figcaption></figure>
+          <figure><img src="objet-deco.jpg" alt="Objet de décoration en poterie artisanale" loading="lazy"><figcaption>Objet de décoration</figcaption></figure>
+          <figure><img src="il_794xN.7967896239_dt7r.webp" alt="Plat décoratif marocain en argile" loading="lazy"><figcaption>Plat décoratif</figcaption></figure>
+          <!-- <figure><img src="https://picsum.photos/seed/vase7/600/400" alt="Vase artisanal marocain fait main" loading="lazy"><figcaption>Vase artisanal</figcaption></figure>
+          <figure><img src="https://picsum.photos/seed/argile8/600/400" alt="Création en argile naturelle façonnée à la main" loading="lazy"><figcaption>Création en argile</figcaption></figure>
+          <figure><img src="https://picsum.photos/seed/table9/600/400" alt="Collection de poteries marocaines artisanales" loading="lazy"><figcaption>Collection de poteries</figcaption></figure>
+        -->     </div>
+      </div>
+    </section>
+
+    <section id="localisation" class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Où nous trouver</h2>
+          <p>L'atelier est situé à Mex, dans le canton de Vaud. Vous êtes les bienvenus pour découvrir nos créations sur place.</p>
+        </div>
+        <div class="location-layout">
+          <article class="location-card">
+            <address>
+              <strong>L'artisan Marocain</strong><br>
+              Chem. Lugny les Charolles 7<br>
+              1031 Mex, Vaud, Suisse
+            </address>
+            <p>Une visite à l'atelier est l'occasion de voir les pièces en vrai, de ressentir la matière et de choisir une création qui vous ressemble.</p>
+          </article>
+          <div class="map">
+            <iframe
+              title="Carte de localisation de L'artisan Marocain à Mex"
+              width="100%"
+              height="450"
+              style="border:0;"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin"
+              src="https://www.google.com/maps?q=Chem.+Lugny+les+Charolles+7,+1031+Mex,+Vaud,+Suisse&output=embed">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-card">
+          <h2>Contact</h2>
+          <p>Pour un renseignement, une visite ou pour découvrir les pièces disponibles, appelez-nous directement.</p>
+          <a class="phone" href="tel:+41793576857">+41 79 357 68 57</a>
+          <address>
+            <strong>L'artisan Marocain</strong><br>
+            Chem. Lugny les Charolles 7<br>
+            1031 Mex, Vaud, Suisse
+          </address>
+          <p>N'hésitez pas à passer à l'atelier pour admirer les poteries en vrai. Nous serons heureux de vous accueillir et de partager avec vous notre passion de l'artisanat marocain.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>L'artisan Marocain</strong></p>
+    <p>Artisan potier à Mex, canton de Vaud, Suisse</p>
+    <p>© 2026 L'artisan Marocain – Tous droits réservés</p>
+  </footer>
+</body>
+</html>

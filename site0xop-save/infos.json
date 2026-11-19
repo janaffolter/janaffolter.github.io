@@ -1,0 +1,31 @@
+{
+  "restaurant": {
+    "nom": "Le Brûlot",
+    "sous_titre": "Cuisine de brasserie – Cossonay, Vaud",
+    "telephone_affiche": "021 861 15 41",
+    "telephone_lien": "+41218611541",
+    "adresse": {
+      "rue": "Chemin du 900ème 2",
+      "npa": "1304",
+      "localite": "Cossonay-Ville",
+      "canton": "Vaud",
+      "pays": "Suisse"
+    },
+    "google_maps_embed": "https://www.google.com/maps?q=Chemin+du+900%C3%A8me+2,+1304+Cossonay-Ville,+Vaud,+Suisse&output=embed",
+    "google_maps_avis": "https://www.google.com/maps/search/?api=1&query=Le+Brulot+Chemin+du+900%C3%A8me+2+1304+Cossonay-Ville",
+    "facebook": null,
+    "instagram": null,
+    "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g1022770-d7691268-Reviews-Le_Brulot-Cossonay_Canton_of_Vaud.html"
+  },
+  "menu_semaine": true,
+  "images_accueil": {
+    "image_hero": "images/ambiance02.webp",
+    "image_vignette_menu": "images/menu005.jpg",
+    "image_vignette_ambiance": "images/ambiance01.webp"
+  },
+  "horaires": [
+    { "jours": "Mardi – Samedi", "creneaux": ["10:00 – 15:00", "18:00 – 22:30"] },
+    { "jours": "Dimanche – Lundi", "creneaux": ["Fermé"] }
+  ],
+  "horaires_note": "Réservation fortement conseillée au 021 861 15 41, en particulier le week-end."
+}

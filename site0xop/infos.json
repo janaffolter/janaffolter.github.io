@@ -17,7 +17,7 @@
     "instagram": null,
     "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g1022770-d7691268-Reviews-Le_Brulot-Cossonay_Canton_of_Vaud.html"
     },
-  "menu_semaine": true,
+  "menu_semaine": false,
   "accueil": {
     "hero": {
       "image": "images/ambiance02.webp",
